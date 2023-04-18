@@ -46,7 +46,7 @@ define("BASE","http://localhost/localjobconnect/");
 
 //////////////////////////////////////////
 
-define("ASSETS","http://localhost/localjobconnect/assets"); 
+define("ASSETS","http://localhost/localjobconnect/assets/"); 
 
 
 ///////////////////////////////////////////
