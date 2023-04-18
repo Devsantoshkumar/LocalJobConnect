@@ -1,4 +1,9 @@
-<?php $this->view("includes/header"); ?>
+<?php 
+
+$this->view("includes/header"); 
+$this->view("includes/navbar");
+
+?>
 
     <h1>Home Page</h1>
 
