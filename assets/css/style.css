@@ -11,3 +11,7 @@
     height: 600px;
     z-index: -1;
 }
+
+nav{
+    background-color: rgba(185, 175, 175, 0.4);
+}
