@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 RewriteEngine On
 
 php_flag display_errors on
@@ -9,4 +5,3 @@ php_flag display_errors on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
->>>>>>> d71f0e2f454ad3971b2e8eff3f907b4aecb8b7f0
