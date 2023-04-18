@@ -12,19 +12,19 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
-                    <a class="nav-link poppins text-dark" aria-current="page" href="#">Home</a>
+                    <a class="nav-link poppins text-white" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link poppins text-dark" aria-current="page" href="#">Explore</a>
+                    <a class="nav-link poppins text-white" aria-current="page" href="#">Explore</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link poppins text-dark" aria-current="page" href="#">Become a Seller</a>
+                    <a class="nav-link poppins text-white" aria-current="page" href="#">Become a Seller</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link poppins text-dark" aria-current="page" href="#">Contact Us</a>
+                    <a class="nav-link poppins text-white" aria-current="page" href="#">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link poppins text-dark" aria-current="page" href="#">About Us</a>
+                    <a class="nav-link poppins text-white" aria-current="page" href="#">About Us</a>
                 </li>
             </ul>
             <button class="btn btn-success mx-lg-3"><a href="#" class="text-decoration-none text-white poppins">Sign In</a></button>
