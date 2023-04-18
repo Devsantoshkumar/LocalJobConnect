@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Ubuntu&display=swap');
+
+.openSans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: red;
+}
