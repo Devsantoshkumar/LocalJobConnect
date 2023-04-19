@@ -3,16 +3,7 @@
     margin: 0;
 }
 
-/* Background Image Section Start */
 
-.bg-image {
-    width: 100%;
-    object-fit: cover;
-    height: 600px;
-    z-index: -1;
-}
-
-/* Background Image Section End */
 
 /* Background Content Section Start */
 

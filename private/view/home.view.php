@@ -7,7 +7,7 @@ $this->view("includes/navbar");
 
 <!-- Background Content Section Start -->
 
-<section class="navbar navbar-light mt-5 mx-md-5 bg-box">
+<section class="navbar navbar-light mt-5 bg-box">
     <section class="banner-section">
         <div class="banner-image-box">
             <img src="assets\image\bg-1.jpg" alt="image" class="bg-image">
