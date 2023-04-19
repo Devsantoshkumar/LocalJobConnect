@@ -38,7 +38,7 @@ $this->view("includes/navbar");
 <section class="container-fluid">
 <div class="container">
     <div class="row">
-        <h4>How It Works</h4>
+        <h4 class="heading">How It Works</h4>
     </div>
 </div>
 </section>

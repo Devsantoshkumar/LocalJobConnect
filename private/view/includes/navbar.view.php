@@ -1,6 +1,6 @@
 <!-- NavBar Section Start -->
 
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar fixed-top navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="http://localhost/LOCALJOBCONNECT/">
             <img src="assets\image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30">
