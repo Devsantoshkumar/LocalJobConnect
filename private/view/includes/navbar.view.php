@@ -27,8 +27,13 @@
                     <a class="nav-link poppins text-white" aria-current="page" href="#">About Us</a>
                 </li>
             </ul>
-            <button class="btn btn-success mx-lg-3"><a href="#" class="text-decoration-none text-white poppins">Sign In</a></button>
-            <button class="btn btn-success mx-lg-2"><a href="#" class="text-decoration-none text-white poppins">Join</a></button>
+            <button class="btn btn-success mx-lg-3"><a href="#" class="text-decoration-none text-white poppins"><i
+                        class="fa-solid fa-user me-2"></i>Sign
+                    In</a>
+            </button>
+
+            <button class="btn btn-success mx-lg-2"><a href="#"
+                    class="text-decoration-none text-white poppins">Join</a></button>
         </div>
     </div>
 </nav>

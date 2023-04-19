@@ -5,3 +5,13 @@
     --poppins-font-family: 'Poppins', sans-serif;
     --ubuntu-font-family: 'Ubuntu', sans-serif;
 }
+
+/* NavBar Section Start */
+
+nav {
+    background-color: rgba(93, 86, 86, 0.069);
+}
+
+.nav-link:hover {
+    color: var(--green-color) !important;
+}

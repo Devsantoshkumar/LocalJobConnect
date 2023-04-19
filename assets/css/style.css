@@ -3,6 +3,8 @@
     margin: 0;
 }
 
+/* Background Image Section Start */
+
 .bg-image{
     position: absolute;
     top: 0;
@@ -12,6 +14,13 @@
     z-index: -1;
 }
 
-nav{
-    background-color: rgba(93, 86, 86, 0.069);
+/* Background Image Section End */
+
+
+/* Background Content Section Start */
+
+.bg-text{
+    font-family: var(--ubuntu-font-family);
 }
+
+/* Background Content Section End */
