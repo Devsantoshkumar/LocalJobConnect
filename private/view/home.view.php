@@ -5,14 +5,6 @@ $this->view("includes/navbar");
 
 ?>
 
-<!-- Background image Section Start -->
-
-<section>
-    <img src="assets\image\bg-1.jpg" alt="image" class="bg-image">
-</section>
-
-<!-- Background image Section End -->
-
 <!-- Background Content Section Start -->
 
 <section class="navbar navbar-light mt-5 mx-md-5 bg-box">
