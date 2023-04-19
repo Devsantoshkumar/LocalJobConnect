@@ -6,10 +6,14 @@
     --ubuntu-font-family: 'Ubuntu', sans-serif;
 }
 
+body{
+    background-color: var(--white-color1);
+}
+
 /* NavBar Section Start */
 
-nav {
-    background-color: rgba(93, 86, 86, 0.069);
+nav{
+    background-color: #595c5e26;
 }
 
 .nav-link:hover {

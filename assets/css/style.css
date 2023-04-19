@@ -3,20 +3,11 @@
     margin: 0;
 }
 
-
-
 /* Background Content Section Start */
 
 .bg-text {
     font-family: var(--ubuntu-font-family);
 }
-
-.heading {
-    background-color: var(--dark-red-color);
-}
-
-/* Background Content Section End */
-
 
 .banner-section {
     width: 100%;
@@ -37,8 +28,18 @@
 
 .image-text-section {
     position: absolute;
-    left: 100px;
     top: 150px;
-    font-size: 30px;
-    color: var(--white-color);
 }
+
+/* Background Content Section End */
+
+/* Work Process Section Start */
+
+.work-process-heading {
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--opensans-font-family);
+    font-size: 30px;
+}
+
+/* Work Process Section End */
