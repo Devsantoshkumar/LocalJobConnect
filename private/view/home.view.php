@@ -29,7 +29,7 @@ $this->view("includes/navbar");
             <button class="btn btn-success" type="submit">Search</button>
         </form>
     </div>
-    <button class="btn btn-success start-btn">Get Started</button>
+    <button class="btn start-btn mx-md-5">Get Started</button>
 </section>
 
 <!-- Background Content Section End -->
