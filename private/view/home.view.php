@@ -20,7 +20,7 @@ $this->view("includes/navbar");
         <h1 class="text-white fw-bold mx-3">Search Between More <br> Then 50,00 Open Jobs.</h1>
     </div>
     <div class="container-fluid">
-        <form class="d-flex input-group w-sm-75 w-100">
+        <form class="d-flex input-group w-50">
             <span class="input-group-text bg-success" id="basic-addon1"><i
                     class="fa-solid fa-magnifying-glass text-white"></i></span>
             <input class="form-control me-2" type="search" class="" placeholder="Search" aria-label="Search">
