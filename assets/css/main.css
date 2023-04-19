@@ -29,4 +29,15 @@ nav {
     box-shadow: 0 0 0 0.25rem rgba(95, 241, 46, 0.369);
 }
 
+.start-btn {
+    margin: 20px;
+    padding: 10px;
+    width: 15%;
+    height: 70px;
+    border-radius: 50px;
+    font-family: var(--poppins-font-family);
+    border: none;
+    outline: none;
+}
+
 /* Background Content Section End */
