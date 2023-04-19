@@ -1,12 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-<<<<<<< HEAD
 /* Background Image Section Start */
 
-.bg-image{
+.bg-image {
     width: 100%;
     object-fit: cover;
     height: 600px;
@@ -15,41 +14,40 @@
 
 /* Background Image Section End */
 
-
-=======
->>>>>>> 072ec1cbe235766dac2cbc9db4c8915d019fc678
 /* Background Content Section Start */
 
-.bg-text{
+.bg-text {
     font-family: var(--ubuntu-font-family);
 }
 
-.heading{
+.heading {
     background-color: var(--dark-red-color);
 }
+
 /* Background Content Section End */
 
 
-.banner-section{
+.banner-section {
     width: 100%;
     height: 600px;
     position: relative;
 }
 
-.banner-image-box{
+.banner-image-box {
     width: 100%;
     height: 600px;
 }
-.banner-image-box img{
+
+.banner-image-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.image-text-section{
-   position: absolute;
-   left: 100px;
-   top: 150px;
-   font-size: 30px;
-   color: var(--white-color);
+.image-text-section {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    font-size: 30px;
+    color: var(--white-color);
 }
