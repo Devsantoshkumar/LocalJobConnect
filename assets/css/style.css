@@ -9,7 +9,6 @@
     width: 100%;
     object-fit: cover;
     height: 600px;
-    bottom: 50px;
     z-index: -1;
 }
 
