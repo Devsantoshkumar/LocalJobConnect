@@ -8,6 +8,7 @@ $this->view("includes/navbar");
 <!-- Background image Section Start -->
 
 <section>
+    
     <img src="assets\image\bg-1.jpg" alt="image" class="bg-image">
 </section>
 
