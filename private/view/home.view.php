@@ -7,6 +7,7 @@ $this->view("includes/navbar");
 
 <!-- Background image Section Start -->
 
+<<<<<<< HEAD
 <section>
     <img src="assets\image\bg-1.jpg" alt="image" class="bg-image">
 </section>
@@ -16,6 +17,13 @@ $this->view("includes/navbar");
 <!-- Background Content Section Start -->
 
 <section class="navbar navbar-light mt-5 mx-md-5 bg-box">
+=======
+<section class="banner-section">
+     <div class="banner-image-box">
+        <img src="assets\image\bg-1.jpg" alt="image" class="bg-image">
+    </div>
+    <div class="image-text-section">
+>>>>>>> 072ec1cbe235766dac2cbc9db4c8915d019fc678
     <div class="bg-text mb-5">
         <h1 class="text-white fw-bold mx-3 mb-3">Talent ?<br> Meet Opportunity.</h1>
         <span class="text-white fw-bold mx-3">Search Between More Then 50,000+ Open Jobs.</span>
@@ -28,10 +36,11 @@ $this->view("includes/navbar");
             <button class="btn btn-success" type="submit">Search</button>
         </form>
     </div>
-    <button class="btn start-btn mx-md-5">Get Started</button>
+    </div>
 </section>
 
-<!-- Background Content Section End -->
+<!-- Background image Section End -->
+
 
 <!-- Working Process Section Start -->
 
