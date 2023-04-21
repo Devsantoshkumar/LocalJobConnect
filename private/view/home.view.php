@@ -164,7 +164,7 @@ $this->view("includes/navbar");
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-center poppins fw-bold py-3">Our Client Reviews</h1>
+                    <h1 class="text-center fw-bold py-3 heading-text">Our Client Reviews</h1>
                     <p class="poppins w-50 m-auto fs-6 text-center pb-4">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vitae facilis. Quaerat dolore
                     </p>
