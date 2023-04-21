@@ -6,17 +6,39 @@
     --ubuntu-font-family: 'Ubuntu', sans-serif;
 }
 
-.heading-text{
-   font-family: var(--opensans-font-family);
+.heading-text {
+    font-family: var(--opensans-font-family);
 }
-.heading-color{
+
+.heading-color {
     color: var(--green-color);
 }
 
+.link-btn {
+    background-color: var(--green-color);
+    font-family: var(--poppins-font-family);
+    color: var(--white-color);
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.link-btn:hover {
+    background-color: var(--yellow-color);
+    color: var(--black-blue-color);
+}
+
+
 /* NavBar Section Start */
 
-nav{
+nav {
     background-color: #595c5e26;
+}
+
+.nav-link {
+    color: var(--black-color);
+    font-family: var(--poppins-font-family);
 }
 
 .nav-link:hover {
@@ -52,8 +74,11 @@ nav{
 
 /* Job Categories Section Start */
 
-.job-link{
-   font-family: var(--ubuntu-font-family);
+.job-link {
+    float: right;
+    background-color: var(--green-color);
+    width: 100px;
+    font-family: var(--ubuntu-font-family);
 }
 
 /* Job Categories Section End */

@@ -65,7 +65,7 @@ $this->view("includes/navbar");
 
     <!-- Job Categories Section Start -->
 
-    <section class="containerfluid">
+    <section class="containerfluid mt-5 mb-3">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -74,10 +74,6 @@ $this->view("includes/navbar");
                     <p class="text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nemo!
                     </p>
                 </div>
-            </div>
-            <div class="row">
-                <a href="#" class="text-decoration-none text-end job-link">View
-                    All<i class="fa-solid fa-caret-down mx-2"></i></a>
             </div>
             <div class="job-category mt-2">
                 <div class="job-category-box rounded card border-0 shadow">
@@ -153,6 +149,9 @@ $this->view("includes/navbar");
                     </div>
                 </div>
             </div>
+            <div class="d-flex justify-content-center mt-2 p-2">
+                <a href="#" class="text-decoration-none fw-bold link-btn text-center">Explore More</a>
+            </div>
         </div>
     </section>
 
@@ -164,8 +163,9 @@ $this->view("includes/navbar");
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-center poppins fw-bold py-3">Our Client Reviews</h1>
-                    <p class="poppins w-50 m-auto fs-6 text-center pb-4">
+                    <h1 class="text-center fw-bold heading-text fs-2 py-3">Our Client <span
+                            class="fs-2 heading-color">Reviews</span></h1>
+                    <p class="w-50 m-auto fs-6 text-center pb-4">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vitae facilis. Quaerat dolore
                     </p>
                 </div>
@@ -174,43 +174,126 @@ $this->view("includes/navbar");
             <div class="row">
                 <div class="col">
                     <div class="owl-carousel owl-theme">
-                        <div class="item card client border shadow rounded">
+                        <div class="item card client shadow border">
                             <div class="client-img">
                                 <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
                             </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                            </ul>
                         </div>
-                        <div class="item">
-                            <h4>2</h4>
+
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                            </ul>
                         </div>
-                        <div class="item">
-                            <h4>3</h4>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                            </ul>
                         </div>
-                        <div class="item">
-                            <h4>4</h4>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                            </ul>
                         </div>
-                        <div class="item">
-                            <h4>5</h4>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                            </ul>
                         </div>
-                        <div class="item">
-                            <h4>6</h4>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                            </ul>
                         </div>
-                        <div class="item">
-                            <h4>7</h4>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                            </ul>
                         </div>
-                        <div class="item">
-                            <h4>8</h4>
-                        </div>
-                        <div class="item">
-                            <h4>9</h4>
-                        </div>
-                        <div class="item">
-                            <h4>10</h4>
-                        </div>
-                        <div class="item">
-                            <h4>11</h4>
-                        </div>
-                        <div class="item">
-                            <h4>12</h4>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                                <li><i class="fa-solid fa-star heading-color"></i></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
