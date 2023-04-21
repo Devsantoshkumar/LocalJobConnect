@@ -6,8 +6,11 @@
     --ubuntu-font-family: 'Ubuntu', sans-serif;
 }
 
-body{
-    background-color: var(--white-color1);
+.heading-text{
+   font-family: var(--opensans-font-family);
+}
+.heading-color{
+    color: var(--green-color);
 }
 
 /* NavBar Section Start */
@@ -46,3 +49,11 @@ nav{
 }
 
 /* Background Content Section End */
+
+/* Job Categories Section Start */
+
+.job-link{
+   font-family: var(--ubuntu-font-family);
+}
+
+/* Job Categories Section End */
