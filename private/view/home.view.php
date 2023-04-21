@@ -81,114 +81,74 @@ $this->view("includes/navbar");
             </div>
             <div class="job-category mt-2">
                 <div class="job-category-box rounded card border-0 shadow">
-                    <div class="job-category-image rounded">
-                        <img src="assets\image\job-category-electrician.jpg" class="rounded-top img-fluid" alt="image">
-                    </div>
+                    <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
-                        <div class="d-flex align-item-center justify-content-between">
-                            <h1 class="fw-bold fs-5 heading-text card-title">Electrician</h1>
-                            <span><i class="fa-solid fa-star fs-6 heading-color mx-1"></i>4.5 </span>
+                        <div class="d-flex align-item-center justify-content-center">
+                            <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
                 <div class="job-category-box rounded card border-0 shadow">
-                    <div class="job-category-image rounded">
-                        <img src="assets\image\job-category-electrician.jpg" class="rounded-top img-fluid" alt="image">
-                    </div>
+                    <i class="fa-solid fa-wrench"></i>
                     <div class="p-3">
-                        <div class="d-flex align-item-center justify-content-between">
-                            <h1 class="fw-bold fs-5 heading-text card-title">Electrician</h1>
-                            <span><i class="fa-solid fa-star fs-6 heading-color mx-1"></i>4.5 </span>
+                        <div class="d-flex align-item-center justify-content-center">
+                            <h1 class="fw-bold fs-5 heading-text  card-title">Plumber</h1>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
                 <div class="job-category-box rounded card border-0 shadow">
-                    <div class="job-category-image rounded">
-                        <img src="assets\image\job-category-electrician.jpg" class="rounded-top img-fluid" alt="image">
-                    </div>
+                    <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
-                        <div class="d-flex align-item-center justify-content-between">
-                            <h1 class="fw-bold fs-5 heading-text card-title">Electrician</h1>
-                            <span><i class="fa-solid fa-star fs-6 heading-color mx-1"></i>4.5 </span>
+                        <div class="d-flex align-item-center justify-content-center">
+                            <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
                 <div class="job-category-box rounded card border-0 shadow">
-                    <div class="job-category-image rounded">
-                        <img src="assets\image\job-category-electrician.jpg" class="rounded-top img-fluid" alt="image">
-                    </div>
+                    <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
-                        <div class="d-flex align-item-center justify-content-between">
-                            <h1 class="fw-bold fs-5 heading-text card-title">Electrician</h1>
-                            <span><i class="fa-solid fa-star fs-6 heading-color mx-1"></i>4.5 </span>
+                        <div class="d-flex align-item-center justify-content-center">
+                            <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
                 <div class="job-category-box rounded card border-0 shadow">
-                    <div class="job-category-image rounded">
-                        <img src="assets\image\job-category-electrician.jpg" class="rounded-top img-fluid" alt="image">
-                    </div>
+                    <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
-                        <div class="d-flex align-item-center justify-content-between">
-                            <h1 class="fw-bold fs-5 heading-text card-title">Electrician</h1>
-                            <span><i class="fa-solid fa-star fs-6 heading-color mx-1"></i>4.5 </span>
+                        <div class="d-flex align-item-center justify-content-center">
+                            <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
                 <div class="job-category-box rounded card border-0 shadow">
-                    <div class="job-category-image rounded">
-                        <img src="assets\image\job-category-electrician.jpg" class="rounded-top img-fluid" alt="image">
-                    </div>
+                    <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
-                        <div class="d-flex align-item-center justify-content-between">
-                            <h1 class="fw-bold fs-5 heading-text card-title">Electrician</h1>
-                            <span><i class="fa-solid fa-star fs-6 heading-color mx-1"></i>4.5 </span>
+                        <div class="d-flex align-item-center justify-content-center">
+                            <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
                 <div class="job-category-box rounded card border-0 shadow">
-                    <div class="job-category-image rounded">
-                        <img src="assets\image\job-category-electrician.jpg" class="rounded-top img-fluid" alt="image">
-                    </div>
+                    <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
-                        <div class="d-flex align-item-center justify-content-between">
-                            <h1 class="fw-bold fs-5 heading-text card-title">Electrician</h1>
-                            <span><i class="fa-solid fa-star fs-6 heading-color mx-1"></i>4.5 </span>
+                        <div class="d-flex align-item-center justify-content-center">
+                            <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
                 <div class="job-category-box rounded card border-0 shadow">
-                    <div class="job-category-image rounded">
-                        <img src="assets\image\job-category-electrician.jpg" class="rounded-top img-fluid" alt="image">
-                    </div>
+                    <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
-                        <div class="d-flex align-item-center justify-content-between">
-                            <h1 class="fw-bold fs-5 heading-text card-title">Electrician</h1>
-                            <span><i class="fa-solid fa-star fs-6 heading-color mx-1"></i>4.5 </span>
+                        <div class="d-flex align-item-center justify-content-center">
+                            <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>

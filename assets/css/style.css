@@ -63,10 +63,17 @@
     gap: 20px;
     padding: 20px 0px;
 }
-.job-category-box .job-category-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.job-category-box{
+    width: 250px;
+    height: 250px;
+}
+
+.job-category-box i{
+    font-size: 50px;
+    padding: 10px;
+    color: var(--green-color);
+    margin: auto;
 }
 
 /* Job Category Section End */
