@@ -70,9 +70,14 @@
 }
 
 .job-category-box i{
+    width: 80px;
+    height: 80px;
     font-size: 50px;
-    padding: 10px;
-    color: var(--green-color);
+    padding-top: 10px;
+    text-align: center;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    border-radius: 50%;
     margin: auto;
 }
 
