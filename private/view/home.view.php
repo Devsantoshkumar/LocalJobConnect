@@ -163,14 +163,9 @@ $this->view("includes/navbar");
         <div class="container">
             <div class="row">
                 <div class="col">
-<<<<<<< HEAD
-                    <h1 class="text-center fw-bold py-3 heading-text">Our Client Reviews</h1>
-                    <p class="poppins w-50 m-auto fs-6 text-center pb-4">
-=======
                     <h1 class="text-center fw-bold heading-text fs-2 py-3">Our Client <span
                             class="fs-2 heading-color">Reviews</span></h1>
                     <p class="w-50 m-auto fs-6 text-center pb-4">
->>>>>>> main
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vitae facilis. Quaerat dolore
                     </p>
                 </div>
