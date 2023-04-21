@@ -172,8 +172,7 @@ $this->view("includes/navbar");
             </div>
             <div class="owl-carousel owl-theme owl-loaded owl-drag pt-5">
                 <div class="owl-stage-outer">
-                    <div class="owl-stage"
-                        style="transform: translate3d(-1130px,0px,0px); transition: all 0s ease 0s; width: 3950px;">
+                    <div class="owl-stage d-flex">
                         <div class="owl-item active" style="width: 275px; margin-right: 10px;">
                             <div class="item client border shadow m-2">
                                 <div class="client-img">
