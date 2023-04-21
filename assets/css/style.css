@@ -42,13 +42,14 @@
     font-size: 30px;
 }
 
-.work-process-text h5{
+.work-process-text h5 {
     color: var(--green-color);
     font-weight: bold;
     font-family: var(--poppins-font-family);
     font-size: 23px;
 }
-.work-process-text p{
+
+.work-process-text p {
     font-family: var(--ubuntu-font-family);
     font-size: 15px;
 }
@@ -57,19 +58,19 @@
 
 /* Job Category Section Start */
 
-.job-category{
+.job-category {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 5fr));
     gap: 20px;
     padding: 20px 0px;
 }
 
-.job-category-box{
+.job-category-box {
     width: 250px;
     height: 250px;
 }
 
-.job-category-box i{
+.job-category-box i {
     width: 80px;
     height: 80px;
     font-size: 50px;
@@ -82,3 +83,42 @@
 }
 
 /* Job Category Section End */
+
+/* Client Section Start */
+
+.owl-prev span {
+    font-size: 40px;
+}
+
+.owl-next span {
+    font-size: 40px;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background-color: #ffff;
+    color: #000;
+}
+
+.owl-dots {
+    display: none;
+}
+
+.client {
+    height: 350px;
+    width: 250px;
+}
+
+.client-img {
+    height: 70px;
+    width: 70px;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.client-img img {
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Client Section End */

@@ -158,6 +158,170 @@ $this->view("includes/navbar");
 
     <!-- Job Categories Section End -->
 
+    <!-- Client Section Start -->
+
+    <section class="container-fluid my-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center poppins fw-bold py-3">Our Client Reviews</h1>
+                    <p class="poppins w-50 m-auto fs-6 text-center pb-4">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vitae facilis. Quaerat dolore
+                    </p>
+                </div>
+            </div>
+            <div class="owl-carousel owl-theme owl-loaded owl-drag pt-5">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage"
+                        style="transform: translate3d(-1130px,0px,0px); transition: all 0s ease 0s; width: 3950px;">
+                        <div class="owl-item active" style="width: 275px; margin-right: 10px;">
+                            <div class="item client border shadow m-2">
+                                <div class="client-img">
+                                    <img src="assets\image\logo.svg" alt="imgae">
+                                </div>
+                                <span class="text-center open-sans d-block fw-bold">Jatin Yadav</span>
+                                <p class="text-center open-sans mt-2">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Illo, laudantium.</p>
+                                <ul class="list-unstyled d-flex justify-content-center pe-4 mt-3">
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="width: 275px; margin-right: 10px;">
+                            <div class="item client border shadow m-2">
+                                <div class="client-img">
+                                    <img src="assets\image\logo.svg" alt="imgae">
+                                </div>
+                                <span class="text-center open-sans d-block fw-bold">Jatin Yadav</span>
+                                <p class="text-center open-sans mt-2">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Illo, laudantium.</p>
+                                <ul class="list-unstyled d-flex justify-content-center pe-4 mt-3">
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="width: 275px; margin-right: 10px;">
+                            <div class="item client border shadow m-2">
+                                <div class="client-img">
+                                    <img src="assets\image\logo.svg" alt="imgae">
+                                </div>
+                                <span class="text-center open-sans d-block fw-bold">Jatin Yadav</span>
+                                <p class="text-center open-sans mt-2">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Illo, laudantium.</p>
+                                <ul class="list-unstyled d-flex justify-content-center pe-4 mt-3">
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="width: 275px; margin-right: 10px;">
+                            <div class="item client border shadow m-2">
+                                <div class="client-img">
+                                    <img src="assets\image\logo.svg" alt="imgae">
+                                </div>
+                                <span class="text-center open-sans d-block fw-bold">Jatin Yadav</span>
+                                <p class="text-center open-sans mt-2">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Illo, laudantium.</p>
+                                <ul class="list-unstyled d-flex justify-content-center pe-4 mt-3">
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="owl-item active" style="width: 275px; margin-right: 10px;">
+                            <div class="item client border shadow m-2">
+                                <div class="client-img">
+                                    <img src="assets\image\logo.svg" alt="imgae">
+                                </div>
+                                <span class="text-center open-sans d-block fw-bold">Jatin Yadav</span>
+                                <p class="text-center open-sans mt-2">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing
+                                    elit. Illo, laudantium.</p>
+                                <ul class="list-unstyled d-flex justify-content-center pe-4 mt-3">
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star heading-color"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Section Start -->
+
 
 
     <!-- Working Process Section End -->
