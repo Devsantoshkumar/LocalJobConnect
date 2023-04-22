@@ -38,21 +38,27 @@ $this->view("includes/navbar");
             </div>
             <div class="row mb-3">
                 <div class="offeset-md-1 col-md-3 work-process-text m-auto">
-                    <img src="assets\image\create account.png" class="w-100" alt="image">
+                    <div class="work-process-img m-lg-0 m-auto">
+                        <img src="assets\image\create account.png" alt="image">
+                    </div>
                     <h5 class="text-center">Create Account</h5>
                     <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel similique
                         obcaecati possimus ratione
                         accusamus doloribus provident. Reiciendis eligendi voluptate qui.</p>
                 </div>
                 <div class="offeset-md-1 col-md-3 m-auto work-process-text">
-                    <img src="assets\image\search job.png" alt="image" class="w-100">
+                    <div class="work-process-img m-lg-0 m-auto">
+                        <img src="assets\image\search job.png" alt="image">
+                    </div>
                     <h5 class="text-center">Search Jobs</h5>
                     <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic mollitia
                         laudantium amet consequatur
                         nihil voluptas voluptate incidunt, enim quaerat? At!</p>
                 </div>
                 <div class="offeset-md-1 col-md-3 m-auto work-process-text">
-                    <img src="assets\image\sava & appy.png" class="w-100" alt="image">
+                    <div class="work-process-img m-lg-0 m-auto">
+                        <img src="assets\image\sava & appy.png" alt="image">
+                    </div>
                     <h5 class="text-center">Save & Apply</h5>
                     <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quibusdam
                         iusto consectetur
