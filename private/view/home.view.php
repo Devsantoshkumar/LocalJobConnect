@@ -163,6 +163,118 @@ $this->view("includes/navbar");
 
     <!-- Job Categories Section End -->
 
+    <!-- Paid Section Start -->
+    <section class="container-fluid my-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center fw-bold heading-text fs-2 py-3">Top Paid <span
+                            class="fs-2 heading-color">Employees</span></h1>
+                    <p class="w-50 m-auto fs-6 text-center pb-4">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, vitae facilis. Quaerat dolore
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li class="fs-5"><i class="fa-solid fa-dollar-sign heading-color"></i>30000</li>
+                            </ul>
+                        </div>
+
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li class="fs-5"><i class="fa-solid fa-dollar-sign heading-color"></i>30000</li>
+                            </ul>
+                        </div>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li class="fs-5"><i class="fa-solid fa-dollar-sign heading-color"></i>30000</li>
+                            </ul>
+                        </div>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li class="fs-5"><i class="fa-solid fa-dollar-sign heading-color"></i>30000</li>
+                            </ul>
+                        </div>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li class="fs-5"><i class="fa-solid fa-dollar-sign heading-color"></i>30000</li>
+                            </ul>
+                        </div>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li class="fs-5"><i class="fa-solid fa-dollar-sign heading-color"></i>30000</li>
+                            </ul>
+                        </div>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li class="fs-5"><i class="fa-solid fa-dollar-sign heading-color"></i>30000</li>
+                            </ul>
+                        </div>
+                        <div class="item card client shadow border">
+                            <div class="client-img">
+                                <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            </div>
+                            <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
+                            <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Provident, molestias.</p>
+                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
+                                <li class="fs-5"><i class="fa-solid fa-dollar-sign heading-color"></i>30000</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Paid Section End -->
+
     <!-- Client Section Start -->
 
     <section class="container-fluid my-5 pt-5">
