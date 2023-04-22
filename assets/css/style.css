@@ -60,7 +60,7 @@
 
 .job-category {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 5fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
     gap: 20px;
     padding: 20px 0px;
 }
@@ -68,6 +68,13 @@
 .job-category-box {
     width: 250px;
     height: 250px;
+    object-fit: cover;
+    transition: scale 1s ease-in-out;
+}
+
+.job-category-box:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .job-category-box i {
@@ -80,6 +87,12 @@
     color: var(--white-color);
     border-radius: 50%;
     margin: auto;
+    transition: color .5s ease-in-out;
+}
+
+.job-category-box i:hover {
+    background-color: var(--yellow-color);
+    color: var(--black-blue-color);
 }
 
 /* Job Category Section End */
@@ -104,8 +117,11 @@
 }
 
 .client {
-    height: 350px;
-    width: 250px;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); */
+    gap: 20px;
+    padding: 20px 0px;
+    margin: 0px 15px;
 }
 
 .client-img {
@@ -123,3 +139,60 @@
 }
 
 /* Client Section End */
+
+/* FOOTER SECTION Start */
+
+footer {
+    background-color: var(--green-color);
+}
+
+.footer-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    margin: 0px 10px;
+    transition: scale .5s ease-in-out;
+}
+
+.footer-icon:hover {
+    background-color: var(--yellow-color);
+    scale: 1.2;
+}
+
+.footer-icon a {
+    border-radius: 50%;
+    padding: 10px 15px 12px 15px;
+    color: var(--green-color);
+}
+
+.footer-icon a:hover {
+    color: var(--black-blue-color);
+}
+
+.footer-icon a i {
+    margin-top: 15px;
+}
+
+.footer-link {
+    transition: scale .5s ease-in-out;
+}
+
+.footer-link:hover {
+    scale: 1.1;
+}
+
+.footer-link a {
+    color: var(--white-color);
+    font-family: var(--ubuntu-font-family);
+}
+
+.footer-link a:hover {
+    color: var(--black-blue-color);
+}
+
+.footer-copyright {
+    background-color: var(--green-color);
+}
+
+/* Footer Section End */

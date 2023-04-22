@@ -76,7 +76,7 @@ $this->view("includes/navbar");
                 </div>
             </div>
             <div class="job-category mt-2">
-                <div class="job-category-box rounded card border-0 shadow">
+                <div class="job-category-box rounded card border-0 shadow m-sm-0 m-auto">
                     <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
                         <div class="d-flex align-item-center justify-content-center">
@@ -85,7 +85,7 @@ $this->view("includes/navbar");
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
-                <div class="job-category-box rounded card border-0 shadow">
+                <div class="job-category-box rounded card border-0 shadow m-sm-0 m-auto">
                     <i class="fa-solid fa-wrench"></i>
                     <div class="p-3">
                         <div class="d-flex align-item-center justify-content-center">
@@ -94,7 +94,7 @@ $this->view("includes/navbar");
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
-                <div class="job-category-box rounded card border-0 shadow">
+                <div class="job-category-box rounded card border-0 shadow m-sm-0 m-auto">
                     <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
                         <div class="d-flex align-item-center justify-content-center">
@@ -103,7 +103,7 @@ $this->view("includes/navbar");
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
-                <div class="job-category-box rounded card border-0 shadow">
+                <div class="job-category-box rounded card border-0 shadow m-sm-0 m-auto">
                     <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
                         <div class="d-flex align-item-center justify-content-center">
@@ -112,7 +112,7 @@ $this->view("includes/navbar");
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
-                <div class="job-category-box rounded card border-0 shadow">
+                <div class="job-category-box rounded card border-0 shadow m-sm-0 m-auto">
                     <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
                         <div class="d-flex align-item-center justify-content-center">
@@ -121,7 +121,7 @@ $this->view("includes/navbar");
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
-                <div class="job-category-box rounded card border-0 shadow">
+                <div class="job-category-box rounded card border-0 shadow m-sm-0 m-auto">
                     <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
                         <div class="d-flex align-item-center justify-content-center">
@@ -130,7 +130,7 @@ $this->view("includes/navbar");
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
-                <div class="job-category-box rounded card border-0 shadow">
+                <div class="job-category-box rounded card border-0 shadow m-sm-0 m-auto">
                     <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
                         <div class="d-flex align-item-center justify-content-center">
@@ -139,7 +139,7 @@ $this->view("includes/navbar");
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
                     </div>
                 </div>
-                <div class="job-category-box rounded card border-0 shadow">
+                <div class="job-category-box rounded card border-0 shadow m-sm-0 m-auto">
                     <i class="fa-solid fa-lightbulb"></i>
                     <div class="p-3">
                         <div class="d-flex align-item-center justify-content-center">
