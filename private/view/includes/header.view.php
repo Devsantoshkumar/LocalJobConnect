@@ -15,5 +15,4 @@
     <link rel="stylesheet" href="<?= ASSETS ?>css/main.css">
     <link rel="stylesheet" href="<?= ASSETS ?>css/style.css">
 </head>
-
 <body>
