@@ -69,7 +69,7 @@
     width: 250px;
     height: 250px;
     object-fit: cover;
-    transition: scale 1s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
 .job-category-box:hover {
@@ -87,7 +87,7 @@
     color: var(--white-color);
     border-radius: 50%;
     margin: auto;
-    transition: color .5s ease-in-out;
+    transition: color .3s ease-in-out;
 }
 
 .job-category-box i:hover {
