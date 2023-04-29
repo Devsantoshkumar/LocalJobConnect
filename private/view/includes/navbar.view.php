@@ -12,19 +12,19 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="http://localhost/LOCALJOBCONNECT/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Explore</a>
+                    <a class="nav-link" aria-current="page" href="http://localhost/LOCALJOBCONNECT/explore">Explore</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Become a Seller</a>
+                    <a class="nav-link" aria-current="page" href="http://localhost/LOCALJOBCONNECT/seller">Become a Seller</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Contact Us</a>
+                    <a class="nav-link" aria-current="page" href="http://localhost/LOCALJOBCONNECT/contact">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">About Us</a>
+                    <a class="nav-link" aria-current="page" href="http://localhost/LOCALJOBCONNECT/about">About Us</a>
                 </li>
             </ul>
             <a href="#" class="text-decoration-none link-btn mx-2"><i class="fa-solid fa-user me-2"></i>Sign
