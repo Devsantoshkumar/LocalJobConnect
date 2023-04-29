@@ -425,4 +425,8 @@ $this->view("includes/navbar");
 
     <!-- Working Process Section End -->
 
-    <?php $this->view("includes/footer"); ?>
+    <?php
+
+    $this->view("includes/footer");
+
+    ?>
