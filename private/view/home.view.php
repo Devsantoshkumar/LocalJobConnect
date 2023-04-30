@@ -69,6 +69,8 @@ $this->view("includes/navbar");
         </div>
     </section>
 
+    <!-- Working Process Section End -->
+
     <!-- Job Categories Section Start -->
 
     <section class="containerfluid mt-5 mb-3">
@@ -421,9 +423,6 @@ $this->view("includes/navbar");
 
     <!-- Client Section Start -->
 
-
-
-    <!-- Working Process Section End -->
 
     <?php
 

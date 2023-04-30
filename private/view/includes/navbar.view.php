@@ -27,7 +27,7 @@
                     <a class="nav-link" aria-current="page" href="http://localhost/LOCALJOBCONNECT/about">About Us</a>
                 </li>
             </ul>
-            <a href="#" class="text-decoration-none link-btn mx-2"><i class="fa-solid fa-user me-2"></i>Sign
+            <a href="http://localhost/LOCALJOBCONNECT/signin" class="text-decoration-none link-btn mx-2"><i class="fa-solid fa-user me-2"></i>Sign
                 In</a>
 
             <a href="#" class="text-decoration-none link-btn">Join</a>
