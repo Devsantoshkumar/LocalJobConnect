@@ -1,0 +1,27 @@
+Database name:
+--------------
+local_job_hire
+
+table 1:
+--------
+users{
+    firstname: varchar(100)
+    lastname: varchar(100)
+    bio: varchar(500)
+    email: varchar(100)
+    email_varified: varchar(100)
+    phone: varchar(14)
+    password: varchar(250)
+    image: varchar(200)
+    cover: varchar(200)
+    token: varchar(70)
+    status: tinyInt-> default: 0
+    date: datetime
+    current_location: varchar(200)
+    hiring_status: varchar(50)
+    country_id: varchar(50)
+    state_id: varchar(50)
+    city_id: varchar(50)
+    skills_id: varchar(50)
+    educations_id: varchar(50)
+}
