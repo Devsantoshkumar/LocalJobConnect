@@ -5,6 +5,7 @@ local_job_hire
 table 1:
 --------
 users{
+    users_id: int
     firstname: varchar(100)
     lastname: varchar(100)
     bio: varchar(500)
