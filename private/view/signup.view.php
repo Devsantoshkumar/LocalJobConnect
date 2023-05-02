@@ -31,6 +31,7 @@ $this->view("includes/navBar");
                                     <input type="text" name="firstname" class="form-control"
                                         placeholder="Enter your First Name">
                                 </div>
+
                                 <div class="mb-3">
                                     <label class="form-label">Enter Your Last Name</label>
                                     <input type="text" name="lastname" class="form-control"
