@@ -7,6 +7,23 @@ class Signup extends Controller
 
         $errors = [];
 
+        if (count($_POST) > 0) {
+
+            $user = new User();
+
+            if ($user->validate($_POST)) {
+
+                $firstname = $_POST['firstname'];
+                $lastname = $_POST['lastname'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+
+                $user->insert($_POST);
+
+            } else {
+                $errors = $user->errors;
+            }
+        }
 
         $this->view("signup", ['errors' => $errors]);
     }

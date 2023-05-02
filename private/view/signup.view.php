@@ -27,13 +27,14 @@ $this->view("includes/navBar");
                             <form action="#" autocomplete="off" method="post">
 
                                 <div class="mb-3">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Enter your name">
+                                    <label class="form-label">Enter Your First Name</label>
+                                    <input type="text" name="firstname" class="form-control"
+                                        placeholder="Enter your First Name">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Phone Number</label>
-                                    <input type="text" name="phno" class="form-control"
-                                        placeholder="Enter your Phone Number">
+                                    <label class="form-label">Enter Your Last Name</label>
+                                    <input type="text" name="lastname" class="form-control"
+                                        placeholder="Enter your Last Name">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
@@ -43,11 +44,6 @@ $this->view("includes/navBar");
                                 <div class="mb-3">
                                     <label class="form-label">Password</label>
                                     <input type="password" name="password" class="form-control"
-                                        placeholder="At least 6 characters">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Confirm Password</label>
-                                    <input type="password" name="conpassword" class="form-control"
                                         placeholder="At least 6 characters">
                                 </div>
                                 <p class="card-text">Already have an account?<a

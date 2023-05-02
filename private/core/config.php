@@ -3,7 +3,7 @@
 /////////////////////////////////////////
 
 
-define("DBNAME","myweb");
+define("DBNAME","local_job_hire");
 define("DBHOST","localhost");
 define("DBUSER","root");
 define("DBPASSWORD","");
