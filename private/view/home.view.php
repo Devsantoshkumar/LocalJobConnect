@@ -33,7 +33,7 @@ $this->view("includes/navbar");
 
     <section class="container-fluid my-5">
         <div class="container">
-            <div class="row">
+            <div class="row mb-5">
                 <h4 class="work-process-heading">How It <span style="color:var(--green-color);">Works</span></h4>
             </div>
             <div class="row mb-3">
@@ -68,6 +68,8 @@ $this->view("includes/navbar");
             </div>
         </div>
     </section>
+
+    <!-- Working Process Section End -->
 
     <!-- Job Categories Section Start -->
 
@@ -422,7 +424,8 @@ $this->view("includes/navbar");
     <!-- Client Section Start -->
 
 
+    <?php
 
-    <!-- Working Process Section End -->
+    $this->view("includes/footer");
 
-    <?php $this->view("includes/footer"); ?>
+    ?>
