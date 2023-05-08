@@ -11,7 +11,7 @@ class Signup extends Controller
 
             $user = new User();
 
-            if ($user->validate($_POST)) {
+            if ($user->validate($_POST)){
 
                 $firstname = $_POST['firstname'];
                 $lastname = $_POST['lastname'];
