@@ -85,7 +85,7 @@ class User extends Model
 
 
     public function loginvalidate(){
-        if(empty($name) || empty($email) || empty($password))
+        if(empty($name) || empty($email) || empty($password));  
     }
 }
 
