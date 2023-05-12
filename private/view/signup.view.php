@@ -48,7 +48,7 @@ $this->view("includes/navBar");
                                         placeholder="At least 6 characters">
                                 </div>
                                 <p class="card-text">Already have an account?<a
-                                        href="http://localhost/LOCALJOBCONNECT/signin" class="text-decoration-none">Sign
+                                        href="<?= BASE ?>signin" class="text-decoration-none">Sign
                                         in</a></p>
                                 <p class="card-text">By creating an account or logging in, you agree to LOCAL JOB
                                     CONNECT <a href="#" class="text-decoration-none">Conditions

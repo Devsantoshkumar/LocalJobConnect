@@ -2,9 +2,6 @@
 
 class User extends Model
 {
-    protected $table = "users";
-    protected $errors = [];
-    
     protected $allowedColumns = [
         'firstname',
         'lastname',
@@ -40,7 +37,7 @@ class User extends Model
         if (empty($data['firstname'])) {
             $this->errors['firstname'] = "First Name is Required";
         }
-   
+
         if (empty($data['lastname'])) {
             $this->errors['lastname'] = "Last Name is Required";
         }
@@ -81,11 +78,10 @@ class User extends Model
         return $data;
     }
 
-
-
-
-    public function loginvalidate(){
-        if(empty($name) || empty($email) || empty($password));  
+    public function loginvalidate()
+    {
+        if (empty($name) || empty($email) || empty($password))
+            ;
     }
 }
 
