@@ -18,10 +18,10 @@ $this->view("includes/navbar");
         </div>
         <div class="container-fluid mx-md-5">
             <form class="d-flex input-group">
-                <span class="input-group-text bg-success" id="basic-addon1"><i
+                <span class="input-group-text link-btn fw-bold" id="basic-addon1"><i
                         class="fa-solid fa-magnifying-glass text-white"></i></span>
                 <input class="form-control me-2" type="search" class="" placeholder="Search" aria-label="Search">
-                <button class="btn btn-success" type="submit">Search</button>
+                <button class="btn link-btn fw-bold" type="submit">Search</button>
             </form>
         </div>
     </div>
