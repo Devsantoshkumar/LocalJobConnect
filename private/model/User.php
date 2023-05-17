@@ -2,6 +2,9 @@
 
 class User extends Model
 {
+    protected $table = "users";
+    public $errors = [];
+
     protected $allowedColumns = [
         'firstname',
         'lastname',
@@ -34,11 +37,11 @@ class User extends Model
     {
         $this->errors = [];
 
-        if (empty($data['firstname'])) {
+        if (empty($data['firstname']) || !preg_match('/^[a-zA-Z]+$/', $data['firstname'])) {
             $this->errors['firstname'] = "First Name is Required";
         }
 
-        if (empty($data['lastname'])) {
+        if (empty($data['lastname']) || !preg_match('/^[a-zA-Z]+$/', $data['lastname'])) {
             $this->errors['lastname'] = "Last Name is Required";
         }
 
@@ -57,11 +60,15 @@ class User extends Model
         }
 
         if (isset($data['password'])) {
-            if (empty($data['password'])) {
-                $this->errors['password'] = "Password is Required";
+            if (empty($data['password']) || !preg_match('/^[a-zA-Z0-1@$%]+$/', $data['password'])) {
+                $this->errors['password'] = "Password is Required and It required at least a number or special character";
             }
         } else {
             unset($data['password']);
+        }
+
+        if (strlen($data['password'] < 5)) {
+            $this->errors['password'] = "At least 6 Character are required in the password";
         }
 
         if (count($this->errors) == 0) {
@@ -80,8 +87,8 @@ class User extends Model
 
     public function loginvalidate()
     {
-        if (empty($name) || empty($email) || empty($password)){
-            
+        if (empty($name) || empty($email) || empty($password)) {
+            $this->errors['login'] = "Enter valid Email and Password";
         }
     }
 }

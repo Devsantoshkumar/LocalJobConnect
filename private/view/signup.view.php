@@ -23,6 +23,15 @@ $this->view("includes/navBar");
                     <div class="col-md-6 pt-3">
                         <h4 class="card-header heading-text heading-color fw-bold border-0 bg-white text-center">Sign Up
                         </h4>
+                        <?php if (count($errors) > 0): ?>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Error!</strong>
+                                <?php foreach ($errors as $errors): ?><br>
+                                    <?= $errors ?>
+                                <?php endforeach; ?>
+                                <span type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></span>
+                            </div>
+                        <?php endif; ?>
                         <div class="card-body">
                             <form action="#" autocomplete="off" method="post">
 
@@ -47,9 +56,9 @@ $this->view("includes/navBar");
                                     <input type="password" name="password" class="form-control"
                                         placeholder="At least 6 characters">
                                 </div>
-                                <p class="card-text">Already have an account?<a
-                                        href="<?= BASE ?>signin" class="text-decoration-none">Sign
-                                        in</a></p>
+                                <p class="card-text">Already have an account?<a href="<?= BASE ?>signin"
+                                        class="text-decoration-none">Sign in</a>
+                                </p>
                                 <p class="card-text">By creating an account or logging in, you agree to LOCAL JOB
                                     CONNECT <a href="#" class="text-decoration-none">Conditions
                                         of Use</a>and <a href="#" class="text-decoration-none">Privacy Policy.</a>

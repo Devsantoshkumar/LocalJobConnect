@@ -82,3 +82,15 @@ nav {
 }
 
 /* Job Categories Section End */
+
+/* PROFILE SECTION START */
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: var(--white-color);
+    background-color: var(--green-color);
+}
+.dropdown-menu-start[data-bs-popper]{
+    left: -130px;
+}
+
+/* PROFILE SECTION END */

@@ -211,19 +211,21 @@
     width: 230px;
     height: 230px;
 }
-.community-image img{
+
+.community-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transform: scale(1);
     transition: all .5s ease-in;
 }
-.community-box:hover img{
+
+.community-box:hover img {
     transform: scale(1.1);
     transition: all .5s ease-in;
 }
 
-.community-text{
+.community-text {
     position: absolute;
     top: 140px;
     left: 25px;
@@ -232,10 +234,121 @@
     font-family: var(--poppins-font-family);
     color: var(--white-color);
 }
+
 /* Community Section End */
 
 
+/* PROFILE SECTION START */
 
+/* PROFILE NAV START */
+
+.profile-nav {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+.profile-icon {
+    margin: 0px 20px;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+
+.profile-icon a i {
+    font-size: 20px;
+    color: var(--black-color);
+    transition: all .5s ease-in-out;
+    padding: 10px;
+    opacity: 1;
+}
+
+.profile-icon:hover {
+    background-color: var(--yellow-color);
+    transition: all .5s ease-in-out;
+    border-radius: 10%;
+    opacity: .4;
+    outline: 0;
+    scale: 1.2;
+}
+
+.profile-icon a:hover i {
+    opacity: 1;
+    color: var(--black-blue-color);
+}
+
+.buy-btn {
+    border: 2px solid var(--green-color);
+    font-family: var(--poppins-font-family);
+    color: var(--black-color);
+    width: 150px;
+    height: 40px;
+    margin: 0px 10px;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.buy-btn:hover {
+    background-color: var(--green-color);
+    color: var(--white-color);
+    border: none;
+    outline: none;
+}
+
+/* PROFILE NAV END */
+
+/* PROFILE MAIN SECTION START */
+
+.profile-section {
+    width: 440px;
+    height: 380px;
+    margin: 0px 20px;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.profile-card {
+    width: 300px;
+    height: 100px;
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    /* border: 2px solid red; */
+    border-radius: 50%;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-card a {
+    color: var(--black-color);
+    font-family: var(--opensans-font-family);
+    font-weight: 700;
+}
+.profile-card-list li{
+    margin: 5px 10px;
+}
+
+.profile-content{
+    width: 20%;
+    border: 2px solid red;
+    height: 300px;
+}
+
+/* PROFILE MAIN SECTION END */
+
+
+/* PROFILE SECTION END */
 
 /* FOOTER SECTION Start */
 
