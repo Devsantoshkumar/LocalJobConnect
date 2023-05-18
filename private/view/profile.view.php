@@ -22,7 +22,9 @@ $this->view("profileNav");
             <div class="profile-img rounded-circle">
                 <img src="assets\image\employee (4).jpg" class="image-fluid" alt="image">
             </div>
-            <a href="#" class="text-decoration-none ms-2">jatinyadav08</a>
+            <a href="#" class="text-decoration-none ms-2">
+                <?= Auth::user('firstname') ?>
+            </a>
             <span class="ms-5">N/A</span>
         </div>
         <hr>

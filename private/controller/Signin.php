@@ -16,7 +16,7 @@ class Signin extends Controller
 
                 if (password_verify($_POST['password'], $row->password)) {
 
-                    $this->redirect("home");
+                    $this->redirect("profile");
 
                 } else {
                     $errors['password'] = 'Password is invalid';

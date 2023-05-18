@@ -59,7 +59,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
-                <li class="profile-icon">
+                <!-- <li class="profile-icon">
                     <a href="<?= BASE ?>profile" class="text-decoration-none">
                         <i class="fa-regular fa-bell rounded-circle"></i>
                     </a>
@@ -73,13 +73,13 @@
                 <li class="profile-icon"><a href="<?= BASE ?>profile" class="text-decoration-none">
                         <i class="fa-regular fa-circle-question"></i>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="nav-item dropdown">
                     <div class="btn-group">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-user"></i>
+                        <a class="nav-link dropdown-toggle" href="<?= BASE ?>profile" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <?= Auth::user('firstname') ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-start">
                             <li class="m-auto"><a class="dropdown-item buy-btn" href="#">Switch to Buying</a></li>
@@ -100,7 +100,8 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Logout <i class="fa-solid fa-power-off ms-2"></i></a>
+                            <li><a class="dropdown-item" href="<?= BASE ?>">Logout <i
+                                        class="fa-solid fa-power-off ms-2"></i></a>
                             </li>
                         </ul>
                     </div>

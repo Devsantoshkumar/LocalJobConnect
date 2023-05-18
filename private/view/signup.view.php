@@ -37,24 +37,24 @@ $this->view("includes/navBar");
 
                                 <div class="mb-3">
                                     <label class="form-label">Enter Your First Name</label>
-                                    <input type="text" name="firstname" class="form-control"
-                                        placeholder="Enter your First Name">
+                                    <input type="text" value="<?= get_val('firstname') ?>" name="firstname"
+                                        class="form-control" placeholder="Enter your First Name">
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Enter Your Last Name</label>
-                                    <input type="text" name="lastname" class="form-control"
-                                        placeholder="Enter your Last Name">
+                                    <input type="text" value="<?= get_val('lastname') ?>" name="lastname"
+                                        class="form-control" placeholder="Enter your Last Name">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control"
-                                        placeholder="abcd123@gmail.com">
+                                    <input type="email" value="<?= get_val('email') ?>" name="email"
+                                        class="form-control" placeholder="abcd123@gmail.com">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control"
-                                        placeholder="At least 6 characters">
+                                    <input type="password" value="<?= get_val('password') ?>" name="password"
+                                        class="form-control" placeholder="At least 6 characters">
                                 </div>
                                 <p class="card-text">Already have an account?<a href="<?= BASE ?>signin"
                                         class="text-decoration-none">Sign in</a>

@@ -60,7 +60,7 @@ class User extends Model
         }
 
         if (isset($data['password'])) {
-            if (empty($data['password']) || !preg_match('/^[a-zA-Z0-1@$%]+$/', $data['password'])) {
+            if (empty($data['password']) || !preg_match('/^[a-zA-Z0-9@$%]+$/', $data['password'])) {
                 $this->errors['password'] = "Password is Required and It required at least a number or special character";
             }
         } else {

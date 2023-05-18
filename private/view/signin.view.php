@@ -21,9 +21,19 @@ $this->view("includes/navBar");
                         <img src="assets\image\signin-imagee1.jpg" class="img-fluid rounded-start h-100" alt="image">
                     </div>
                     <div class="col-md-6 pt-3">
-                        <h4 class="card-header heading-text heading-color fw-bold border-0 bg-white text-center mb-3">Sign In
+                        <h4 class="card-header heading-text heading-color fw-bold border-0 bg-white text-center mb-3">
+                            Sign In
                         </h4>
                         <div class="card-body">
+                            <?php if (count($errors) > 0): ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong>Error!</strong>
+                                    <?php foreach ($errors as $errors): ?><br>
+                                        <?= $errors ?>
+                                    <?php endforeach; ?>
+                                    <span type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></span>
+                                </div>
+                            <?php endif; ?>
                             <ul class="list-unstyled d-flex align-item-center justify-content-center">
                                 <li class="footer-icon">
                                     <a href="#!" class="text-decoration-none rounded-circle"><i
