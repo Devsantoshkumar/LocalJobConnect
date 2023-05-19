@@ -6,6 +6,10 @@
     --ubuntu-font-family: 'Ubuntu', sans-serif;
 }
 
+body{
+    background-color: var(--bodyColor);
+}
+
 .heading-text {
     font-family: var(--opensans-font-family);
 }

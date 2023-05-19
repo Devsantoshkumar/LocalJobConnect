@@ -79,7 +79,13 @@
                     <div class="btn-group">
                         <a class="nav-link dropdown-toggle" href="<?= BASE ?>profile" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <?= Auth::user('firstname') ?>
+                            <?php 
+                                if(Auth::loggedIn()){
+                                    echo Auth::user('firstname');
+                                }else{
+                                    echo "No Name";
+                                }
+                            ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-start">
                             <li class="m-auto"><a class="dropdown-item buy-btn" href="#">Switch to Buying</a></li>
