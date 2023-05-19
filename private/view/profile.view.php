@@ -17,7 +17,7 @@ $this->view("profileNav");
 
 
 <section class="container-fluid my-5">
-    <div class="profile-section card bg-white shadow">
+    <div class="profile-section card border-0 p-3 bg-white shadow">
         <div class="profile-card">
             <div class="profile-img rounded-circle">
                 <img src="assets\image\employee (4).jpg" class="image-fluid" alt="image">

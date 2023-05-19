@@ -59,7 +59,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav">
-                <!-- <li class="profile-icon">
+                <li class="profile-icon">
                     <a href="<?= BASE ?>profile" class="text-decoration-none">
                         <i class="fa-regular fa-bell rounded-circle"></i>
                     </a>
@@ -73,7 +73,7 @@
                 <li class="profile-icon"><a href="<?= BASE ?>profile" class="text-decoration-none">
                         <i class="fa-regular fa-circle-question"></i>
                     </a>
-                </li> -->
+                </li>
 
                 <li class="nav-item dropdown">
                     <div class="btn-group">
