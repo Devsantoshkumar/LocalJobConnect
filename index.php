@@ -15,7 +15,6 @@ error_reporting(ERROR_REPORTING_LEVEL);
 
 //////////////////////////////////////
 
-
 ///////////////////
 
 $app = new App();

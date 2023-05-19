@@ -16,6 +16,8 @@ class Signin extends Controller
 
                 if (password_verify($_POST['password'], $row->password)) {
 
+                    Auth::authenticate($row);
+
                     $this->redirect("profile");
 
                 } else {
