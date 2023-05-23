@@ -106,7 +106,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="<?= BASE ?>">Logout <i
+                            <li><a class="dropdown-item" href="<?= BASE ?>logout">Logout <i
                                         class="fa-solid fa-power-off ms-2"></i></a>
                             </li>
                         </ul>

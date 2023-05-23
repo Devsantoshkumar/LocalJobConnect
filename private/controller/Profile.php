@@ -10,6 +10,9 @@ class Profile extends Controller
     {
 
         $errors = [];
+        if (!Auth::loggedIn()) {
+            $this->redirect("signin");
+        }
 
         $this->view("profile", ['errors' => $errors]);
     }

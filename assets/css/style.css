@@ -359,11 +359,82 @@
     box-shadow: 0 0 0 0.25rem rgba(13, 253, 41, 0.25);
 }
 
+.profile-content-list {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.profile-content-list li p {
+    text-align: center;
+    padding: 10px;
+    font-family: var(--ubuntu-font-family);
+}
+
+.profile-list-img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+.profile-list-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-content-list li a {
+    text-align: center;
+    font-family: var(--poppins-font-family);
+    color: var(--white-color);
+    background-color: var(--green-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
 
 /* PROFILE MAIN SECTION END */
 
 
 /* PROFILE SECTION END */
+
+/* Explore Section Start */
+
+
+.explore-img {
+    width: 260px;
+    height: 230px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.explore-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.user-img {
+    width: 40px;
+    height: 40px;
+}
+
+.user-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.job-category .card {
+    transition: all 0.5s ease-in-out;
+}
+
+.job-category .card:hover {
+    transform: scale(1.1);
+}
+
+/* Explore Section End */
 
 /* FOOTER SECTION Start */
 
