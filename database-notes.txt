@@ -25,4 +25,5 @@ users{
     city_id: varchar(50)
     skills_id: varchar(50)
     educations_id: varchar(50)
+    rank: varchar(100)-> default(normal)
 }

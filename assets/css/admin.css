@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+:root{
+    --fontFamilyPoppins: 'Poppins', sans-serif;
+    --fontFamilyOpensans: 'Open Sans', sans-serif;
+    --darkYellow: #f0932b;
+    --transYellow: rgba(235, 175, 64, 0.205);
+    --lightPink: #F34770;
+    --transPink: rgba(233, 73, 156, 0.205);
+    --darkBlue: #30336b;
+    --transBlue: rgba(73, 89, 233, 0.205);
+    --darkGreen: #1dd1a1;
+    --transGreen: rgba(73, 233, 198, 0.205);
+    --white: #ffffff;
+    --black: #000000;
+    --background: #F8F7FA;
+    --hoverGray: #FEFEFF;
+    --indico: #7367F0;
+    --orange: #FF9F43;
+    --grayLightText: #BBB8C0;
+    --grayDarkText: #605D6B;
+    --grayLightHeadingText: #99979F;
+}
+
+body{
+    background-color: var(--background);
+}
+
+/* admin dashboard style start */
+
+.admin-wrapper{
+    display: flex;
+}
+
+.sidebar{
+    flex-basis: 260px;
+    flex-shrink: 0;
+    position: relative;
+      
+}
+
+.sidebar-content{
+    background-color: var(--white);
+    height: 100vh; 
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.content{
+    flex-grow: 1;
+    min-height: 1000px; 
+}
+
+.topbar{
+    top: 16px;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0;
+    vertical-align: 0;
+    content: "";
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.toggleProfile{
+    width: 50px;
+    height: 50px;
+}
+
+.toggleProfile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dropdown-item:hover{
+    background-color: transparent;
+  }
+/* admin dashboard style end */
+
+/* admin sidebar style start */
+.dashboard-logo span{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.dashboard-logo span img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar-menus{
+    list-style: none;
+}
+.sidebar-menus a{
+    color: var(--grayLightHeadingText);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar-menus a:hover{
+    color: var(--darkGreen);
+    background-color: var(--transGreen);
+}
+
+.sidebar-menus span:first-child{
+    font-size: 20px;
+}
+
+.sidebar-menus a .fa-solid{
+    color: var(--grayDarkText);
+    font-size: 13px;
+}
+
+.sub-items{
+    list-style: none;
+}
+.sub-items li a{
+    font-size: 12px;
+    text-transform: uppercase;
+    border-bottom: 1px dotted var(--grayLightText);
+}
+
+.sub-items li:last-child a{
+    border-bottom: none;
+}
+.sub-items li a i{
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.sub-items li a:hover{
+    background-color: transparent;
+}
+/* admin sidebar style end */
+
+
+/* User page */
+.userCardTitle span:nth-child(2){
+    background-color: var(--transPink);
+    color: var(--lightPink);
+}
+
+.tableDataHeading{
+    font-size: 13px;
+}
+
+.tableData{
+   font-size: 14px;
+   vertical-align: middle;
+}
+
+.errorMsg{
+    top: 75px;
+    left: 2px;
+}

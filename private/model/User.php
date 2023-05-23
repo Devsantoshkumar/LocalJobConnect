@@ -24,6 +24,7 @@ class User extends Model
         'state_id',
         'city_id',
         'skills_id',
+        'rank',
         'educations_id'
     ];
 
