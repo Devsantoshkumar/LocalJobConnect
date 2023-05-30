@@ -92,7 +92,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="<?= BASE ?>userprofile">Profile</a></li>
+                            <li><a class="dropdown-item" href="<?= BASE ?>userprofile/<?=Auth::user('users_id')?>">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
                             <li><a class="dropdown-item" href="#">Sitting</a></li>
                             <li><a class="dropdown-item" href="#">Billing</a></li>

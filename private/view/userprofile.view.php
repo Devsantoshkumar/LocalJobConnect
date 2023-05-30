@@ -9,17 +9,18 @@ $this->view("includes/profileNav");
 
 <!-- For the black space -->
 <section class="container-fluid profile-nav">
-
+   
 </section>
 
 <!-- User Profile Main Section Start -->
 
 <section class="container-fluid my-4">
+    <?php if($rows): ?>
     <div class="row">
         <div class="col-3 card h-100 ms-5 border-0 px-4 py-3 shadow-sm">
             <div class="m-auto">
                 <div class="userprofile-img mb-3">
-                    <img src="assets\image\employee (1).jpg" alt="image">
+                    <img src="<?=ASSETS ?>image/<?=$rows[0]->image; ?>" alt="image">
                 </div>
                 <span class="ms-3">
                     <a href="#" class="text-decoration-none">
@@ -128,6 +129,7 @@ $this->view("includes/profileNav");
             </div>
         </div>
     </div>
+    <?php endif; ?>
 </section>
 
 <!-- User Profile Main Section End -->

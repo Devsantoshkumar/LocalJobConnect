@@ -4,15 +4,22 @@
 
 class Userprofile extends Controller
 {
-    function index()
-    {
-        $errors = [];
-
+    function __construct(){
         if (!Auth::loggedIn()) {
             $this->redirect("signin");
         }
+    }
 
-        $this->view("userprofile", ['errors' => $errors]);
+
+    function index($id=NULL)
+    {
+        $errors = [];
+
+        $user = new User();
+
+        $data = $user->where("users_id",$id);
+        
+        $this->view("userprofile", ['errors' => $errors,'rows'=>$data]);
     }
 }
 

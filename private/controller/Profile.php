@@ -6,15 +6,23 @@
 class Profile extends Controller
 {
 
-    public function index()
-    {
-
-        $errors = [];
+    function __construct(){
         if (!Auth::loggedIn()) {
             $this->redirect("signin");
         }
+    }
 
-        $this->view("profile", ['errors' => $errors]);
+    public function index($id=NULL)
+    {
+
+        $errors = [];
+
+
+        $user = new User();
+
+        $data = $user->where('users_id', $id);
+
+        $this->view("profile", ['errors' => $errors,'row'=>$data]);
     }
 }
 

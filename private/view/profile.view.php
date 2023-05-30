@@ -15,14 +15,14 @@ $this->view("includes/profileNav");
 </section>
 
 
-
-
 <section class="container-fluid my-4">
     <div class="row">
+        <?php if($row): ?>
+
         <div class="col-3 card h-75 border-0 p-4 shadow-sm">
             <div class="d-flex flex-row align-items-center gap-4 p-4">
                 <div class="profile-img">
-                    <img src="assets\image\employee (1).jpg" alt="image">
+                    <img src="<?=ASSETS ?>image/<?=$row[0]->image; ?>" alt="image">
                 </div>
                 <span>
                     <a href="#" class="text-decoration-none">
@@ -67,6 +67,7 @@ $this->view("includes/profileNav");
                 </li>
             </ul>
         </div>
+        <?php endif; ?>
         <div class="col">
             <div class="d-flex flex-row justify-content-between align-items-center card border-0 p-4 shadow-sm">
                 <h1 class="fs-5 profile-content-head">Active Orders - 0($0)</h1>
