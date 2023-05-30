@@ -403,7 +403,7 @@
 
 .explore-img {
     width: 260px;
-    height: 230px;
+    height: 173px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -492,3 +492,52 @@ footer {
 }
 
 /* Footer Section End */
+
+/* User Profile Section Start */
+
+.userprofile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.userprofile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.userprofile-img:hover {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.2);
+}
+
+.card-hover span a {
+    color: var(--black-color);
+}
+
+.card-hover:hover {
+    cursor: pointer;
+}
+
+.card-hover:hover span a {
+    color: var(--green-color);
+}
+
+.user-profile-text {
+    font-size: 15px;
+    font-family: var(--opensans-font-family);
+}
+.user-profile-list li {
+    display: flex;
+    justify-content: space-between;
+}
+.user-profile-list li p{
+  font-family: var(--ubuntu-font-family);
+  font-weight: bold;
+}
+
+/* User Profile Section End */

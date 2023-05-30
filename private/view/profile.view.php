@@ -3,7 +3,7 @@
 <?php
 
 $this->view("includes/header");
-$this->view("profileNav");
+$this->view("includes/profileNav");
 
 ?>
 
