@@ -5,16 +5,34 @@
 
 class Editprofile extends Controller
 {
-    function index()
+
+    function __construct()
+    {
+        if (!Auth::loggedIn()) {
+            $this->redirect("signin");
+        }
+    }
+    function index($id = null)
     {
 
         $errors = [];
 
-        if (!Auth::loggedIn()) {
-            $this->redirect("signin");
+
+        $user = new User();
+
+        if (count($_POST) > 0) {
+
+
+            $user->update($id, $_POST);
+
         }
 
-        $this->view("editprofile", ['errors' => $errors]);
+        $data = $user->where("users_id", $id);
+
+
+        // show($data);
+
+        $this->view("editprofile", ['errors' => $errors, 'rows' => $data]);
     }
 }
 

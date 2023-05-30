@@ -3,7 +3,7 @@
 <nav class="navbar fixed-top navbar-expand-lg bg-white shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?= BASE ?>">
-            <img src="assets\image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30">
+            <img src="<?= ASSETS ?>image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,8 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?= BASE ?>profile">Dashboard</a>
+                    <a class="nav-link" aria-current="page"
+                        href="<?= BASE ?>profile/<?= Auth::user("users_id"); ?>">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -25,7 +26,8 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item" href="#">Gig</a></li>
-                        <li><a class="dropdown-item" href="<?= BASE ?>userprofile">Profile</a></li>
+                        <li><a class="dropdown-item"
+                                href="<?= BASE ?>userprofile/<?= Auth::user("users_id"); ?>">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -79,12 +81,12 @@
                     <div class="btn-group">
                         <a class="nav-link dropdown-toggle" href="<?= BASE ?>profile" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <?php 
-                                if(Auth::loggedIn()){
-                                    echo Auth::user('firstname');
-                                }else{
-                                    echo "No Name";
-                                }
+                            <?php
+                            if (Auth::loggedIn()) {
+                                echo Auth::user('firstname');
+                            } else {
+                                echo "No Name";
+                            }
                             ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-start">
@@ -92,7 +94,8 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="<?= BASE ?>userprofile/<?=Auth::user('users_id')?>">Profile</a></li>
+                            <li><a class="dropdown-item"
+                                    href="<?= BASE ?>userprofile/<?= Auth::user('users_id') ?>">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
                             <li><a class="dropdown-item" href="#">Sitting</a></li>
                             <li><a class="dropdown-item" href="#">Billing</a></li>

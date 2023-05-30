@@ -17,56 +17,56 @@ $this->view("includes/profileNav");
 
 <section class="container-fluid my-4">
     <div class="row">
-        <?php if($row): ?>
+        <?php if ($row): ?>
 
-        <div class="col-3 card h-75 border-0 p-4 shadow-sm">
-            <div class="d-flex flex-row align-items-center gap-4 p-4">
-                <div class="profile-img">
-                    <img src="<?=ASSETS ?>image/<?=$row[0]->image; ?>" alt="image">
+            <div class="col-3 card h-75 border-0 p-4 shadow-sm">
+                <div class="d-flex flex-row align-items-center gap-4 p-4">
+                    <div class="profile-img">
+                        <img src="<?= ASSETS ?>image/<?= $row[0]->image; ?>" alt="image">
+                    </div>
+                    <span>
+                        <a href="#" class="text-decoration-none">
+                            <?php
+
+                            if (Auth::loggedIn()) {
+                                echo Auth::user('firstname');
+                            } else {
+                                echo "No Name";
+                            }
+                            ?>
+                        </a>
+                    </span>
                 </div>
-                <span>
-                    <a href="#" class="text-decoration-none">
-                        <?php
-
-                        if (Auth::loggedIn()) {
-                            echo Auth::user('firstname');
-                        } else {
-                            echo "No Name";
-                        }
-                        ?>
-                    </a>
-                </span>
-            </div>
-            <hr>
-            <ul class="profile-list list-unstyled">
-                <li>
-                    <a href="#">Inbox Response Rate</a>
-
-                    <a href="#">100%</a>
-                </li>
-                <li>
-                    <a href="#">Inbox Response Time</a>
-                    <a href="#">100%</a>
-                </li>
-                <li>
-                    <a href="#">Order Response Rate</a>
-                    <a href="#">100%</a>
-                </li>
-                <li>
-                    <a href="#">Delivered On Time</a>
-                    <a href="#">100%</a>
-                </li>
-                <li>
-                    <a href="#">Order Completion</a>
-                    <a href="#">100%</a>
-                </li>
                 <hr>
-                <li>
-                    <a href="#">Total Earning</a>
-                    <a href="#">US $0</a>
-                </li>
-            </ul>
-        </div>
+                <ul class="profile-list list-unstyled">
+                    <li>
+                        <a href="#">Inbox Response Rate</a>
+
+                        <a href="#">100%</a>
+                    </li>
+                    <li>
+                        <a href="#">Inbox Response Time</a>
+                        <a href="#">100%</a>
+                    </li>
+                    <li>
+                        <a href="#">Order Response Rate</a>
+                        <a href="#">100%</a>
+                    </li>
+                    <li>
+                        <a href="#">Delivered On Time</a>
+                        <a href="#">100%</a>
+                    </li>
+                    <li>
+                        <a href="#">Order Completion</a>
+                        <a href="#">100%</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="#">Total Earning</a>
+                        <a href="#">US $0</a>
+                    </li>
+                </ul>
+            </div>
         <?php endif; ?>
         <div class="col">
             <div class="d-flex flex-row justify-content-between align-items-center card border-0 p-4 shadow-sm">
@@ -89,9 +89,9 @@ $this->view("includes/profileNav");
                 <ul class="list-unstyled profile-content-list">
                     <li>
                         <div class="profile-list-img">
-                            <img src="assets\image\profile-section (1).png" alt="image">
+                            <img src="<?= ASSETS ?>image\profile-section (1).png" alt="image">
                         </div>
-                        <h1 class="fs-6 profile-heading-head text-center">Get Noticed</h1>
+                        <h1 class="fs-5 profile-heading-head text-center">Get Noticed</h1>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius iure veritatis rerum ratione
                             et recusandae, necessitatibus obcaecati accusantium! Magni, hic?
@@ -102,9 +102,9 @@ $this->view("includes/profileNav");
                     <li>
                     <li>
                         <div class="profile-list-img">
-                            <img src="assets\image\profile-section (2).png" alt="image">
+                            <img src="<?= ASSETS ?>image/profile-section (2).png" alt="image">
                         </div>
-                        <h1 class="fs-6 profile-heading-head text-center">Get More Skill & Exposure</h1>
+                        <h1 class="fs-5 profile-heading-head text-center">Get More Skill & Exposure</h1>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius iure veritatis rerum ratione
                             et recusandae, necessitatibus obcaecati accusantium! Magni, hic?
@@ -115,9 +115,9 @@ $this->view("includes/profileNav");
                     <li>
                     <li>
                         <div class="profile-list-img">
-                            <img src="assets\image\profile-section (3).png" alt="image">
+                            <img src="<?= ASSETS ?>image\profile-section (3).png" alt="image">
                         </div>
-                        <h1 class="fs-6 profile-heading-head text-center">Become a Successful Seller!</h1>
+                        <h1 class="fs-5 profile-heading-head text-center">Become a Successful Seller!</h1>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius iure veritatis rerum ratione
                             et recusandae, necessitatibus obcaecati accusantium! Magni, hic?
