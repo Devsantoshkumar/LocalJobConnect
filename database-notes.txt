@@ -27,3 +27,7 @@ users{
     educations_id: varchar(50)
     rank: varchar(100)-> default(normal)
 }
+
+
+table 2:
+--------
