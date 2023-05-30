@@ -1,20 +1,21 @@
-<!-- User Profile Controller -->
+<!-- Edit Profile Controller -->
+
 
 <?php
 
-class Userprofile extends Controller
+class Editprofile extends Controller
 {
     function index()
     {
+
         $errors = [];
 
         if (!Auth::loggedIn()) {
             $this->redirect("signin");
         }
 
-        $this->view("userprofile", ['errors' => $errors]);
+        $this->view("editprofile", ['errors' => $errors]);
     }
 }
-
 
 ?>

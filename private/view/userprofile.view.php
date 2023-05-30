@@ -34,7 +34,7 @@ $this->view("includes/profileNav");
                     </a>
                 </span>
             </div>
-            <a href="#" class="text-decoration-none mt-2 text-center fw-bold link-btn">Edit Profile</a>
+            <a href="<?= BASE ?>editprofile" class="text-decoration-none mt-2 text-center fw-bold link-btn">Edit Profile</a>
             <hr>
             <ul class="profile-list list-unstyled">
                 <li>
