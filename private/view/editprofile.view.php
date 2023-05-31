@@ -3,7 +3,7 @@
 <?php
 
 $this->view("includes/header");
-$this->view("includes/profileNav");
+// $this->view("includes/profileNav");
 
 // show($rows);
 
@@ -71,9 +71,9 @@ $this->view("includes/profileNav");
                                         <select class="form-select" id="floatingSelect" name="country_id"
                                             aria-label="Floating label select example">
                                             <option selected>Select Your Country</option>
-                                            <option value="1">INDIA</option>
-                                            <option value="2">RUSSIA</option>
-                                            <option value="3">AMERICA</option>
+                                            <option value="INDIA">INDIA</option>
+                                            <option value="RUSSIA">RUSSIA</option>
+                                            <option value="AMERICA">AMERICA</option>
                                         </select>
                                         <label for="floatingSelect">Country</label>
                                     </div>
@@ -81,9 +81,9 @@ $this->view("includes/profileNav");
                                         <select class="form-select" id="floatingSelect" name="state_id"
                                             aria-label="Floating label select example">
                                             <option selected>Select Your State</option>
-                                            <option value="1">Uttar Pradesh</option>
-                                            <option value="2">Rajasthan</option>
-                                            <option value="3">Delhi</option>
+                                            <option value="UTTAR PRADESH">Uttar Pradesh</option>
+                                            <option value="RAJASTHAN">Rajasthan</option>
+                                            <option value="DELHI">Delhi</option>
                                         </select>
                                         <label for="floatingSelect">State</label>
                                     </div>
@@ -91,9 +91,9 @@ $this->view("includes/profileNav");
                                         <select class="form-select" id="floatingSelect" name="city_id"
                                             aria-label="Floating label select example">
                                             <option selected>Select Your City</option>
-                                            <option value="1">Lucknow</option>
-                                            <option value="2">Sitapur</option>
-                                            <option value="3">Hardio</option>
+                                            <option value="LUCKNOW">Lucknow</option>
+                                            <option value="SITAPUR">Sitapur</option>
+                                            <option value="HARDIO">Hardio</option>
                                         </select>
                                         <label for="floatingSelect">City</label>
                                     </div>

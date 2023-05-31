@@ -11,12 +11,14 @@ class Signup extends Controller
 
             $user = new User();
 
-            if ($user->validate($_POST)){
+            if ($user->validate($_POST)) {
 
                 $firstname = $_POST['firstname'];
                 $lastname = $_POST['lastname'];
                 $email = $_POST['email'];
                 $password = $_POST['password'];
+
+                $_POST['date'] = date("Y-m-d");
 
                 $user->insert($_POST);
 

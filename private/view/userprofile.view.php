@@ -35,7 +35,7 @@ $this->view("includes/profileNav");
                         </a>
                     </span>
                 </div>
-                <a href="<?= BASE ?>editprofile/<?= Auth::user("users_id"); ?>"
+                <a href="<?= BASE ?>userprofile/update/<?= Auth::user("users_id"); ?>"
                     class="text-decoration-none mt-2 text-center fw-bold link-btn">Edit Profile</a>
                 <hr>
                 <ul class="profile-list list-unstyled">
@@ -43,13 +43,15 @@ $this->view("includes/profileNav");
                         <p><i class="fa-solid fa-location-dot fa-bounce me-2"></i>From</p>
 
                         <p>
-                            <?= $rows[0]->country_id; ?>
+                            <?= $rows[0]->current_location; ?>
                         </p>
                     </li>
                     <li>
                         <p><i class="fa-solid fa-user-large fa-bounce me-2"></i>Member</p>
 
-                        <p>Apr 2022</p>
+                        <p>
+                            <?= date("M y", strtotime($rows[0]->date)); ?>
+                        </p>
                     </li>
                 </ul>
                 <hr>
@@ -60,8 +62,7 @@ $this->view("includes/profileNav");
                     </li>
                 </ul>
                 <p class="user-profile-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptate magni distinctio! Labore
-                    accusamus, facere fuga cumque excepturi eveniet assumenda?
+                    <?= $rows[0]->bio; ?>
                 </p>
                 <hr>
                 <ul class="user-profile-list list-unstyled">
@@ -83,12 +84,13 @@ $this->view("includes/profileNav");
                         <a href="#" class="text-decoration-none">Add New</a>
                     </li>
                 </ul>
-                <p class="user-profile-text">
-                    <i class="fa-solid fa-plus fw-bold me-2"></i> Electrician
-                </p>
-                <p class="user-profile-text">
-                    <i class="fa-solid fa-plus fw-bold me-2"></i>Plumber
-                </p>
+
+                <?php foreach ($rows as $row): ?>
+                    <p class="user-profile-text">
+                        <i class="fa-solid fa-plus fw-bold me-2"></i>
+                        <?= $row->skills_id; ?>
+                    </p>
+                <?php endforeach; ?>
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
@@ -96,13 +98,12 @@ $this->view("includes/profileNav");
                         <a href="#" class="text-decoration-none">Add New</a>
                     </li>
                 </ul>
-                <p class="user-profile-text">
-                    <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i> XII - KV IIM,
-                    Lucknow
-                </p>
-                <p class="user-profile-text">
-                    <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i>X - KV, Sitapur
-                </p>
+                <?php foreach ($rows as $row): ?>
+                    <p class="user-profile-text">
+                        <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i>
+                        <?= $row->educations_id; ?>
+                    </p>
+                <?php endforeach; ?>
             </div>
             <div class="col">
                 <div class="d-flex flex-row align-items-center card border-0 p-3 shadow-sm">
