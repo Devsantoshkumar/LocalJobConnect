@@ -107,7 +107,7 @@ class User extends Model
 
         // Checking for the type of image
 
-        if (in_array($imageType, $allowedTypes)) {
+        if (not_in_array($imageType, $allowedTypes)) {
             $this->errors['imageType'] = "Invalid Image Type";
         }
 
