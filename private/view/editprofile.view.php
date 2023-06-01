@@ -18,6 +18,17 @@ $this->view("includes/header");
     <div class="row d-flex justify-content-center">
         <div class="col-10 pb-5 pt-3">
             <div class="card border-0 shadow-sm">
+                <div class="row">
+                    <div class="col">
+                        <?php 
+                        
+                        if(count($errors)>0){
+                            show($errors);
+                        }
+                        
+                        ?>
+                    </div>
+                </div>
                 <div class="row gap-0">
                     <div class="col pt-3">
                         <h4 class="card-header heading-text heading-color fw-bold border-0 bg-white text-center mb-3">
@@ -25,9 +36,9 @@ $this->view("includes/header");
                         </h4>
                         <div class="card-body">
                             <?php if ($rows): ?>
-                                <form action="#" autocomplete="off" method="post" enctype="multipart/form-data">
+                                <form autocomplete="off" method="post" enctype="multipart/form-data">
                                     <div class="profile-img m-auto mb-3">
-                                        <img src="<?= ASSETS ?>image/<?= $rows[0]->image; ?>" alt="image">
+                                        <img src="<?=BASE ?>uploads/<?= $rows[0]->image; ?>" alt="image">
                                     </div>
                                     <div class="text-center mb-3">
                                         <input type="file" name="image">
