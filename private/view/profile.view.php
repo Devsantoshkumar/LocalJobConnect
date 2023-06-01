@@ -22,7 +22,7 @@ $this->view("includes/profileNav");
             <div class="col-3 card h-75 border-0 p-4 shadow-sm">
                 <div class="d-flex flex-row align-items-center gap-4 p-4">
                     <div class="profile-img">
-                        <img src="<?= ASSETS ?>image/<?= $row[0]->image; ?>" alt="image">
+                        <img src="<?= BASE ?>uploads/<?= $row[0]->image; ?>" alt="image">
                     </div>
                     <span>
                         <a href="#" class="text-decoration-none">
