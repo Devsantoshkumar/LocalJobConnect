@@ -33,7 +33,6 @@ class Userprofile extends Controller
 
         $userimage = $user->where("users_id", $id);
 
-
         if (count($_POST) > 0) {
 
             $allowedTypes = ["image/jpeg", "image/jpg", "image/png"];
@@ -41,10 +40,11 @@ class Userprofile extends Controller
             if ($user->fileValidate($_FILES['image'], $allowedTypes)) {
 
                 $_POST['image'] = $user->updateImage($_FILES['image'], $userimage, $id);
-                show($_POST['image']);
                 $user->update($id, $_POST);
 
                 $this->redirect("userprofile/" . Auth::user("users_id"));
+            }else{
+                $errors = $user->errors;
             }
 
         }
