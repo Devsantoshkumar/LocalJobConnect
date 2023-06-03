@@ -14,6 +14,7 @@ class Users extends Controller{
         $this->view("users",['errors'=>$errors, 'rows'=>$data, 'team'=>$team]);
     }
 
+
     function add(){
         $errors = [];
 

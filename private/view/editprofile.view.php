@@ -44,23 +44,23 @@ $this->view("includes/header");
                                         <input type="file" name="image">
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput"
+                                        <input type="text" value="<?= $rows[0]->firstname; ?>" class="form-control" id="floatingInput"
                                             placeholder="Enter the First Name" name="firstname">
                                         <label for="floatingInput">First Name</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingPassword"
+                                        <input type="text" class="form-control" value="<?= $rows[0]->lastname; ?>" id="floatingPassword"
                                             placeholder="Enter the Last Name" name="lastname">
                                         <label for="floatingPassword">Last Name</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingPassword"
+                                        <input type="text" value="<?= $rows[0]->phone; ?>" class="form-control" id="floatingPassword"
                                             placeholder="Enter your Phone Number" name="phone">
                                         <label for="floatingPassword">Phone Number</label>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <textarea class="form-control" placeholder="Enter Your Description"
-                                            id="floatingTextarea2" name="bio" style="height: 100px"></textarea>
+                                            id="floatingTextarea2" name="bio" style="height: 100px"><?= $rows[0]->bio; ?></textarea>
                                         <label for="floatingTextarea2">Bio</label>
                                     </div>
                                     <div class="form-floating mb-3">
