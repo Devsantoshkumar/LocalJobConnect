@@ -18,7 +18,7 @@ class Signin extends Controller
 
                     Auth::authenticate($row);
 
-                    $this->redirect("profile/".$row->users_id);
+                    $this->redirect("startselling/".$row->users_id);
 
                 } else {
                     $errors['password'] = 'Password is invalid';

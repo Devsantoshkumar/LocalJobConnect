@@ -64,17 +64,17 @@ $this->view("includes/header");
                                         <label for="floatingTextarea2">Bio</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingPassword"
+                                        <input type="text" class="form-control" id="floatingPassword" value="<?= $rows[0]->skills_id?>"
                                             placeholder="Enter Your Skills" name="skills_id">
                                         <label for="floatingPassword">Skills</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingPassword"
+                                        <input type="text" class="form-control" id="floatingPassword" value="<?= $rows[0]->educations_id?>"
                                             placeholder="Enter Your Qualification" name="educations_id">
                                         <label for="floatingPassword">Education</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingPassword"
+                                        <input type="text" class="form-control" id="floatingPassword" value="<?= $rows[0]->current_location?>"
                                             name="current_location" placeholder="Enter Your Current Location">
                                         <label for="floatingPassword">Current Location</label>
                                     </div>
@@ -82,9 +82,9 @@ $this->view("includes/header");
                                         <select class="form-select" id="floatingSelect" name="country_id"
                                             aria-label="Floating label select example">
                                             <option selected>Select Your Country</option>
-                                            <option value="INDIA">INDIA</option>
-                                            <option value="RUSSIA">RUSSIA</option>
-                                            <option value="AMERICA">AMERICA</option>
+                                            <option value="<?= $rows[0]->country_id?>">INDIA</option>
+                                            <option value="<?= $rows[0]->country_id?>">RUSSIA</option>
+                                            <option value="<?= $rows[0]->country_id?>">AMERICA</option>
                                         </select>
                                         <label for="floatingSelect">Country</label>
                                     </div>
@@ -92,19 +92,19 @@ $this->view("includes/header");
                                         <select class="form-select" id="floatingSelect" name="state_id"
                                             aria-label="Floating label select example">
                                             <option selected>Select Your State</option>
-                                            <option value="UTTAR PRADESH">Uttar Pradesh</option>
-                                            <option value="RAJASTHAN">Rajasthan</option>
-                                            <option value="DELHI">Delhi</option>
+                                            <option  value="<?= $rows[0]->state_id?>">Uttar Pradesh</option>
+                                            <option  value="<?= $rows[0]->state_id?>">Rajasthan</option>
+                                            <option  value="<?= $rows[0]->state_id?>">Delhi</option>
                                         </select>
                                         <label for="floatingSelect">State</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <select class="form-select" id="floatingSelect" name="city_id"
+                                        <select class="form-select" id="floatingSelect" name="city_id" value="<?= $rows[0]->city_id?>"
                                             aria-label="Floating label select example">
                                             <option selected>Select Your City</option>
-                                            <option value="LUCKNOW">Lucknow</option>
-                                            <option value="SITAPUR">Sitapur</option>
-                                            <option value="HARDIO">Hardio</option>
+                                            <option  value="<?= $rows[0]->state_id?>">Lucknow</option>
+                                            <option  value="<?= $rows[0]->state_id?>">Sitapur</option>
+                                            <option  value="<?= $rows[0]->state_id?>">Hardio</option>
                                         </select>
                                         <label for="floatingSelect">City</label>
                                     </div>
