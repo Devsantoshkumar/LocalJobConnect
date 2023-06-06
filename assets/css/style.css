@@ -72,8 +72,8 @@
 .job-category {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
-    gap: 20px;
-    padding: 20px 0px;
+    /* gap: 20px;
+    padding: 20px 0px; */
 }
 
 .job-category-box {
@@ -415,8 +415,8 @@
 }
 
 .user-img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .user-img img {
@@ -426,13 +426,13 @@
     cursor: pointer;
 }
 
-.job-category .card {
+/* .job-category .card {
     transition: all 0.5s ease-in-out;
-}
+} */
 
-.job-category .card:hover {
+/* .job-category .card:hover {
     transform: scale(1.1);
-}
+} */
 
 /* Explore Section End */
 

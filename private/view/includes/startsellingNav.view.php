@@ -12,7 +12,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <form class="d-flex mx-lg-5 mt-lg-0 mt-3 w-md-50 w-100">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="What service are you looking for today ?"
+                    aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <ul class="navbar-nav">
@@ -34,7 +35,7 @@
 
                 <li class="profile-icon">
                     <a href="<?= BASE ?>profile" class="text-decoration-none">
-                    <i class="fa-solid fa-toggle-on"></i>
+                        <i class="fa-solid fa-toggle-on"></i>
                     </a>
                 </li>
 

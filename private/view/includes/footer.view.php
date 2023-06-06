@@ -8,7 +8,7 @@
                 <div class="col-md-3 mt-md-0 mt-3">
                     <!-- Content -->
                     <a class="navbar-brand px-5" href="http://localhost/LOCALJOBCONNECT/">
-                        <img src="assets\image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30">
+                        <img src="<?= ASSETS ?>image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30">
                     </a>
                     <p class="pt-2 text-center">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolor voluptatibus sed ullam
