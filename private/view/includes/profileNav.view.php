@@ -90,7 +90,8 @@
                             ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-start">
-                            <li class="m-auto"><a class="dropdown-item buy-btn" href="#">Switch to Buying</a></li>
+                            <li class="m-auto"><a class="dropdown-item buy-btn"
+                                    href="<?= BASE ?>startselling/<?= Auth::user("users_id"); ?>">Switch to Buying</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
