@@ -25,7 +25,6 @@ $this->view("includes/profileNav");
                     <span class="ms-3">
                         <a href="#" class="text-decoration-none">
                             <?php
-
                             if (Auth::loggedIn()) {
                                 echo Auth::user('firstname');
                             } else {
