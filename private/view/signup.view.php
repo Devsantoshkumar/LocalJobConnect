@@ -53,8 +53,10 @@ $this->view("includes/navBar");
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Password</label>
-                                    <input type="password" value="<?= get_val('password') ?>" name="password"
+                                    <input type="password" id="pass" value="<?= get_val('password') ?>" name="password"
                                         class="form-control" placeholder="At least 6 characters">
+                                    <input type="checkbox" class="mt-2" name="check" id="check">
+                                    <span class="heading-text fs-6">Show password</span>
                                 </div>
                                 <p class="card-text">Already have an account?<a href="<?= BASE ?>signin"
                                         class="text-decoration-none">Sign in</a>

@@ -50,13 +50,15 @@ $this->view("includes/navBar");
                             <form action="#" autocomplete="off" method="post">
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
-                                    <input type="email" name="email" class="form-control"
-                                        placeholder="abcd123@gmail.com">
+                                    <input type="email" value="<?= get_val('email') ?>" name="email"
+                                        class="form-control" placeholder="abcd123@gmail.com">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control"
-                                        placeholder="At least 6 characters">
+                                    <input type="password" id="pass" value="<?= get_val('password') ?>" name="password"
+                                        class="form-control" placeholder="At least 6 characters">
+                                    <input type="checkbox" class="mt-2" name="check" id="check">
+                                    <span class="heading-text fs-6">Show password</span>
                                 </div>
                                 <p class="card-text">New User?<a href="<?= BASE ?>signup"
                                         class="text-decoration-none">Start here</a></p>
