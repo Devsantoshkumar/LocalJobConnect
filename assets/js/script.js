@@ -22,8 +22,14 @@ $(document).ready(function () {
 
 });
 
-// owl carousel section start
+// Show password Function
 
+check.onclick = showPassword;
 
-
-// owl carousel section end
+function showPassword() {
+  if (check.checked) {
+    pass.type = "text";
+  } else {
+    pass.type = "password";
+  }
+}
