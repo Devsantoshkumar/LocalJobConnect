@@ -1,0 +1,76 @@
+Database name:
+--------------
+local_job_hire
+
+table 1:
+--------
+users{
+    users_id: int
+    firstname: varchar(100)
+    lastname: varchar(100)
+    bio: varchar(500)
+    email: varchar(100)
+    email_varified: varchar(100)
+    phone: varchar(14)
+    password: varchar(250)
+    image: varchar(200)
+    cover: varchar(200)
+    token: varchar(70)
+    status: tinyInt-> default: 0
+    date: datetime
+    current_location: varchar(200)
+    hiring_status: varchar(50)
+    country_id: varchar(50)
+    state_id: varchar(50)
+    city_id: varchar(50)
+    skills_id: varchar(50)                  // remove this column from the database
+    educations_id: varchar(50)              // remove this column from the database
+    rank: varchar(100)-> default(normal)
+}
+
+
+table 2:
+--------
+skills{
+    skills_id: int primary_key auto_increament,
+    skill_name: varchar(100),
+    skill_description: varchar(150),
+    skill_status: tinyInt default(1),
+    user_id: int,
+    date: datetime,
+}
+
+table 3:
+--------
+educations{
+    educations_id: int primary_key auto_increament,
+    education_name: varchar(100),
+    education_description: varchar(150),
+    skill_status: tinyInt default(1),
+    user_id: int,
+    date: datetime,
+}
+
+table 4:
+--------
+experiences{
+    experiences_id: int primary_key auto_increament,
+    experience_title: varchar(100),
+    experience_description: varchar(150),
+    experience_company: varchar(100),
+    experience_start_date: varchar(50),
+    experience_end_date: varchar(50),
+    user_id: int,
+    date: datetime,
+}
+
+
+table 5:
+--------
+protfolios{
+    protfolios_id: int primary_key auto_increament,
+    protfolio_image: varchar(100),
+    protfolio_status: tinyInt default(1),
+    user_id: int,
+    date: datetime,
+}
