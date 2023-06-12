@@ -22,14 +22,14 @@ $this->view("includes/navbar");
         <p class="heading-text text-center fs-6 fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
             reiciendis.</p>
     </div>
-    <div class="job-category">
+    <div class="explore">
         <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-around align-items-center gap-4">
+            <div class="d-flex flex-row justify-content-around align-items-center gap-4 p-3">
                 <div class="user-img rounded-circle">
                     <img src="assets\image\employee (4).jpg" alt="image" class="image-fluid rounded-circle">
                 </div>
@@ -47,7 +47,7 @@ $this->view("includes/navbar");
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-around align-items-center gap-4">
+            <div class="d-flex flex-row justify-content-around align-items-center gap-4 p-3 p-3">
                 <div class="user-img rounded-circle">
                     <img src="assets\image\employee (4).jpg" alt="image" class="image-fluid rounded-circle">
                 </div>
@@ -65,7 +65,7 @@ $this->view("includes/navbar");
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-around align-items-center gap-4">
+            <div class="d-flex flex-row justify-content-around align-items-center gap-4 p-3">
                 <div class="user-img rounded-circle">
                     <img src="assets\image\employee (4).jpg" alt="image" class="image-fluid rounded-circle">
                 </div>
@@ -83,7 +83,7 @@ $this->view("includes/navbar");
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-around align-items-center gap-4">
+            <div class="d-flex flex-row justify-content-around align-items-center gap-4 p-3">
                 <div class="user-img rounded-circle">
                     <img src="assets\image\employee (4).jpg" alt="image" class="image-fluid rounded-circle">
                 </div>
@@ -101,7 +101,7 @@ $this->view("includes/navbar");
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-around align-items-center gap-4">
+            <div class="d-flex flex-row justify-content-around align-items-center gap-4 p-3">
                 <div class="user-img rounded-circle">
                     <img src="assets\image\employee (4).jpg" alt="image" class="image-fluid rounded-circle">
                 </div>
@@ -119,7 +119,7 @@ $this->view("includes/navbar");
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-around align-items-center gap-4">
+            <div class="d-flex flex-row justify-content-around align-items-center gap-4 p-3">
                 <div class="user-img rounded-circle">
                     <img src="assets\image\employee (4).jpg" alt="image" class="image-fluid rounded-circle">
                 </div>
@@ -137,7 +137,7 @@ $this->view("includes/navbar");
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-around align-items-center gap-4">
+            <div class="d-flex flex-row justify-content-around align-items-center gap-4 p-3">
                 <div class="user-img rounded-circle">
                     <img src="assets\image\employee (4).jpg" alt="image" class="image-fluid rounded-circle">
                 </div>
@@ -155,7 +155,7 @@ $this->view("includes/navbar");
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-around align-items-center gap-4">
+            <div class="d-flex flex-row justify-content-around align-items-center gap-4 p-3">
                 <div class="user-img rounded-circle">
                     <img src="assets\image\employee (4).jpg" alt="image" class="image-fluid rounded-circle">
                 </div>

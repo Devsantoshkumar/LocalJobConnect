@@ -20,16 +20,26 @@ $(document).ready(function () {
     }
   });
 
-});
+  // Scroll Script Code
 
-// Show password Function
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $("#navbar").css('background-color', 'var(--white-color)');
+    } else {
+      $("#navbar").css('background-color', 'transparent');
+    }
+  });
 
-check.onclick = showPassword;
+  // Show password code
 
-function showPassword() {
-  if (check.checked) {
-    pass.type = "text";
-  } else {
-    pass.type = "password";
+  $('#check').on('click', showPassword);
+
+  function showPassword() {
+    if ($('#check').prop('checked')) {
+      $('#pass').attr('type', 'text');
+    } else {
+      $('#pass').attr('type', 'password');
+    }
   }
-}
+
+});
