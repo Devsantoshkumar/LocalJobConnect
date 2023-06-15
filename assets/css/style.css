@@ -400,11 +400,17 @@
 
 /* Explore Section Start */
 
+.explore {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-gap: 10px;
+}
 
 .explore-img {
     width: 260px;
     height: 173px;
     border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
 }
 
 .explore-img img {
@@ -412,6 +418,11 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
+    transition: scale 400ms ease-in-out;
+}
+
+.explore-img:hover img {
+    scale: 120%;
 }
 
 .user-img {
@@ -426,13 +437,6 @@
     cursor: pointer;
 }
 
-/* .job-category .card {
-    transition: all 0.5s ease-in-out;
-} */
-
-/* .job-category .card:hover {
-    transform: scale(1.1);
-} */
 
 /* Explore Section End */
 
@@ -531,13 +535,15 @@ footer {
     font-size: 15px;
     font-family: var(--opensans-font-family);
 }
+
 .user-profile-list li {
     display: flex;
     justify-content: space-between;
 }
-.user-profile-list li p{
-  font-family: var(--ubuntu-font-family);
-  font-weight: bold;
+
+.user-profile-list li p {
+    font-family: var(--ubuntu-font-family);
+    font-weight: bold;
 }
 
 /* User Profile Section End */

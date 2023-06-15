@@ -34,7 +34,7 @@
                 </li>
 
                 <li class="profile-icon">
-                    <a href="<?= BASE ?>profile" class="text-decoration-none">
+                    <a href="<?= BASE ?>profile/<?= Auth::user("users_id"); ?>" class="text-decoration-none">
                         <i class="fa-solid fa-toggle-on"></i>
                     </a>
                 </li>
@@ -52,7 +52,8 @@
                             ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-start">
-                            <li class="m-auto"><a class="dropdown-item buy-btn" href="<?= BASE ?>profile/<?= Auth::user('users_id') ?>">Switch to Selling</a></li>
+                            <li class="m-auto"><a class="dropdown-item buy-btn"
+                                    href="<?= BASE ?>profile/<?= Auth::user('users_id') ?>">Switch to Selling</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
