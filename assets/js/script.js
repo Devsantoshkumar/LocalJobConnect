@@ -32,7 +32,7 @@ $(document).ready(function () {
 
   // Show password code
 
-  $('#check').on('click', showPassword);
+   $('#check').on('click', showPassword);
 
   function showPassword() {
     if ($('#check').prop('checked')) {
