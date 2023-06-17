@@ -41,8 +41,7 @@ $(document).ready(function () {
       $('#pass').attr('type', 'password');
     }
   }
-
-
+  
   // Skill form code
 
   const skill_form = $("#skill_form");
