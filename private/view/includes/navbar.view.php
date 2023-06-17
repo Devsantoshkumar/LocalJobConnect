@@ -27,11 +27,9 @@
                     <a class="nav-link" aria-current="page" href="<?= BASE ?>about">About Us</a>
                 </li>
             </ul>
-            <a href="<?= BASE ?>signin" class="text-decoration-none link-btn mx-2"><i
-                    class="fa-solid fa-user me-2"></i>Sign
-                In</a>
-
-            <a href="#" class="text-decoration-none link-btn">Join</a>
+            <a href="<?= BASE ?>signin" class="text-decoration-none link-btn mx-2">
+                <i class="fa-solid fa-user me-2"></i>Sign In
+            </a>
         </div>
     </div>
 </nav>
