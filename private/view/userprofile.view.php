@@ -80,7 +80,7 @@ $this->view("includes/profileNav");
                 <ul class="user-profile-list list-unstyled">
                     <li>
                         <p class="m-0 heading-text">Skills</p>
-                        <button id="skill_add" class="bg-transparent border-0">Add New</button>
+                        <button id="skill_add" class="bg-transparent text-primary border-0">Add New</button>
                     </li>
                     <li id="skill_form_box"></li>
                 </ul>
@@ -95,11 +95,12 @@ $this->view("includes/profileNav");
                 <ul class="user-profile-list list-unstyled">
                     <li>
                         <p class="m-0 heading-text">Education</p>
-                        <a href="#" class="text-decoration-none">Add New</a>
+                        <button id="education_add" class="bg-transparent text-primary border-0">Add New</button>
                     </li>
+                    <li id="education_form_box"></li>
                 </ul>
                 <?php foreach ($rows as $row): ?>
-                    <p class="user-profile-text">
+                    <p class="user-profile-text" id="education_data">
                         <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i>
                         <?= $row->educations_id; ?>
                     </p>
@@ -145,42 +146,3 @@ $this->view("includes/profileNav");
 $this->view("includes/footer");
 
 ?>
-
-
-<script>
-
-    const skill_form = document.querySelector("#skill_form");
-    const skill_form_box = document.querySelector("#skill_form_box");
-    const skill_add = document.querySelector("#skill_add");
-
-    skill_add.addEventListener("click", ()=>{
-        skill_form_box.innerHTML = `<form action="" id="skill_form" class="p-2 w-100 px-0">
-                            <input type="text" id="skill" class="form-control px-2" placeholder="Enter skill">
-                            <textarea id="skill_desc" name="skill_description" class="form-control my-2" rows="2" placeholder="Write description"></textarea>
-                            <button id="add_skill" class="btn btn-sm btn-secondary mt-1">Add</button>
-                            <button class="btn btn-sm btn-danger mt-1">Cancel</button>
-                        </form>`;
-    })
-
-
-    $(document).ready(()=>{
-        
-        $("#add_skill").on("click",function(e){
-            e.preventDefault();
-            const skill = $("skill").val();
-            const skill_desc = $("#skill_desc").val();
-
-            $.ajax({
-                url:"",
-                type:"GET",
-                // data:{skill:skill,skill_desc:skill_desc},
-                success:function(data){
-                    $("#skill_data").html(data);
-                }
-
-            })
-        })
-
-    })
-    
-</script>
