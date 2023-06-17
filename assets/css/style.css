@@ -546,4 +546,12 @@ footer {
     font-weight: bold;
 }
 
+.user-profile-list li:nth-child(2) p {
+    font-weight: normal;
+}
+
+.hidden {
+    display: none;
+}
+
 /* User Profile Section End */
