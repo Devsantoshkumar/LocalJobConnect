@@ -87,11 +87,13 @@ $this->view("includes/profileNav");
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
-                       <form id="skillForm" class="w-100">
-                           <h6 class="d-flex justify-content-between"><span>Skills</span> <span id="addSkills">Add New</span></h6>
-                          <div id="inputs">
-                            
-                       </form>
+                        <form id="skillForm" class="w-100">
+                            <h6 class="d-flex justify-content-between"><span>Skills</span> <span id="addSkills"
+                                    class="text-primary heading-text" style="cursor:pointer;">Add
+                                    New</span></h6>
+                            <div id="inputs">
+
+                        </form>
                     </li>
                 </ul>
 
@@ -159,50 +161,50 @@ $this->view("includes/footer");
 
 
 <script>
-  
-  $(document).ready(function(){
 
-    const formInputs = `<div class="input-group mb-1"> 
-                                <input type="text" class="form-control" id="skill" placeholder="Skill name">
+    $(document).ready(function () {
+
+        const formInputs = `<div class="input-group mb-1"> 
+                                <input type="text" class="form-control mt-2" id="skill" placeholder="Skill name">
                             </div>
                             <div class="input-group mb-1">
-                                <textarea id="skillDesc" rows="2" class="form-control" placeholder="Skill description"></textarea>
+                                <textarea id="skillDesc" rows="2" class="form-control mt-2" placeholder="Skill description"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-sm btn-success">Add</button>
+                            <button type="submit" class="btn btn-sm btn-success mt-2">Add</button>
                         </div>`;
-    
-    $("#addSkills").on("click",(e)=>{
-        $("#inputs").html(formInputs);
-    })
 
-
-
-    $("#skillForm").submit(function(e){
-        e.preventDefault()
-
-        const formData = {
-            skill_name: $("#skill").val(),
-            skill_description: $("#skillDesc").val()
-        }
-        var form = this;
-
-        $.ajax({
-            type: "POST",
-            url: "",
-            data: formData,
-            success: function(response){
-                alert(response)
-                // Reset the form
-               form.reset();
-            },
-            error: function(xhr, status, error){
-                console.log(error)
-            }
+        $("#addSkills").on("click", (e) => {
+            $("#inputs").html(formInputs);
         })
+
+
+
+        $("#skillForm").submit(function (e) {
+            e.preventDefault()
+
+            const formData = {
+                skill_name: $("#skill").val(),
+                skill_description: $("#skillDesc").val()
+            }
+            var form = this;
+
+            $.ajax({
+                type: "POST",
+                url: "",
+                data: formData,
+                success: function (response) {
+                    alert(response)
+                    // Reset the form
+                    form.reset();
+                },
+                error: function (xhr, status, error) {
+                    console.log(error)
+                }
+            })
+        })
+
+
+
     })
-
-
-
-  })
 
 </script>
