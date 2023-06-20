@@ -1,4 +1,3 @@
-<!-- User Profile Controller -->
 
 <?php
 
@@ -15,6 +14,17 @@ class Userprofile extends Controller
     function index($id = NULL)
     {
         $errors = [];
+
+        if(!empty($_POST)){
+            
+            $skills = new Skill();
+            
+            $_POST['date'] = date("Y-m-d");
+            $_POST['user_id'] = Auth::user("users_id");
+            $skills->insert($_POST);
+            echo "Data inserted successfully";
+            die();
+        }
 
         $user = new User();
 

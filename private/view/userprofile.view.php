@@ -87,10 +87,12 @@ $this->view("includes/profileNav");
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
-                        <p class="m-0 heading-text">Skills</p>
-                        <button id="skill_add" class="bg-transparent text-primary border-0">Add New</button>
+                       <form id="skillForm" class="w-100">
+                           <h6 class="d-flex justify-content-between"><span>Skills</span> <span id="addSkills">Add New</span></h6>
+                          <div id="inputs">
+                            
+                       </form>
                     </li>
-                    <li id="skill_form_box"></li>
                 </ul>
 
                 <?php foreach ($rows as $row): ?>
@@ -154,3 +156,53 @@ $this->view("includes/profileNav");
 $this->view("includes/footer");
 
 ?>
+
+
+<script>
+  
+  $(document).ready(function(){
+
+    const formInputs = `<div class="input-group mb-1"> 
+                                <input type="text" class="form-control" id="skill" placeholder="Skill name">
+                            </div>
+                            <div class="input-group mb-1">
+                                <textarea id="skillDesc" rows="2" class="form-control" placeholder="Skill description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-success">Add</button>
+                        </div>`;
+    
+    $("#addSkills").on("click",(e)=>{
+        $("#inputs").html(formInputs);
+    })
+
+
+
+    $("#skillForm").submit(function(e){
+        e.preventDefault()
+
+        const formData = {
+            skill_name: $("#skill").val(),
+            skill_description: $("#skillDesc").val()
+        }
+        var form = this;
+
+        $.ajax({
+            type: "POST",
+            url: "",
+            data: formData,
+            success: function(response){
+                alert(response)
+                // Reset the form
+               form.reset();
+            },
+            error: function(xhr, status, error){
+                console.log(error)
+            }
+        })
+    })
+
+
+
+  })
+
+</script>
