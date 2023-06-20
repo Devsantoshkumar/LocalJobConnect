@@ -20,9 +20,16 @@ class Userprofile extends Controller
 
         $data = $user->where("users_id", $id);
 
+        // if (isset($_POST)) {
+        //     // show($_POST);
+        //     die;
+        // }
+
         $this->view("userprofile", ['errors' => $errors, 'rows' => $data]);
     }
 
+
+    // This function is for edit profile page
     function update($id = null)
     {
 
@@ -43,7 +50,7 @@ class Userprofile extends Controller
                 $user->update($id, $_POST);
 
                 $this->redirect("userprofile/" . Auth::user("users_id"));
-            }else{
+            } else {
                 $errors = $user->errors;
             }
 
