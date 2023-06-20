@@ -14,10 +14,9 @@ class Userprofile extends Controller
     function index($id = NULL)
     {
         $errors = [];
+        $skills = new Skill();
 
-        if(!empty($_POST)){
-            
-            $skills = new Skill();
+        if(!empty($_POST['skillData'])){
             
             $_POST['date'] = date("Y-m-d");
             $_POST['user_id'] = Auth::user("users_id");
@@ -29,6 +28,21 @@ class Userprofile extends Controller
         $user = new User();
 
         $data = $user->where("users_id", $id);
+
+        $sData = $skills->where("user_id",Auth::user("users_id"));
+        if(!empty($_GET['skills'])){
+
+            $output = "";
+
+            foreach($sData as $srows){
+               $output .= '<div class="d-flex align-items-center">
+                            <i class="fa-solid fa-plus fw-bold me-2"></i>
+                            <span>'.$srows->skill_name.'</span>
+                        </div>';
+            }
+            echo $output;
+            die();
+        }
 
         $this->view("userprofile", ['errors' => $errors, 'rows' => $data]);
     }

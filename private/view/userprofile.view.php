@@ -87,22 +87,25 @@ $this->view("includes/profileNav");
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
-                        <form id="skillForm" class="w-100">
+                        <<<<<<< HEAD <form id="skillForm" class="w-100">
                             <h6 class="d-flex justify-content-between"><span>Skills</span> <span id="addSkills"
                                     class="text-primary heading-text" style="cursor:pointer;">Add
                                     New</span></h6>
                             <div id="inputs">
 
-                        </form>
+                                </form>
+                                =======
+                                <form id="skillForm" class="w-100">
+                                    <h6 class="d-flex align-items-center justify-content-between"> <span>Skills</span> <span
+                                            id="addSkills" class="btn">Add New</span></h6>
+                                    <div id="inputs"></div>
+                                </form>
+                                >>>>>>> main
                     </li>
                 </ul>
+                <p class="user-profile-text" id="skill_data">
 
-                <?php foreach ($rows as $row): ?>
-                    <p class="user-profile-text" id="skill_data">
-                        <i class="fa-solid fa-plus fw-bold me-2"></i>
-                        <?= $row->skills_id; ?>
-                    </p>
-                <?php endforeach; ?>
+                </p>
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
@@ -173,9 +176,34 @@ $this->view("includes/footer");
                             <button type="submit" class="btn btn-sm btn-success mt-2">Add</button>
                         </div>`;
 
+        // $("#addSkills").on("click", (e) => {
+        //     $("#inputs").html(formInputs);
+        //                     <button class="btn btn-sm btn-success">Add</button>
+        //                 </div>`;
+
+
+
         $("#addSkills").on("click", (e) => {
             $("#inputs").html(formInputs);
         })
+
+
+        function fetchData() {
+            $.ajax({
+                type: "GET",
+                url: "",
+                data: { skills: "getSkill" },
+                success: function (response) {
+                    $("#skill_data").html(response);
+                },
+                error: function (xhr, status, error) {
+                    console.log(error)
+                }
+            })
+        }
+
+
+        fetchData();
 
 
 
@@ -184,8 +212,10 @@ $this->view("includes/footer");
 
             const formData = {
                 skill_name: $("#skill").val(),
-                skill_description: $("#skillDesc").val()
+                skill_description: $("#skillDesc").val(),
+                skillData: "skill_data"
             }
+
             var form = this;
 
             $.ajax({
@@ -193,18 +223,44 @@ $this->view("includes/footer");
                 url: "",
                 data: formData,
                 success: function (response) {
-                    alert(response)
+                    console.log(response)
                     // Reset the form
                     form.reset();
+                    fetchData();
                 },
                 error: function (xhr, status, error) {
                     console.log(error)
                 }
             })
+
+
+
+            // $("#skillForm").submit(function (e) {
+            //     e.preventDefault()
+
+            //     const formData = {
+            //         skill_name: $("#skill").val(),
+            //         skill_description: $("#skillDesc").val()
+            //     }
+            //     var form = this;
+
+            //     $.ajax({
+            //         type: "POST",
+            //         url: "",
+            //         data: formData,
+            //         success: function (response) {
+            //             alert(response)
+            //             // Reset the form
+            //             form.reset();
+            //         },
+            //         error: function (xhr, status, error) {
+            //             console.log(error)
+            //         }
+            //     })
+            // })
+
+
+
         })
-
-
-
-    })
-
+    });
 </script>
