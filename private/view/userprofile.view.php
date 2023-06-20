@@ -88,19 +88,14 @@ $this->view("includes/profileNav");
                 <ul class="user-profile-list list-unstyled">
                     <li>
                        <form id="skillForm" class="w-100">
-                           <h6 class="d-flex justify-content-between"><span>Skills</span> <span id="addSkills">Add New</span></h6>
-                          <div id="inputs">
-                            
+                           <h6 class="d-flex align-items-center justify-content-between"> <span>Skills</span> <span id="addSkills" class="btn">Add New</span></h6>
+                          <div id="inputs"></div>
                        </form>
                     </li>
                 </ul>
-
-                <?php foreach ($rows as $row): ?>
-                    <p class="user-profile-text" id="skill_data">
-                        <i class="fa-solid fa-plus fw-bold me-2"></i>
-                        <?= $row->skills_id; ?>
-                    </p>
-                <?php endforeach; ?>
+                <p class="user-profile-text" id="skill_data">
+                    
+                </p>
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
@@ -168,12 +163,32 @@ $this->view("includes/footer");
                             <div class="input-group mb-1">
                                 <textarea id="skillDesc" rows="2" class="form-control" placeholder="Skill description"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-sm btn-success">Add</button>
+                            <button class="btn btn-sm btn-success">Add</button>
                         </div>`;
     
+
+
     $("#addSkills").on("click",(e)=>{
         $("#inputs").html(formInputs);
     })
+
+
+    function fetchData(){
+        $.ajax({
+            type: "GET",
+            url: "",
+            data: {skills: "getSkill"},
+            success: function(response){
+                $("#skill_data").html(response);
+            },
+            error: function(xhr, status, error){
+                console.log(error)
+            }
+        })
+    }
+
+
+    fetchData();
 
 
 
@@ -182,8 +197,10 @@ $this->view("includes/footer");
 
         const formData = {
             skill_name: $("#skill").val(),
-            skill_description: $("#skillDesc").val()
+            skill_description: $("#skillDesc").val(),
+            skillData: "skill_data"
         }
+
         var form = this;
 
         $.ajax({
@@ -191,9 +208,10 @@ $this->view("includes/footer");
             url: "",
             data: formData,
             success: function(response){
-                alert(response)
+                console.log(response)
                 // Reset the form
                form.reset();
+               fetchData();
             },
             error: function(xhr, status, error){
                 console.log(error)
