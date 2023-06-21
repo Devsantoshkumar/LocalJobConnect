@@ -42,7 +42,15 @@ $this->view("includes/profileNav");
                         <p><i class="fa-solid fa-location-dot fa-bounce me-2"></i>From</p>
 
                         <p>
-                            <?= $rows[0]->current_location; ?>
+
+                            <?php
+
+                            $current_location = $rows[0]->current_location ?? "None";
+
+                            echo $current_location;
+
+                            ?>
+
                         </p>
                     </li>
                     <li>
@@ -56,20 +64,17 @@ $this->view("includes/profileNav");
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
-                        <p class="m-0">Description</p>
-                        <button id="bio_add" class="bg-transparent text-primary border-0">Add New</button>
-                    </li>
-                    <li id="bio_form_box">
-                        <form action="" id="bio_form" class="hidden p-2 w-100 px-0">
-                            <textarea id="bio_desc" name="bio_description" class="form-control my-2" rows="5"
-                                placeholder="Write Bio" style="overflow:hidden;"><?= $rows[0]->bio; ?></textarea>
-                            <button id="add_bio" class="btn btn-sm btn-secondary mt-1">Add</button>
-                            <button class="btn btn-sm btn-danger mt-1">Cancel</button>
+                        <form id="bioForm" class="w-100">
+                            <h6 class="d-flex justify-content-between"><span class="fw-bold heading-text">Description</span>
+                                <span id="addbio" class="text-primary heading-text" style="cursor:pointer;">Add
+                                    New</span>
+                            </h6>
+                            <div id="bioinputs">
+                            </div>
                         </form>
                     </li>
                 </ul>
                 <p class="user-profile-text" id="bio_data">
-                    <?= $rows[0]->bio; ?>
                 </p>
                 <hr>
                 <ul class="user-profile-list list-unstyled">
@@ -163,6 +168,78 @@ $this->view("includes/footer");
 
     $(document).ready(function () {
 
+        // Bio Form Code Starts
+
+        const bioFormInputs = `<div class="input-group mb-1">
+                                <textarea id="bioDesc" rows="5" class="form-control mt-2" placeholder="Write your Description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-success mt-2">Add</button>`;
+
+        $("#addbio").on("click", (e) => {
+            $("#bioinputs").html(bioFormInputs);
+        });
+
+        function fetchBioData() {
+            $.ajax({
+                type: "GET",
+                url: "",
+                data: { bio: "getbio", users_id: "<?= Auth::user('users_id'); ?>" },
+                success: function (response) {
+                    $("#bio_data").html(response);
+                    let value = $("#bio_data").text();
+                    let trimvalue = $.trim(value);
+                    if (trimvalue != '') {
+
+                        $("#bioDesc").text(trimvalue);
+                    } else {
+                        $("#bio_data").html(`
+                        <div class="d-flex align-items-center">
+                            <p>No Record Found</p>
+                        </div>
+                        `);
+                    }
+
+                },
+                error: function (xhr, status, error) {
+                    console.log(error)
+                }
+            })
+        }
+
+
+        fetchBioData();
+
+
+        $("#bioForm").submit(function (e) {
+            e.preventDefault()
+
+            const bioFormData = {
+                users_id: "<?= Auth::user('users_id') ?>",
+                bio: $("#bioDesc").val(),
+                bioData: "biodata"
+            }
+
+            // console.log(bioFormData);
+
+            let formB = this;
+
+            $.ajax({
+                type: "POST",
+                url: "",
+                data: bioFormData,
+                success: function (response) {
+                    // Reset the form
+                    formB.reset();
+                    fetchBioData();
+                },
+                error: function (xhr, status, error) {
+                    console.log(error)
+                }
+            })
+        });
+
+        // Bio Form Code Ends
+
         // Skill form code start
 
         const formInputs = `<div class="input-group mb-1"> 
@@ -186,7 +263,6 @@ $this->view("includes/footer");
                 data: { skills: "getSkill" },
                 success: function (response) {
                     $("#skill_data").html(response);
-                    console.log(response);
                 },
                 error: function (xhr, status, error) {
                     console.log(error)
@@ -215,7 +291,6 @@ $this->view("includes/footer");
                 url: "",
                 data: formData,
                 success: function (response) {
-                    console.log(response)
                     // Reset the form
                     form.reset();
                     fetchData();
@@ -251,7 +326,6 @@ $this->view("includes/footer");
                 data: { educations: "getEducation" },
                 success: function (response) {
                     $("#education_data").html(response);
-                    console.log(response);
                 },
                 error: function (xhr, status, error) {
                     console.log(error);
@@ -263,7 +337,7 @@ $this->view("includes/footer");
         fetcheducationData();
 
 
-        $("#educationForm").submit(function(e){
+        $("#educationForm").submit(function (e) {
             e.preventDefault()
 
             const educationdata = {
@@ -282,7 +356,6 @@ $this->view("includes/footer");
                 type: "POST",
                 data: educationdata,
                 success: function (data) {
-                    console.log(data);
                     formss.reset(); //Reset the form
                     fetcheducationData();
                 }
