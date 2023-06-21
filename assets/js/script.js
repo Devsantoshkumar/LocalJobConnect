@@ -42,39 +42,6 @@ $(document).ready(function () {
     }
   }
   
-  // Skill form code
-
-
-  // Education form code
-
-  const education_form = $("#education_form");
-  const education_form_box = $("#education_form_box");
-  const education_add = $("#education_add");
-
-  education_add.on("click", () => {
-    education_form_box.html(`<form action="" id="education_form" class="p-2 w-100 px-0">
-    <input type="text" id="education" class="form-control px-2" placeholder="Enter education">
-    <textarea id="education_desc" name="education_description" class="form-control my-2" rows="2" placeholder="Write description" style="overflow:hidden;"></textarea>
-    <button id="add_education" class="btn btn-sm btn-secondary mt-1">Add</button>
-    <button class="btn btn-sm btn-danger mt-1">Cancel</button>
-    </form>`);
-  });
-
-  $("#add_education").on("click", (e) => {
-    e.preventDefault();
-    const education = $("education").val();
-    const education_desc = $("#education_desc").val();
-
-    $.ajax({
-      url: "",
-      type: "POST",
-      data: { education: education, education_desc: education_desc },
-      success: function (data) {
-        $("#education_data").html(data);
-      }
-
-    });
-  });
 
   // Bio form code
 

@@ -87,20 +87,14 @@ $this->view("includes/profileNav");
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
-                        <<<<<<< HEAD <form id="skillForm" class="w-100">
-                            <h6 class="d-flex justify-content-between"><span>Skills</span> <span id="addSkills"
-                                    class="text-primary heading-text" style="cursor:pointer;">Add
-                                    New</span></h6>
-                            <div id="inputs">
+                        <form id="skillForm" class="w-100">
+                            <h6 class="d-flex justify-content-between"><span class="fw-bold heading-text">Skills</span>
+                                <span id="addSkills" class="text-primary heading-text" style="cursor:pointer;">Add
+                                    New</span>
+                            </h6>
+                            <div id="skillinputs">
 
-                                </form>
-                                =======
-                                <form id="skillForm" class="w-100">
-                                    <h6 class="d-flex align-items-center justify-content-between"> <span>Skills</span> <span
-                                            id="addSkills" class="btn">Add New</span></h6>
-                                    <div id="inputs"></div>
-                                </form>
-                                >>>>>>> main
+                        </form>
                     </li>
                 </ul>
                 <p class="user-profile-text" id="skill_data">
@@ -109,17 +103,17 @@ $this->view("includes/profileNav");
                 <hr>
                 <ul class="user-profile-list list-unstyled">
                     <li>
-                        <p class="m-0 heading-text">Education</p>
-                        <button id="education_add" class="bg-transparent text-primary border-0">Add New</button>
+                        <form id="educationForm" class="w-100">
+                            <h6 class="d-flex justify-content-between"><span class="fw-bold heading-text">Educations</span>
+                                <span id="addeducations" class="text-primary heading-text" style="cursor:pointer;">Add
+                                    New</span>
+                            </h6>
+                            <div id="educationinputs"> </div>
+
+                        </form>
                     </li>
-                    <li id="education_form_box"></li>
                 </ul>
-                <?php foreach ($rows as $row): ?>
-                    <p class="user-profile-text" id="education_data">
-                        <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i>
-                        <?= $row->educations_id; ?>
-                    </p>
-                <?php endforeach; ?>
+                <p class="user-profile-text" id="education_data"></p>
             </div>
             <div class="col">
                 <div class="d-flex flex-row align-items-center card border-0 p-3 shadow-sm">
@@ -132,9 +126,11 @@ $this->view("includes/profileNav");
                             <img src="<?= ASSETS ?>image\electrical-card.jpg" alt="image" class="image-fluid">
                         </div>
                     </div>
-                    <span class="p-3"><a href="#" class="text-decoration-none">Lorem ipsum dolor sit amet,
-                            consectetur
-                            adipisicing elit. Nostrum, asperiores?</a></span>
+                    <span class="p-3">
+                        <a href="#" class="text-decoration-none">Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Nostrum, asperiores?
+                        </a>
+                    </span>
                     <span class="p-3"><a href="#" class="text-decoration-none fw-bold"><i
                                 class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)</a>
                     </span>
@@ -167,6 +163,8 @@ $this->view("includes/footer");
 
     $(document).ready(function () {
 
+        // Skill form code start
+
         const formInputs = `<div class="input-group mb-1"> 
                                 <input type="text" class="form-control mt-2" id="skill" placeholder="Skill name">
                             </div>
@@ -176,15 +174,8 @@ $this->view("includes/footer");
                             <button type="submit" class="btn btn-sm btn-success mt-2">Add</button>
                         </div>`;
 
-        // $("#addSkills").on("click", (e) => {
-        //     $("#inputs").html(formInputs);
-        //                     <button class="btn btn-sm btn-success">Add</button>
-        //                 </div>`;
-
-
-
         $("#addSkills").on("click", (e) => {
-            $("#inputs").html(formInputs);
+            $("#skillinputs").html(formInputs);
         })
 
 
@@ -195,6 +186,7 @@ $this->view("includes/footer");
                 data: { skills: "getSkill" },
                 success: function (response) {
                     $("#skill_data").html(response);
+                    console.log(response);
                 },
                 error: function (xhr, status, error) {
                     console.log(error)
@@ -216,7 +208,7 @@ $this->view("includes/footer");
                 skillData: "skill_data"
             }
 
-            var form = this;
+            let form = this;
 
             $.ajax({
                 type: "POST",
@@ -232,35 +224,71 @@ $this->view("includes/footer");
                     console.log(error)
                 }
             })
+        });
+
+        // Skill form code end
 
 
+        // Education Form code Starts
 
-            // $("#skillForm").submit(function (e) {
-            //     e.preventDefault()
+        const formeducatoin = `<div class="input-group mb-1"> 
+                                <input type="text" class="form-control mt-2" id="education" placeholder="School/College name">
+                            </div>
+                            <div class="input-group mb-1">
+                                <textarea id="educationDesc" rows="2" class="form-control mt-2" placeholder="Course description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-success mt-2">Add</button>`;
 
-            //     const formData = {
-            //         skill_name: $("#skill").val(),
-            //         skill_description: $("#skillDesc").val()
-            //     }
-            //     var form = this;
-
-            //     $.ajax({
-            //         type: "POST",
-            //         url: "",
-            //         data: formData,
-            //         success: function (response) {
-            //             alert(response)
-            //             // Reset the form
-            //             form.reset();
-            //         },
-            //         error: function (xhr, status, error) {
-            //             console.log(error)
-            //         }
-            //     })
-            // })
+        $("#addeducations").on("click", (e) => {
+            $("#educationinputs").html(formeducatoin);
+        });
 
 
+        function fetcheducationData() {
+            $.ajax({
+                type: "GET",
+                url: "",
+                data: { educations: "getEducation" },
+                success: function (response) {
+                    $("#education_data").html(response);
+                    console.log(response);
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
 
-        })
+
+        fetcheducationData();
+
+
+        $("#educationForm").submit((e) => {
+            e.preventDefault()
+
+            const educationdata = {
+                education_name: $("#education").val(),
+                education_description: $("#educationDesc").val(),
+                educationData: "education_data"
+            };
+
+            let resetdata = this;
+
+
+            // This is ajax request is for inserting the data into database
+
+            $.ajax({
+                url: "",
+                type: "POST",
+                data: educationdata,
+                success: function (data) {
+                    console.log(data);
+                    $(this).reset(); //Reset the form
+                    fetcheducationData();
+                }
+            });
+
+        });
+        // Education form code ends
     });
 </script>

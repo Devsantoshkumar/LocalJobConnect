@@ -1,3 +1,5 @@
+<!-- Skill Model class -->
+
 <?php 
 
 class Skill extends Model{

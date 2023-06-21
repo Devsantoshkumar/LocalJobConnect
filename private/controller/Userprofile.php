@@ -1,4 +1,3 @@
-
 <?php
 
 class Userprofile extends Controller
@@ -14,10 +13,13 @@ class Userprofile extends Controller
     function index($id = NULL)
     {
         $errors = [];
+
+        // Skill Code starts
+
         $skills = new Skill();
 
-        if(!empty($_POST['skillData'])){
-            
+        if (!empty($_POST['skillData'])) {
+
             $_POST['date'] = date("Y-m-d");
             $_POST['user_id'] = Auth::user("users_id");
             $skills->insert($_POST);
@@ -25,24 +27,65 @@ class Userprofile extends Controller
             die();
         }
 
-        $user = new User();
-
-        $data = $user->where("users_id", $id);
-
-        $sData = $skills->where("user_id",Auth::user("users_id"));
-        if(!empty($_GET['skills'])){
+        $sData = $skills->where("user_id", Auth::user("users_id"));
+        if (!empty($_GET['skills'])) {
 
             $output = "";
 
-            foreach($sData as $srows){
-               $output .= '<div class="d-flex align-items-center">
+            foreach ($sData as $srows) {
+                $output .= '<div class="d-flex align-items-center">
                             <i class="fa-solid fa-plus fw-bold me-2"></i>
-                            <span>'.$srows->skill_name.'</span>
+                            <span>' . $srows->skill_name . '</span>
                         </div>';
             }
             echo $output;
             die();
         }
+        //  else {
+        //     $output.='<div class="d-flex align-items-center">
+        //     <i class="fa-solid fa-plus fw-bold me-2"></i>
+        //     <span>No Record found</span>
+        // </div>';
+        // }
+
+        // Skill code ends
+
+        // Education Code starts
+
+        $educations = new Education();
+
+        if (!empty($_POST['educationData'])) {
+
+            $_POST['date'] = date("Y-m-d");
+            $_POST['user_id'] = Auth::user("users_id");
+            $educations->insert($_POST);
+            echo "Data inserted successfully";
+            die();
+        }
+
+        $eData = $educations->where("user_id", Auth::user("users_id"));
+
+        if (!empty($_GET['educations'])) {
+
+            // show($_GET['educations']);
+
+            $result = "";
+
+            foreach ($eData as $erows) {
+                $result .= '<div class="d-flex align-items-center">
+                            <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i>
+                            <span>' . $erows->education_name . '</span>
+                        </div>';
+            }
+            echo $result;
+            die();
+        }
+
+        // Education code ends
+
+        $user = new User();
+
+        $data = $user->where("users_id", $id);
 
         $this->view("userprofile", ['errors' => $errors, 'rows' => $data]);
     }
@@ -67,7 +110,7 @@ class Userprofile extends Controller
                 $user->update($id, $_POST);
 
                 $this->redirect("userprofile/" . Auth::user("users_id"));
-            }else{
+            } else {
                 $errors = $user->errors;
             }
 
