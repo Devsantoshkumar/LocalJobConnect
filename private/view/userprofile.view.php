@@ -263,7 +263,7 @@ $this->view("includes/footer");
         fetcheducationData();
 
 
-        $("#educationForm").submit((e) => {
+        $("#educationForm").submit(function(e){
             e.preventDefault()
 
             const educationdata = {
@@ -272,7 +272,7 @@ $this->view("includes/footer");
                 educationData: "education_data"
             };
 
-            let resetdata = this;
+            let formss = this;
 
 
             // This is ajax request is for inserting the data into database
@@ -283,7 +283,7 @@ $this->view("includes/footer");
                 data: educationdata,
                 success: function (data) {
                     console.log(data);
-                    $(this).reset(); //Reset the form
+                    formss.reset(); //Reset the form
                     fetcheducationData();
                 }
             });
