@@ -31,22 +31,23 @@ class Userprofile extends Controller
         if (!empty($_GET['skills'])) {
 
             $output = "";
-
-            foreach ($sData as $srows) {
+            if ($sData) {
+                foreach ($sData as $srows) {
+                    $output .= '<div class="d-flex align-items-center">
+                    <i class="fa-solid fa-plus fw-bold me-2"></i>
+                    <span>' . $srows->skill_name . '</span>
+                </div>';
+                }
+                echo $output;
+                die();
+            } else
                 $output .= '<div class="d-flex align-items-center">
-                            <i class="fa-solid fa-plus fw-bold me-2"></i>
-                            <span>' . $srows->skill_name . '</span>
-                        </div>';
-            }
+                 <i class="fa-solid fa-plus fw-bold me-2"></i>
+                 <span>No Record found</span>
+             </div>';
             echo $output;
             die();
         }
-        //  else {
-        //     $output.='<div class="d-flex align-items-center">
-        //     <i class="fa-solid fa-plus fw-bold me-2"></i>
-        //     <span>No Record found</span>
-        // </div>';
-        // }
 
         // Skill code ends
 
@@ -71,21 +72,61 @@ class Userprofile extends Controller
 
             $result = "";
 
-            foreach ($eData as $erows) {
+            if ($eData) {
+                foreach ($eData as $erows) {
+                    $result .= '<div class="d-flex align-items-center">
+                                <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i>
+                                <span>' . $erows->education_name . '</span>
+                            </div>';
+                }
+                echo $result;
+                die();
+            } else {
                 $result .= '<div class="d-flex align-items-center">
-                            <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i>
-                            <span>' . $erows->education_name . '</span>
-                        </div>';
+                <i class="fa-solid fa-user-graduate fw-bold fs-5 me-2" style="color: #1cbe72;"></i>
+                <span>No Record found</span>
+            </div>';
+                echo $result;
+                die();
             }
-            echo $result;
-            die();
+
+
         }
 
         // Education code ends
 
         $user = new User();
-
         $data = $user->where("users_id", $id);
+
+
+        // Bio Code Starts
+
+        if (!empty($_POST['bioData'])) {
+            // show($_POST['bio']);
+            $bioid = $_POST['users_id'];
+            unset($_POST['bioData']);
+            $user->update($bioid, $_POST);
+            echo "Data inserted Successfully";
+            die();
+        }
+
+
+        if (!empty($_GET['bio'])) {
+
+            // show($_GET['educations']);
+            $bioOutput = "";
+            foreach ($data as $brows) {
+                $bioOutput .= '<div class="d-flex align-items-center">
+                            <p>' . $brows->bio . '</p>
+                        </div>';
+            }
+            echo $bioOutput;
+            die();
+        }
+
+        // Bio Code Ends
+
+
 
         $this->view("userprofile", ['errors' => $errors, 'rows' => $data]);
     }

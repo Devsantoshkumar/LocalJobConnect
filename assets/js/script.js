@@ -41,15 +41,5 @@ $(document).ready(function () {
       $('#pass').attr('type', 'password');
     }
   }
-  
 
-  // Bio form code
-
-  const bio_form = $("#bio_form");
-  const bio_add = $("#bio_add");
-
-  bio_add.on("click", () => {
-    bio_form.show();
-    $("#bio_data").hide();
-  });
 });
