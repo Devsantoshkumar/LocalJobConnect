@@ -556,3 +556,50 @@ footer {
 }
 
 /* User Profile Section End */
+
+/* search page section start */
+
+.searchbar {
+    width: 450px;
+}
+
+/* search page section end */
+
+/* Side bar css starts */
+
+.sidebar-responsive {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--white-color2);
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+#sidebar.active {
+    left: 0px;
+}
+
+.sidebar-logo span {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.sidebar-logo span img {
+    width: 100%;
+    height: 100%;
+}
+
+.toggler {
+    border: none;
+    outline: none;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Sidebar css ends */

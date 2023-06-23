@@ -15,5 +15,7 @@
     <link rel="stylesheet" href="<?= ASSETS ?>css/colors.css">
     <link rel="stylesheet" href="<?= ASSETS ?>css/main.css">
     <link rel="stylesheet" href="<?= ASSETS ?>css/style.css">
+    <link rel="stylesheet" href="<?= ASSETS ?>css/responsive.css">
 </head>
+
 <body>

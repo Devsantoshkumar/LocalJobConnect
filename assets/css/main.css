@@ -98,3 +98,12 @@ nav {
 }
 
 /* PROFILE SECTION END */
+
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    background-color: var(--green-color);
+}
