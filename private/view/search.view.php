@@ -22,16 +22,13 @@ $this->View("includes/searchnav");
         }
     };
 
-    // To reset the state of the toggle button and sidebar
-    // when the user clicks outside of them,
-    // we can add an event listener to the document
-    // that will listen for clicks on all elements.
-    // document.onclick = function (e) {
-    //     if (e.target !== togglebtn && e.target !== sidebar) {
-    //         togglebtn.classList.remove('active');
-    //         sidebar.classList.remove('active');
-    //     }
-    // };
+    window.onclick = function (e) {
+        if (e.target === togglebtn && e.target === sidebar) {
+            // togglebtn.classList.remove('active');
+            // sidebar.classList.remove('active');
+            console.log("hello");
+        }
+    };
 
 
 

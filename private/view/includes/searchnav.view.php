@@ -8,15 +8,15 @@
         <a class="navbar-brand" href="<?= BASE ?>">
             <img src="assets\image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30"><span>LJC</span>
         </a>
-
-        <button class="toggler d-lg-none order-sm-3 order-2" id="toggle-btn">
-            <i class="fa-solid fa-bars" id="toggle-icon"></i>
-        </button>
-        <div class="d-flex justify-content-between" id="navbarNavDropdown">
-            <form class="d-flex searchbar d-md-flex d-none">
-                <input class="form-control me-2" type="search" placeholder="What service are you looking for today ?"
-                    aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+        <div class="d-flex">
+            <form class="d-flex">
+                <div class="input-group searchbar">
+                    <input class="form-control d-sm-block d-none" type="search"
+                        placeholder="What service are you looking for today ?" aria-label="Search" id="basic-addon1">
+                    <button class="input-group-text link-btn fw-bold" type="submit" id="basic-addon1">
+                        <i class="fa-solid fa-magnifying-glass text-white"></i>
+                    </button>
+                </div>
             </form>
             <ul class="navbar-nav d-lg-flex d-none">
                 <li class="nav-item">
@@ -38,6 +38,9 @@
             <a href="<?= BASE ?>signin" class="text-decoration-none link-btn d-lg-block d-none mx-2">
                 <i class="fa-solid fa-user me-2"></i>Sign In
             </a>
+            <button class="toggler btn d-lg-none order-sm-3 order-2" id="toggle-btn">
+                <i class="fa-solid fa-bars" id="toggle-icon"></i>
+            </button>
         </div>
     </div>
 </nav>
