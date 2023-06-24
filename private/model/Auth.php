@@ -4,7 +4,7 @@ class Auth
 {
     public static function authenticate($row)
     {
-        $_SESSION['USER'] = $row;
+        $_SESSION['USERS'] = $row;
     }
 
 
