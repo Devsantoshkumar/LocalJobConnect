@@ -2,8 +2,12 @@
 
 <footer class="page-footer shadow-sm font-small pt-4 text-white">
 
-    <div class="container-fluid text-md-left my-5">
-        <div class="container">
+    <div class="footer-bg">
+        <img src="<?= ASSETS ?>/image/footer image.jpg" alt="">
+    </div>
+
+    <div class="container-fluid footer-card text-md-left">
+        <div class="container pt-5">
             <div class="row">
                 <div class="col-md-3 mt-md-0 mt-3">
                     <!-- Content -->
@@ -118,14 +122,13 @@
                 </li>
             </ul>
         </div>
+        <div class="footer-copyright text-center text-white">
+            <hr class="clearfix text-dark w-100">
+            Copyright © 2023 All Rights Reserved.
+        </div>
     </div>
 
     <!-- Copyright -->
-
-    <div class="footer-copyright text-center py-3 text-white">
-        <hr class="clearfix text-dark w-100">
-        Copyright © 2023 All Rights Reserved.
-    </div>
 
 </footer>
 

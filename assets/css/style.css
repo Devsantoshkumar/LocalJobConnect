@@ -444,7 +444,35 @@
 /* FOOTER SECTION Start */
 
 footer {
-    background-color: var(--green-color);
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.footer-bg {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.footer-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    backdrop-filter: blur(10px) saturate(171%);
+    -webkit-backdrop-filter: blur(10px) saturate(171%);
+    background-color: rgba(0, 0, 0, 0.33);
+    /* border: 1px solid rgba(209, 213, 219, 0.3); */
 }
 
 .footer-icon {
@@ -492,9 +520,9 @@ footer {
     color: var(--black-blue-color);
 }
 
-.footer-copyright {
+/* .footer-copyright {
     background-color: var(--green-color);
-}
+} */
 
 /* Footer Section End */
 
@@ -560,7 +588,8 @@ footer {
 /* search page section start */
 
 .searchbar {
-    width: 450px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 /* search page section end */
@@ -596,10 +625,56 @@ footer {
 .toggler {
     border: none;
     outline: none;
+    width: 50px;
+    height: 40px;
     background-color: var(--green-color);
     color: var(--white-color);
-    padding: 10px;
+    /* padding: 10px; */
+    margin: 10px 10px;
     border-radius: 10px;
 }
 
 /* Sidebar css ends */
+
+.search-title {
+    font-family: var(--ubuntu-font-family);
+    font-weight: bold;
+}
+
+.customCheck input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+}
+
+.cardsearch {
+    border-radius: 20px;
+
+}
+
+.client-img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.client-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.like-icon{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.like-icon i{
+    position: absolute;
+    top: 20px;
+    left: 17px;
+}
+.like-icon:hover i{
+    color: red;
+}
