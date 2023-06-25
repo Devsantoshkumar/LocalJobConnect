@@ -19,11 +19,11 @@ $this->view("includes/navbar");
             <p class="text-white fw-bold mx-md-5 mx-3 fs-6">You bring the skill. We'll make earning easy.</p>
         </div>
         <div class="container-fluid mx-md-5">
-            <form class="d-flex mb-4 input-group">
+            <form class="d-flex mb-4 input-group" action="<?= BASE?>search">
                 <span class="input-group-text link-btn fw-bold" id="basic-addon1"><i
                         class="fa-solid fa-magnifying-glass text-white"></i>
                 </span>
-                <input class="form-control me-2" type="search" class="" placeholder="Search">
+                <input class="form-control me-2" type="search" name="search" placeholder="Search">
                 <button class="btn link-btn fw-bold" type="submit">Search</button>
             </form>
             <button class="btn text-center link-btn p-3 fs-5">Become a Seller</button>

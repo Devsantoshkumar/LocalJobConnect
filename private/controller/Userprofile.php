@@ -27,7 +27,7 @@ class Userprofile extends Controller
             die();
         }
 
-        $sData = $skills->where("user_id", Auth::user("users_id"));
+        $sData = $skills->where("skill_user_id", Auth::user("users_id"));
         if (!empty($_GET['skills'])) {
 
             $output = "";

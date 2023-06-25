@@ -4,10 +4,21 @@
 
 class Search extends Controller
 {
-    function index(){
+    function index()
+    {
         $errors = [];
+        $rows = [];
+        $search = '';
 
-        $this->view('search',['error'=>$errors]);
+        $user = new User();
+
+        if (isset($_GET['search'])) {
+            $search = $_GET['search'];
+            $rows = $user->query("SELECT * FROM users LEFT JOIN skills ON users.users_id = skills.skill_user_id WHERE skill_name LIKE '%$search%'");
+            // show($rows);
+        }
+
+        $this->view('search', ['errors' => $errors, 'rows' => $rows, 'search' => $search]);
     }
 }
 
