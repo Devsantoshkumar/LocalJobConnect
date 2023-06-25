@@ -6,44 +6,45 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?= BASE ?>">
-            <img src="assets\image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30"><span>LJC</span>
+            <img src="assets\image\logo.svg" width="40" height="30" alt="image">
         </a>
-        <div class="d-flex">
-            <form class="d-flex">
-                <div class="input-group searchbar">
-                    <input class="form-control d-sm-block d-none" type="search"
-                        placeholder="What service are you looking for today ?" aria-label="Search" id="basic-addon1">
-                    <button class="input-group-text link-btn fw-bold" type="submit" id="basic-addon1">
-                        <i class="fa-solid fa-magnifying-glass text-white"></i>
-                    </button>
-                </div>
-            </form>
-            <ul class="navbar-nav d-lg-flex d-none">
+        <form class="d-flex ms-4 w-50" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control d-none d-md-flex searchbar"
+                    placeholder="What services you want to search Today?" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                <span class="input-group-text bg-success text-white" id="basic-addon1"><i
+                        class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+        </form>
+        <button class="navbar-toggler" id="toggle-btn">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ms-2" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?= BASE ?>">Home</a>
+                    <a class="nav-link active" aria-current="page" href="<?= BASE ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?= BASE ?>explore">Explore</a>
+                    <a class="nav-link" href="<?= BASE ?>/explore">Explore</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?= BASE ?>seller">Become a Seller</a>
+                    <a class="nav-link" href="<?= BASE ?>/seller"> Become a Seller </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?= BASE ?>contact">Contact Us</a>
+                    <a class="nav-link" href="<?= BASE ?>/contact">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="<?= BASE ?>about">About Us</a>
+                    <a class="nav-link" href="<?= BASE ?>/about">About Us</a>
                 </li>
             </ul>
-            <a href="<?= BASE ?>signin" class="text-decoration-none link-btn d-lg-block d-none mx-2">
-                <i class="fa-solid fa-user me-2"></i>Sign In
-            </a>
-            <button class="toggler btn d-lg-none order-sm-3 order-2" id="toggle-btn">
-                <i class="fa-solid fa-bars" id="toggle-icon"></i>
-            </button>
         </div>
+        <button class="link-btn d-none d-lg-flex">
+            <a href="<?= BASE ?>/signin" class="text-decoration-none text-white">Sign In</a>
+        </button>
     </div>
 </nav>
+
 
 <?php
 

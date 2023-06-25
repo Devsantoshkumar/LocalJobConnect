@@ -6,7 +6,7 @@
     --ubuntu-font-family: 'Ubuntu', sans-serif;
 }
 
-body{
+body {
     background-color: var(--bodyColor);
 }
 
@@ -89,21 +89,42 @@ nav {
 
 /* PROFILE SECTION START */
 
-.dropdown-item:focus, .dropdown-item:hover {
+.dropdown-item:focus,
+.dropdown-item:hover {
     color: var(--white-color);
     background-color: var(--green-color);
 }
-.dropdown-menu-start[data-bs-popper]{
+
+.dropdown-menu-start[data-bs-popper] {
     left: -130px;
 }
 
 /* PROFILE SECTION END */
 
-.navbar-toggler{
+.navbar-toggler {
     border: none;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
     box-shadow: none;
     background-color: var(--green-color);
+}
+
+.input-group-text {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+
+.accordion-button {
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
 }
