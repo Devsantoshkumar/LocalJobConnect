@@ -277,6 +277,7 @@ $this->view("includes/navbar");
         </div>
     </div>
 </section>
+
 <!-- Paid Section End -->
 
 <!-- Client Section Start -->
@@ -428,6 +429,7 @@ $this->view("includes/navbar");
 
 <?php
 
+$this->view("includes/footer.content");
 $this->view("includes/footer");
 
 ?>

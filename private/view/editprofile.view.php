@@ -3,7 +3,7 @@
 <?php
 
 $this->view("includes/header");
-// $this->view("includes/profileNav");
+$this->view("includes/profileNav");
 
 // show($rows);
 
@@ -123,6 +123,7 @@ $this->view("includes/header");
 
 <?php
 
+$this->view("includes/footer.content");
 $this->view("includes/footer");
 
 ?>

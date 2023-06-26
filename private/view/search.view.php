@@ -206,6 +206,7 @@ $this->View("includes/searchnav");
 </script>
 <?php
 
+$this->view("includes/footer.content");
 $this->View("includes/footer");
 
 ?>

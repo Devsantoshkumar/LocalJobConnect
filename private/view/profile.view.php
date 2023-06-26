@@ -22,7 +22,15 @@ $this->view("includes/profileNav");
             <div class="col-3 card h-75 border-0 p-4 shadow-sm">
                 <div class="d-flex flex-row align-items-center gap-4 p-4">
                     <div class="profile-img">
-                        <img src="<?= BASE ?>uploads/<?= $row[0]->image; ?>" alt="image">
+                        <?php
+                        $image = $row[0]->image;
+                        if ($image === null || $image === '') {
+                            $image = ASSETS . "image/user.png";
+                            echo "<img src=' " . $image . "' alt='image'>";
+                        } else {
+                            echo "<img src='" . BASE . "uploads/" . $image . "' alt='image'>";
+                        }
+                        ?>
                     </div>
                     <span>
                         <a href="#" class="text-decoration-none">
@@ -143,6 +151,7 @@ $this->view("includes/profileNav");
 
 <?php
 
+$this->view("includes/footer.content");
 $this->view("includes/footer");
 
 ?>

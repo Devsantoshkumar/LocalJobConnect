@@ -20,7 +20,15 @@ $this->view("includes/profileNav");
             <div class="col-3 card h-100 ms-5 border-0 px-4 py-3 shadow-sm">
                 <div class="m-auto">
                     <div class="userprofile-img mb-3">
-                        <img src="<?= BASE ?>uploads/<?= $rows[0]->image; ?>" alt="image">
+                        <?php
+                        $image = $rows[0]->image;
+                        if ($image === null || $image === '') {
+                            $image = ASSETS . "image/user.png";
+                            echo "<img src=' " . $image . "' alt='image'>";
+                        } else {
+                            echo "<img src='" . BASE . "uploads/" . $image . "' alt='image'>";
+                        }
+                        ?>
                     </div>
                     <span class="ms-3">
                         <a href="#" class="text-decoration-none">
@@ -43,13 +51,14 @@ $this->view("includes/profileNav");
 
                         <p>
 
-                            <?php
-
-                            $current_location = $rows[0]->current_location ?? "None";
-
-                            echo $current_location;
-
-                            ?>
+                        <?php
+                        $currentLocation = $rows[0]->current_location;
+                        if ($currentLocation !== null && $currentLocation !== '') {
+                            echo $currentLocation;
+                        } else {
+                            echo "None";
+                        }
+                        ?>
 
                         </p>
                     </li>
@@ -158,6 +167,8 @@ $this->view("includes/profileNav");
 
 
 <?php
+
+$this->view("includes/footer.content");
 
 $this->view("includes/footer");
 

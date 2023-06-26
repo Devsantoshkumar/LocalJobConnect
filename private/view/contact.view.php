@@ -108,6 +108,8 @@ $this->view("includes/navbar");
 
 <?php
 
+$this->view("includes/footer.content");
+
 $this->view("includes/footer");
 
 ?>
