@@ -636,7 +636,6 @@ footer {
 
 /* Sidebar css ends */
 
-<<<<<<< HEAD
 
 
 /* ///////////////////////////////////////////// */
@@ -683,7 +682,8 @@ footer {
      height: 100%;
      object-fit: cover;
      border-radius: 50%;
-=======
+
+}
 .search-title {
     font-family: var(--ubuntu-font-family);
     font-weight: bold;
@@ -723,7 +723,7 @@ footer {
     top: 20px;
     left: 17px;
 }
+
 .like-icon:hover i{
     color: red;
->>>>>>> de3f3f31cb87b703e1c59c854bbdee9423cc9e92
 }

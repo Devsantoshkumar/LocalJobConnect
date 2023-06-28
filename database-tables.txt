@@ -2,6 +2,7 @@ Database name:
 --------------
 local_job_hire
 
+
 table 1:
 --------
 users{
@@ -40,6 +41,8 @@ skills{
     date: datetime,
 }
 
+
+
 table 3:
 --------
 educations{
@@ -50,6 +53,7 @@ educations{
     user_id: int,
     date: datetime,
 }
+
 
 table 4:
 --------
@@ -76,72 +80,13 @@ protfolios{
 }
 
 
-
-
-
-
-// search controller
-
-
-<?php 
-
- 
-  class Search extends Controller{
-
-    function index(){
-
-        $errors = [];
-        $notfound = "";
-        $searches = "";
-        $term = "";
-
-
-        $packages = new Package();
-        $category = new Category();
-        $subcategory = new Subcategory();
-
-        if(!empty($_GET['search_term'])){
-           $term = $_GET['search_term'];
-           if($searches = $packages->query("SELECT * FROM packages JOIN categorys ON packages.category_id = categorys.categorys_id WHERE (pack_location LIKE '%$term%' OR category LIKE '%$term%') AND pack_status = 1"))
-           {
-               $searches = $packages->query("SELECT * FROM packages JOIN categorys ON packages.category_id = categorys.categorys_id WHERE (pack_location LIKE '%$term%' OR category LIKE '%$term%') AND pack_status = 1");
-
-           }else if($searches = $packages->query("SELECT * FROM packages WHERE pack_location LIKE '%$term%' AND pack_status = 1"))
-           {
-               $searches = $packages->query("SELECT * FROM packages WHERE pack_location LIKE '%$term%' AND pack_status = 1");
-
-           }else if($searches = $packages->query("SELECT * FROM packages LEFT JOIN subcategorys ON packages.sub_category_id = subcategorys.subcategorys_id LEFT JOIN countrys ON subcategorys.countryId = countrys.countrys_id WHERE country_name LIKE '%$term%' AND pack_status = 1"))
-           {
-               $searches = $packages->query("SELECT * FROM packages LEFT JOIN subcategorys ON packages.sub_category_id = subcategorys.subcategorys_id LEFT JOIN countrys ON subcategorys.countryId = countrys.countrys_id WHERE country_name LIKE '%$term%' AND pack_status = 1");
-               
-           }else{
-               $notfound = "Result not found";
-           }
-        }else{
-              $notfound = "Result not found";
-        }
-
-
-        // auto load search option queries
-        $pacData = $packages->query("SELECT * FROM packages JOIN categorys ON packages.category_id = categorys.categorys_id WHERE pack_status = 1");
-        $subCat = $subcategory->query("SELECT * FROM subcategorys JOIN countrys ON subcategorys.countryId = countrys.countrys_id WHERE subcategory_status = 1");
-
-        foreach($subCat as $csrow){
-            $countArray[] = $csrow->country_name;
-            $subCateArray[] = $csrow->sub_category;
-        }
-
-        foreach($pacData as $pdrow){
-            $pacArray[] = $pdrow->pack_location;
-            $catArray[] = $pdrow->category;
-        }
-
-        $finalArray = array_unique(array_merge($pacArray, $catArray, $countArray, $subCateArray));
-
-        $this->view("search.page", ['errors'=>$errors, 'searchData'=>$searches, 'searchTerm'=>$term, 'notfound'=>$notfound, 'searchResults'=>$finalArray]);
-
-  }
-
+table 6:
+-------
+locations{
+    locations_id: int primary_key auto_increament,
+    country varchar(100),
+    state varchar(100),
+    city varchar(100),
+    pin_code varchar(50),
+    location_status tinyInt default(1)
 }
-
-?>
