@@ -3,9 +3,10 @@
 <?php
 
 $this->view("includes/header");
-$this->view("includes/startsellingNav")
-
-    ?>
+$this->view("includes/startsellingNav");
+// show($rows);
+// show($search);
+?>
 
 
 <!-- Banner Section Start -->
@@ -49,6 +50,7 @@ $this->view("includes/startsellingNav")
 
 <!-- Become a Seller section start -->
 
+
 <section class="container-fluid my-5">
     <div class="container">
         <div class="row">
@@ -69,15 +71,15 @@ $this->view("includes/startsellingNav")
                 </div>
                 <div class="d-flex flex-row justify-content-between align-items-center p-3">
                     <div class="user-img">
-                        <img src="<?= ASSETS ?>image/user.png" alt="user image">
+                        <img src="<?= ASSETS ?>image\user.png" alt="user image">
                     </div>
-                    <span class="heading-text">username</span>
+                    <span class="heading-text">@username</span>
                 </div>
-                <p class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, reiciendis?</p>
+                <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, consectetur.</p>
                 <span class="p-2">
                     <i class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)
                 </span>
-                <span class="p-2 fw-bold"><span class="fs-6 fw-lighter">Starting From</span>
+                <span class="p-2 fw-bold"><span class="fs-6 fw-lighter me-5">Starting From</span>
                     $100
                 </span>
             </a>
@@ -229,11 +231,12 @@ $this->view("includes/startsellingNav")
                 </span>
             </a>
         </div>
-        <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex align-items-center justify-content-center mt-5">
             <a href="#" class="text-decoration-none link-btn">Explore Job</a>
         </div>
     </div>
 </section>
+
 
 <!-- Become a Seller Section End -->
 
@@ -410,12 +413,14 @@ $this->view("includes/startsellingNav")
                     Sign up and Creat your first <span class="fw-bold heading-text heading-color fs-4">Gig Today</span>
                 </p>
                 <div class="d-flex align-item-center justify-content-center">
-                    <a href="<?= BASE ?>profile/<?=Auth::user("users_id");?>" class="link-btn text-decoration-none text-center">Get Started</a>
+                    <a href="<?= BASE ?>profile/<?= Auth::user("users_id"); ?>"
+                        class="link-btn text-decoration-none text-center">Get Started</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <?php
 

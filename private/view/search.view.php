@@ -3,7 +3,10 @@
 <?php
 
 $this->View("includes/header");
-$this->View("includes/searchnav");
+$this->view("includes/searchnav");
+
+
+// $this->View("includes/searchnav");
 
 // show($rows);
 // show($search);
@@ -114,19 +117,20 @@ $this->View("includes/searchnav");
                     </div>
                 </div>
             </div>
-            <div class="col-11 m-auto col-lg-8 card border-0 shadow-sm mx-lg-4">
-                <form action="" class="my-5">
-                    <div class="input-group">
-                        <input type="text" class="cardsearch form-control d-none d-md-flex"
-                            placeholder="What services you want to search Today?" aria-label="Username"
-                            aria-describedby="basic-addon1" value="<?= $search ?>">
-                        <span class="input-group-text bg-success text-white" id="basic-addon1"><i
-                                class="fa-solid fa-magnifying-glass"></i></span>
-                    </div>
-                    <a href="#" class="text-decoration-none ms-2 mt-2">Advance Search</a>
-                </form>
-                <hr>
-                <?php if ($rows): ?>
+            <?php if ($rows): ?>
+                <div class="col-11 m-auto col-lg-8 card border-0 shadow-sm mx-lg-4">
+                    <form action="" class="my-5">
+                        <div class="input-group">
+                            <input type="text" class="cardsearch form-control d-none d-md-flex"
+                                placeholder="What services you want to search Today?" aria-label="Username"
+                                aria-describedby="basic-addon1" value="<?= $search ?>">
+                            <span class="input-group-text bg-success text-white" id="basic-addon1"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>
+                        </div>
+                        <a href="#" class="text-decoration-none ms-2 mt-2">Advance Search</a>
+                    </form>
+                    <hr>
+
                     <?php foreach ($rows as $row): ?>
                         <div class="profile-card">
                             <div class="d-flex justify-content-between">
