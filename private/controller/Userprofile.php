@@ -18,10 +18,15 @@ class Userprofile extends Controller
 
         $skills = new Skill();
 
+        // show($_SESSION);
+
+        // echo Auth::user("users_id");
+
+
         if (!empty($_POST['skillData'])) {
 
             $_POST['date'] = date("Y-m-d");
-            $_POST['user_id'] = Auth::user("users_id");
+            $_POST['skill_user_id'] = Auth::user("users_id");
             $skills->insert($_POST);
             echo "Data inserted successfully";
             die();

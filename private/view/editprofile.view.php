@@ -41,7 +41,9 @@ $this->view("includes/profileNav");
                                         <img src="<?=BASE ?>uploads/<?= $rows[0]->image; ?>" alt="image">
                                     </div>
                                     <div class="text-center mb-3">
-                                        <input type="file" name="image">
+                                        <label for="edit_image" class="link-btn">
+                                         <input type="file" name="image" id="edit_image" class="d-none">Edit image
+                                        </label>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input type="text" value="<?= $rows[0]->firstname; ?>" class="form-control" id="floatingInput"
@@ -57,21 +59,6 @@ $this->view("includes/profileNav");
                                         <input type="text" value="<?= $rows[0]->phone; ?>" class="form-control" id="floatingPassword"
                                             placeholder="Enter your Phone Number" name="phone">
                                         <label for="floatingPassword">Phone Number</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <textarea class="form-control" placeholder="Enter Your Description"
-                                            id="floatingTextarea2" name="bio" style="height: 100px"><?= $rows[0]->bio; ?></textarea>
-                                        <label for="floatingTextarea2">Bio</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingPassword" value="<?= $rows[0]->skills_id?>"
-                                            placeholder="Enter Your Skills" name="skills_id">
-                                        <label for="floatingPassword">Skills</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingPassword" value="<?= $rows[0]->educations_id?>"
-                                            placeholder="Enter Your Qualification" name="educations_id">
-                                        <label for="floatingPassword">Education</label>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="floatingPassword" value="<?= $rows[0]->current_location?>"

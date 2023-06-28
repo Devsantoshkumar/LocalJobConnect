@@ -4,6 +4,13 @@
 
 class Search extends Controller
 {
+
+    function __construct()
+    {
+        if (Auth::loggedIn()) {
+            $this->view("includes/startsellingNav");
+        }
+    }
     function index()
     {
         $errors = [];

@@ -3,7 +3,7 @@
 
 <nav class="navbar fixed-top navbar-expand-lg bg-white shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold heading-text" href="<?= BASE ?>">
+        <a class="navbar-brand fw-bold heading-text" href="<?= BASE ?>startselling/<?= Auth::user("users_id") ?>">
             <img src="<?= ASSETS ?>image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30">LJC
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -11,9 +11,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <form class="d-flex mx-lg-5 mt-lg-0 mt-3 w-md-50 w-100">
-                <input class="form-control me-2" type="search" placeholder="What service are you looking for today ?"
-                    aria-label="Search">
+            <form class="d-flex mx-lg-5 mt-lg-0 mt-3 w-md-50 w-100" action="<?= BASE ?>search" method="GET">
+                <input class="form-control me-2" type="search" name="search"
+                    placeholder="What service are you looking for today ?" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <ul class="navbar-nav">
@@ -59,6 +59,8 @@
                             </li>
                             <li><a class="dropdown-item"
                                     href="<?= BASE ?>userprofile/<?= Auth::user('users_id') ?>">Profile</a></li>
+                            <li><a class="dropdown-item" href="<?= BASE ?>hiring">Hire Employees</a></li>
+                            <li><a class="dropdown-item" href="#">New Jobs</a></li>
                             <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
                             <li><a class="dropdown-item" href="#">Sitting</a></li>
                             <li><a class="dropdown-item" href="#">Billing</a></li>
