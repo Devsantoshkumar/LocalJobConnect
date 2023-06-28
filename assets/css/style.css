@@ -638,10 +638,6 @@ footer {
 
 /* Sidebar css ends */
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
 
 /* employee page style start */
 
@@ -681,23 +677,12 @@ footer {
     padding: 5px;
 }
 
-<<<<<<< HEAD
-.profile_emp .imgprofile{
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border-radius: 50%;
-
-}
-=======
 .profile_emp .imgprofile {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
-
->>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
 .search-title {
     font-family: var(--ubuntu-font-family);
     font-weight: bold;
@@ -740,11 +725,7 @@ footer {
     left: 17px;
 }
 
-<<<<<<< HEAD
-.like-icon:hover i{
-=======
 .like-icon:hover i {
->>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
     color: red;
 }
 
