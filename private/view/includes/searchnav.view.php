@@ -10,7 +10,7 @@
         </a>
         <form class="d-flex ms-4 w-50" role="search">
             <div class="input-group">
-                <input type="text" class="form-control d-none d-md-flex searchbar"
+                <input type="text" class="form-control d-none d-md-flex searchbar" name="search"
                     placeholder="What services you want to search Today?" aria-label="Username"
                     aria-describedby="basic-addon1">
                 <span class="input-group-text bg-success text-white" id="basic-addon1"><i
@@ -26,21 +26,21 @@
                     <a class="nav-link active" aria-current="page" href="<?= BASE ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE ?>/explore">Explore</a>
+                    <a class="nav-link" href="<?= BASE ?>explore">Explore</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE ?>/seller"> Become a Seller </a>
+                    <a class="nav-link" href="<?= BASE ?>seller"> Become a Seller </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE ?>/contact">Contact Us</a>
+                    <a class="nav-link" href="<?= BASE ?>contact">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE ?>/about">About Us</a>
+                    <a class="nav-link" href="<?= BASE ?>about">About Us</a>
                 </li>
             </ul>
         </div>
         <button class="link-btn d-none d-lg-flex">
-            <a href="<?= BASE ?>/signin" class="text-decoration-none text-white">Sign In</a>
+            <a href="<?= BASE ?>signin" class="text-decoration-none text-white">Sign In</a>
         </button>
     </div>
 </nav>

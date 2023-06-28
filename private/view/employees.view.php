@@ -178,4 +178,9 @@
 
 
 
-<?php $this->view("includes/footer"); ?>
+<?php 
+
+$this->view("includes/footer.content");
+$this->view("includes/footer"); 
+
+?>

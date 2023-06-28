@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 <!-- Footer Section Start -->
+=======
+>>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
 
-<footer class="page-footer shadow-sm font-small pt-4 text-white">
+<!-- FOOTER LINK PAGE -->
 
+<<<<<<< HEAD
     <div class="footer-bg">
         <img src="<?= ASSETS ?>/image/footer image.jpg" alt="">
     </div>
@@ -134,11 +138,15 @@
 
 <!-- Footer Section End -->
 
+=======
+>>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="<?= ASSETS ?>js/owl.carousel.min.js"></script>
 <script src="<?= ASSETS ?>js/script.js"></script>
+
+
 </body>
 
 </html>

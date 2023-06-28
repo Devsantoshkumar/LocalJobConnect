@@ -446,12 +446,13 @@
 footer {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 520px;
 }
 
 .footer-bg {
     position: absolute;
     top: 0px;
+    left: 0px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -469,6 +470,7 @@ footer {
     width: 100%;
     height: 100%;
     top: 0;
+    left: 0px;
     backdrop-filter: blur(10px) saturate(171%);
     -webkit-backdrop-filter: blur(10px) saturate(171%);
     background-color: rgba(0, 0, 0, 0.33);
@@ -636,28 +638,30 @@ footer {
 
 /* Sidebar css ends */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
 
-/* ///////////////////////////////////////////// */
 /* employee page style start */
 
-.employee_cards{
+.employee_cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.employeeCard{
+.employeeCard {
     background-color: var(--white-color);
 }
 
-.cover_image{
+.cover_image {
     width: 100%;
     height: 150px;
     position: relative;
 }
 
-.cover_image .cover{
+.cover_image .cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -665,7 +669,7 @@ footer {
 
 }
 
-.profile_emp{
+.profile_emp {
     width: 100px;
     height: 100px;
     position: absolute;
@@ -677,6 +681,7 @@ footer {
     padding: 5px;
 }
 
+<<<<<<< HEAD
 .profile_emp .imgprofile{
      width: 100%;
      height: 100%;
@@ -684,6 +689,15 @@ footer {
      border-radius: 50%;
 
 }
+=======
+.profile_emp .imgprofile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+>>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
 .search-title {
     font-family: var(--ubuntu-font-family);
     font-weight: bold;
@@ -711,19 +725,25 @@ footer {
     height: 100%;
     object-fit: cover;
 }
-.like-icon{
+
+.like-icon {
     position: relative;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
 }
-.like-icon i{
+
+.like-icon i {
     position: absolute;
     top: 20px;
     left: 17px;
 }
 
+<<<<<<< HEAD
 .like-icon:hover i{
+=======
+.like-icon:hover i {
+>>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
     color: red;
 }

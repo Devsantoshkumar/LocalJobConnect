@@ -17,10 +17,11 @@ $this->view("includes/navbar");
             <p class="text-white fw-bold mx-md-5 mx-3 fs-6">Search Between More Then 50,000+ Open Jobs.</p>
         </div>
         <div class="container-fluid mx-md-5">
-            <form class="d-flex input-group">
+            <form class="d-flex input-group" action="<?= BASE ?>search">
                 <span class="input-group-text link-btn fw-bold" id="basic-addon1"><i
                         class="fa-solid fa-magnifying-glass text-white"></i></span>
-                <input class="form-control me-2" type="search" class="" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2" type="search" name="search" class="" placeholder="Search"
+                    aria-label="Search">
                 <button class="btn link-btn fw-bold" type="submit">Search</button>
             </form>
         </div>
@@ -276,6 +277,7 @@ $this->view("includes/navbar");
         </div>
     </div>
 </section>
+
 <!-- Paid Section End -->
 
 <!-- Client Section Start -->
@@ -427,6 +429,7 @@ $this->view("includes/navbar");
 
 <?php
 
+$this->view("includes/footer.content");
 $this->view("includes/footer");
 
 ?>
