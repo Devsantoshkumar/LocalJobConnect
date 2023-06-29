@@ -10,7 +10,7 @@ class Skill extends Model{
         'skill_name',
         'skill_description',
         'skill_status',
-        'user_id',
+        'skill_user_id',
         'date'
     ];
 

@@ -470,7 +470,7 @@ footer {
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0px;
+    left: 12px;
     backdrop-filter: blur(10px) saturate(171%);
     -webkit-backdrop-filter: blur(10px) saturate(171%);
     background-color: rgba(0, 0, 0, 0.33);
@@ -677,6 +677,7 @@ footer {
     padding: 5px;
 }
 
+<<<<<<< HEAD
 .profile_emp .imgprofile{
      width: 100%;
      height: 100%;
@@ -685,6 +686,14 @@ footer {
 
 }
 
+=======
+.profile_emp .imgprofile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+>>>>>>> 90187d9cb05e4c7815bf5b386cd63dbbcb0e0c67
 .search-title {
     font-family: var(--ubuntu-font-family);
     font-weight: bold;
@@ -720,3 +729,57 @@ footer {
     border-radius: 50%;
     cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+.like-icon i {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+}
+
+.like-icon:hover i {
+    color: red;
+}
+
+/* Hiring Page CSS Starts */
+
+.hiring-section {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hiring-banner {
+    width: 100%;
+    height: 600px;
+}
+
+.hiring-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hiring-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    background: rgba(94, 93, 93, 0.24);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+.hiring-heading{
+    width: max-content;
+    margin: 0 auto;
+    font-weight: 600;
+    padding: 10px;
+    border-bottom: 2px solid var(--dark-red-color);
+}
+
+/* Hiring Page CSS Ends */
+>>>>>>> 90187d9cb05e4c7815bf5b386cd63dbbcb0e0c67

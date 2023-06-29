@@ -19,10 +19,10 @@ $this->view("includes/profileNav");
         <div class="row">
             <div class="col-3 card h-100 ms-5 border-0 px-4 py-3 shadow-sm">
                 <div class="m-auto">
-                    <div class="userprofile-img mb-3">
+                    <div class="userprofile-img m-auto pb-2">
                         <?php
                         $image = $rows[0]->image;
-                        if ($image === null || $image === '') {
+                        if (empty($image)) {
                             $image = ASSETS . "image/user.png";
                             echo "<img src=' " . $image . "' alt='image'>";
                         } else {
@@ -34,7 +34,7 @@ $this->view("includes/profileNav");
                         <a href="#" class="text-decoration-none">
                             <?php
                             if (Auth::loggedIn()) {
-                                echo Auth::user('firstname');
+                                echo Auth::user('firstname') . " " . Auth::user('lastname');
                             } else {
                                 echo "No Name";
                             }
@@ -51,14 +51,14 @@ $this->view("includes/profileNav");
 
                         <p>
 
-                        <?php
-                        $currentLocation = $rows[0]->current_location;
-                        if ($currentLocation !== null && $currentLocation !== '') {
-                            echo $currentLocation;
-                        } else {
-                            echo "None";
-                        }
-                        ?>
+                            <?php
+                            $currentLocation = $rows[0]->current_location;
+                            if ($currentLocation !== null && $currentLocation !== '') {
+                                echo $currentLocation;
+                            } else {
+                                echo "None";
+                            }
+                            ?>
 
                         </p>
                     </li>

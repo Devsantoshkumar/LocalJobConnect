@@ -1,23 +1,19 @@
-<!-- Start Selling Controller -->
-
+<!-- Hiring Controller -->
 
 <?php
 
-class StartSelling extends Controller
+class Hiring extends Controller
 {
+
     function __construct()
     {
-        if (!Auth::loggedIn()) {
-            $this->redirect("signin");
+        if (Auth::loggedIn()) {
+            $this->view("includes/startsellingNav");
         }
     }
-
     function index()
     {
-
         $errors = [];
-        // $rows = [];
-        // $search = '';
 
         // $user = new User();
 
@@ -27,9 +23,12 @@ class StartSelling extends Controller
         //     // show($rows);
         // }
 
-
-        $this->view("startselling", ['errors' => $errors]);
+        $this->view('hiring', ['errors' => $errors]);
     }
 }
+
+
+
+
 
 ?>
