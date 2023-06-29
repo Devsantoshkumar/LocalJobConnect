@@ -676,24 +676,12 @@ footer {
     background-color: var(--white-color);
     padding: 5px;
 }
-
-<<<<<<< HEAD
-.profile_emp .imgprofile{
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     border-radius: 50%;
-
-}
-
-=======
 .profile_emp .imgprofile {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
->>>>>>> 90187d9cb05e4c7815bf5b386cd63dbbcb0e0c67
 .search-title {
     font-family: var(--ubuntu-font-family);
     font-weight: bold;
@@ -729,8 +717,6 @@ footer {
     border-radius: 50%;
     cursor: pointer;
 }
-<<<<<<< HEAD
-=======
 
 .like-icon i {
     position: absolute;
@@ -782,4 +768,3 @@ footer {
 }
 
 /* Hiring Page CSS Ends */
->>>>>>> 90187d9cb05e4c7815bf5b386cd63dbbcb0e0c67
