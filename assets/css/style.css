@@ -720,16 +720,3 @@ footer {
     border-radius: 50%;
     cursor: pointer;
 }
-
-.like-icon i {
-    position: absolute;
-    top: 20px;
-    left: 17px;
-}
-
-.like-icon:hover i{
-=======
-.like-icon:hover i {
->>>>>>> 1444728cf4648c0bf16215bb822c6d68b9b77063
-    color: red;
-}
