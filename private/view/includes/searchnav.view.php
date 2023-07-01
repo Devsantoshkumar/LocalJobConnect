@@ -3,18 +3,18 @@
 
 <!-- Search nav Section Start -->
 
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?= BASE ?>">
-            <img src="assets\image\logo.svg" width="40" height="30" alt="image">
+            <img src="assets\image\LJC Logo.png" width="100" height="30" alt="image">
         </a>
-        <form class="d-flex ms-4 w-50" role="search">
-            <div class="input-group">
-                <input type="text" class="form-control d-none d-md-flex searchbar" name="search"
-                    placeholder="What services you want to search Today?" aria-label="Username"
-                    aria-describedby="basic-addon1">
-                <span class="input-group-text bg-success text-white" id="basic-addon1"><i
+        <form action="">
+            <div class="searchbar">
+                <span class="pt-1 px-2 text-success" id="basic-addon1"><i
                         class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="d-none d-md-block" name="search"
+                    placeholder="What services you want to search Today?" aria-label="search"
+                    aria-describedby="basic-addon1">
             </div>
         </form>
         <button class="navbar-toggler" id="toggle-btn">
