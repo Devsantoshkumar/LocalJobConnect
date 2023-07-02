@@ -682,6 +682,8 @@ footer {
     object-fit: cover;
     border-radius: 50%;
 }
+
+
 .search-title {
     font-family: var(--ubuntu-font-family);
     font-weight: bold;

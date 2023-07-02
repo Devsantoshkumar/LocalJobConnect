@@ -4,7 +4,7 @@
 
 
 
-<div class="container" style="margin-top: 80px;">
+<div class="container topShift">
     <div class="row">
         <div class="col">
             <div class="card border-0 shadow-sm p-2">
@@ -92,25 +92,25 @@
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-                            Lucknow
+                            1m-5m
                         </label>
                         </div>
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-                            Kanpur
+                            5m-10m
                         </label>
                         </div>
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-                            Delhi
+                            10m-15m
                         </label>
                         </div>
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
-                            Mumbai
+                            15m-20m
                         </label>
                         </div>
                     </div>
@@ -146,27 +146,173 @@
                                <div class="experience text-center"><span class="fw-bold text-muted">Location: </span> <span>Lucknow</span></div>
                            </div>
                            
-                           <div class="actionButtons py-3 d-flex align-items-center justify-content-between">
-                                <button class="emp_price btn fw-bold">4545</button>
-                                <a href="#" class="btn btn-sm btn-success rounded-0 border-0 shadow-sm">View Detail</a>
+                           <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
+                                <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
+                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
                            </div>
 
                         </div>
                      </div>
                      <div class="employeeCard p-2 shadow-sm">
-                        Hello
+                        <div class="cover_image">
+                            <img src="<?=ASSETS ?>image/banner3.jpg" alt="" class="cover">
+                            <div class="profile_emp">
+                              <img src="<?=ASSETS ?>image/emp2.jpg" alt="" class="imgprofile"> 
+                            </div>
+                        </div>
+                        <div class="employee_details">
+                           <h1 class="h6 py-2 text-uppercase fw-bold mb-0 text-center">Mohan Bhagawt</h1>
+                           <span class="d-block text-center">Electrician</span>
+                           <hr>
+                           <div class="mygrid d-flex flex-column justify-content-center align-items-center">
+                               <div class="experience text-center"><span class="fw-bold text-muted">Experience: </span> <span>3 Years</span></div>
+                               <div class="experience text-center"><span class="fw-bold text-muted">Location: </span> <span>Lucknow</span></div>
+                           </div>
+                           
+                           <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
+                                <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
+                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                           </div>
+
+                        </div>
                      </div>
                      <div class="employeeCard p-2 shadow-sm">
-                        Hello
+                        <div class="cover_image">
+                            <img src="<?=ASSETS ?>image/banner4.jpg" alt="" class="cover">
+                            <div class="profile_emp">
+                              <img src="<?=ASSETS ?>image/emp3.jpg" alt="" class="imgprofile"> 
+                            </div>
+                        </div>
+                        <div class="employee_details">
+                           <h1 class="h6 py-2 text-uppercase fw-bold mb-0 text-center">Sunil Kumar</h1>
+                           <span class="d-block text-center">Plumber</span>
+                           <hr>
+                           <div class="mygrid d-flex flex-column justify-content-center align-items-center">
+                               <div class="experience text-center"><span class="fw-bold text-muted">Experience: </span> <span>3 Years</span></div>
+                               <div class="experience text-center"><span class="fw-bold text-muted">Location: </span> <span>Lucknow</span></div>
+                           </div>
+                           
+                           <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
+                                <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
+                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                           </div>
+
+                        </div>
                      </div>
                      <div class="employeeCard p-2 shadow-sm">
-                        Hello
+                        <div class="cover_image">
+                            <img src="<?=ASSETS ?>image/banner5.jpg" alt="" class="cover">
+                            <div class="profile_emp">
+                              <img src="<?=ASSETS ?>image/emp4.jpg" alt="" class="imgprofile"> 
+                            </div>
+                        </div>
+                        <div class="employee_details">
+                           <h1 class="h6 py-2 text-uppercase fw-bold mb-0 text-center">Shiksha Verma</h1>
+                           <span class="d-block text-center">Home Decorator</span>
+                           <hr>
+                           <div class="mygrid d-flex flex-column justify-content-center align-items-center">
+                               <div class="experience text-center"><span class="fw-bold text-muted">Experience: </span> <span>3 Years</span></div>
+                               <div class="experience text-center"><span class="fw-bold text-muted">Location: </span> <span>Lucknow</span></div>
+                           </div>
+                           
+                           <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
+                                <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
+                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                           </div>
+
+                        </div>
                      </div>
                      <div class="employeeCard p-2 shadow-sm">
-                        Hello
+                        <div class="cover_image">
+                            <img src="<?=ASSETS ?>image/banner1.jpg" alt="" class="cover">
+                            <div class="profile_emp">
+                              <img src="<?=ASSETS ?>image/emp5.jpg" alt="" class="imgprofile"> 
+                            </div>
+                        </div>
+                        <div class="employee_details">
+                           <h1 class="h6 py-2 text-uppercase fw-bold mb-0 text-center">Kamal Hashan</h1>
+                           <span class="d-block text-center">Party Organiger</span>
+                           <hr>
+                           <div class="mygrid d-flex flex-column justify-content-center align-items-center">
+                               <div class="experience text-center"><span class="fw-bold text-muted">Experience: </span> <span>3 Years</span></div>
+                               <div class="experience text-center"><span class="fw-bold text-muted">Location: </span> <span>Lucknow</span></div>
+                           </div>
+                           
+                           <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
+                                <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
+                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                           </div>
+
+                        </div>
                      </div>
                      <div class="employeeCard p-2 shadow-sm">
-                        Hello
+                        <div class="cover_image">
+                            <img src="<?=ASSETS ?>image/banner3.jpg" alt="" class="cover">
+                            <div class="profile_emp">
+                              <img src="<?=ASSETS ?>image/emp1.jpg" alt="" class="imgprofile"> 
+                            </div>
+                        </div>
+                        <div class="employee_details">
+                           <h1 class="h6 py-2 text-uppercase fw-bold mb-0 text-center">Kamini Yadav</h1>
+                           <span class="d-block text-center">Child Caretaker</span>
+                           <hr>
+                           <div class="mygrid d-flex flex-column justify-content-center align-items-center">
+                               <div class="experience text-center"><span class="fw-bold text-muted">Experience: </span> <span>3 Years</span></div>
+                               <div class="experience text-center"><span class="fw-bold text-muted">Location: </span> <span>Lucknow</span></div>
+                           </div>
+                           
+                           <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
+                                <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
+                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                           </div>
+
+                        </div>
+                     </div>
+                     <div class="employeeCard p-2 shadow-sm">
+                        <div class="cover_image">
+                            <img src="<?=ASSETS ?>image/banner4.jpg" alt="" class="cover">
+                            <div class="profile_emp">
+                              <img src="<?=ASSETS ?>image/emp2.jpg" alt="" class="imgprofile"> 
+                            </div>
+                        </div>
+                        <div class="employee_details">
+                           <h1 class="h6 py-2 text-uppercase fw-bold mb-0 text-center">Raj Kumar</h1>
+                           <span class="d-block text-center">Home Designer</span>
+                           <hr>
+                           <div class="mygrid d-flex flex-column justify-content-center align-items-center">
+                               <div class="experience text-center"><span class="fw-bold text-muted">Experience: </span> <span>3 Years</span></div>
+                               <div class="experience text-center"><span class="fw-bold text-muted">Location: </span> <span>Lucknow</span></div>
+                           </div>
+                           
+                           <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
+                                <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
+                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                           </div>
+
+                        </div>
+                     </div>
+                     <div class="employeeCard p-2 shadow-sm">
+                        <div class="cover_image">
+                            <img src="<?=ASSETS ?>image/banner5.jpg" alt="" class="cover">
+                            <div class="profile_emp">
+                              <img src="<?=ASSETS ?>image/emp3.jpg" alt="" class="imgprofile"> 
+                            </div>
+                        </div>
+                        <div class="employee_details">
+                           <h1 class="h6 py-2 text-uppercase fw-bold mb-0 text-center">Rohan Yadav</h1>
+                           <span class="d-block text-center">Carpainter</span>
+                           <hr>
+                           <div class="mygrid d-flex flex-column justify-content-center align-items-center">
+                               <div class="experience text-center"><span class="fw-bold text-muted">Experience: </span> <span>3 Years</span></div>
+                               <div class="experience text-center"><span class="fw-bold text-muted">Location: </span> <span>Lucknow</span></div>
+                           </div>
+                           
+                           <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
+                                <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
+                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                           </div>
+
+                        </div>
                      </div>
                 </div>
             </div>

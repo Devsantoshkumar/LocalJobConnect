@@ -15,4 +15,14 @@
     --dark-blue-color: #3341d8e7;
     --sky-blue-color: #7cdeff78;
     --bodyColor: rgba(0, 255, 229, 0.039);
+
+    --darkYellow: #f0932b;
+    --transYellow: rgba(235, 175, 64, 0.205);
+    --lightPink: #F34770;
+    --transPink: rgba(233, 73, 156, 0.205);
+    --darkBlue: #30336b;
+    --transBlue: rgba(73, 89, 233, 0.205);
+    --darkGreen: #1dd1a1;
+    --transGreen: rgba(73, 233, 198, 0.205);
+    --lightRed: #ff7979;
 }
