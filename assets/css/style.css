@@ -823,3 +823,43 @@ footer {
 .like-icon:hover i {
     color: red;
 }
+
+.bg-about {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.bg-about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-cover {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.heading-underline{
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    margin: auto;
+    width: fit-content;
+}
+.about-img{
+    width: 400px;
+    height: 300px;
+}
+.about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -79,6 +79,7 @@ $this->view("includes/profileNav");
                                     New</span>
                             </h6>
                             <div id="bioinputs">
+                                <button id="cancel_desc_box" class="btn btn-sm btn-warning text-white mt-2">Cancel</button>
                             </div>
                         </form>
                     </li>
@@ -184,11 +185,14 @@ $this->view("includes/footer");
         const bioFormInputs = `<div class="input-group mb-1">
                                 <textarea id="bioDesc" rows="5" class="form-control mt-2" placeholder="Write your Description"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-sm btn-success mt-2">Add</button>`;
+                            <button type="submit" id="desc-box" class="btn btn-sm btn-success mt-2">Add</button>`;
 
-        $("#addbio").on("click", (e) => {
+        $("#addbio").on("click", () => {
+            $("#bioinputs").html(`<button id="cancel_desc_box"
+                                    class="btn btn-sm btn-warning text-white mt-2">Cancel</button>`);
             $("#bioinputs").html(bioFormInputs);
         });
+
 
         function fetchBioData() {
             $.ajax({
@@ -221,7 +225,7 @@ $this->view("includes/footer");
         fetchBioData();
 
 
-        $("#bioForm").submit(function (e) {
+        $("bioForm").submit(function (e) {
             e.preventDefault()
 
             const bioFormData = {
