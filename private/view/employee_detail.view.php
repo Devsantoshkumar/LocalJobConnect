@@ -152,7 +152,7 @@
             <li class="list-group-item rounded-0 tablinks" data-tab="tab2">Portfolio</li>
             <li class="list-group-item rounded-0 tablinks" data-tab="tab3">Gallery</li>
             <li class="list-group-item rounded-0 tablinks" data-tab="tab4">Settings</li>
-            <a href="#" class="hire_me text-decoration-none ms-auto">Hire Me</a>
+            <a href="<?=BASE ?>empdetail/employee_hire" class="hire_me text-decoration-none ms-auto">Hire Me</a>
         </ul>
 
         <div class="mt-2">
