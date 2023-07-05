@@ -90,3 +90,13 @@ locations{
     pin_code varchar(50),
     location_status tinyInt default(1)
 }
+
+
+table 7:
+--------
+verifys{
+   verifys_id: int primary_key auto_increament,
+   otp: varchar(6),
+   expired: varchar(100),
+   email: varchar(100)
+}

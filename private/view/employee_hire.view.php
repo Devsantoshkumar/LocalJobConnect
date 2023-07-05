@@ -167,6 +167,31 @@
                      </form>
                 </div>
             </div>
+
+            <div class="card bg-white mt-2 border-0 shadow-sm">
+                <div class="card-header bg-white border-bottom d-flex align-items-center gap-3 p-3">
+                     <div class="hire_page_employer_profile_box">
+                         <img src="<?=ASSETS ?>image/emp3.jpg" alt="">
+                     </div>
+                     <div class="hire_page_employer_info">
+                        <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
+                        <span class="d-block text-muted">santosh@gmail.com</span>
+                     </div>
+                </div>
+                <div class="card-body px-5">
+                     <form method="POST">
+                        <div class="input-group mt-3">
+                            <textarea name="work_description" id="" class="form-control bg-light shadow-none border-0 border-bottom " placeholder="Write your review..." rows="5"></textarea>
+                        </div>
+
+                        <div class="input-group mt-4">
+                            <button type="submit" class="btn rounded-0 shadow-sm hireBtnEmployerPage">Comment</button>
+                        </div>
+                     </form>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>

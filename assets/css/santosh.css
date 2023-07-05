@@ -87,7 +87,6 @@ profile_details_profession{
     overflow-x: hidden;
 }
 
-
 /* profile details page tab start */
 
 .tab {
@@ -121,9 +120,9 @@ profile_details_profession{
     min-height: max-content;
 }
   
-  .tabcontent h3 {
+.tabcontent h3 {
     margin-top: 0;
-  }
+}
 
 .hire_me{
     display: block;
