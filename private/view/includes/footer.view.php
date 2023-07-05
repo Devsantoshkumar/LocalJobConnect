@@ -32,6 +32,11 @@
 <?php unset($_SESSION['msg']); unset($_SESSION['status']); } ?>
 
 </body>
+<<<<<<< HEAD
 </html>
 
 
+=======
+
+</html>
+>>>>>>> update

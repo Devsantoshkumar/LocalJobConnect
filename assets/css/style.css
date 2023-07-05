@@ -590,8 +590,26 @@ footer {
 /* search page section start */
 
 .searchbar {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    border: none;
+    border: 2px solid var(--grey-color);
+    width: max-content;
+    border-radius: 20px;
+    background-color: var(--white-color);
+}
+
+.searchbar input {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    width: 500px;
+    padding: 5px;
+}
+
+.searchbar input:focus {
+    border: none;
+    outline: none;
 }
 
 /* search page section end */
@@ -676,6 +694,7 @@ footer {
     background-color: var(--white-color);
     padding: 5px;
 }
+
 .profile_emp .imgprofile {
     width: 100%;
     height: 100%;
@@ -683,7 +702,10 @@ footer {
     border-radius: 50%;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> update
 .search-title {
     font-family: var(--ubuntu-font-family);
     font-weight: bold;
@@ -694,9 +716,81 @@ footer {
     height: 15px;
 }
 
-.cardsearch {
-    border-radius: 20px;
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--grey-color);
+    border-radius: 30px;
+}
 
+.drop-down {
+    position: relative;
+    width: 400px;
+    cursor: pointer;
+}
+
+.drop-down-items {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    background-color: var(--green-color);
+    padding: 0.8rem 1.5rem;
+    color: var(--white-color);
+    font-family: var(--poppins-font-family);
+    font-size: 15px;
+}
+
+.drop-down-list {
+    position: absolute;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    top: 4rem;
+    left: 0rem;
+    width: 100%;
+    height: 150px;
+    background-color: var(--light-red-Color);
+    color: var(--black-color2);
+    z-index: 3;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+#stateName.state{
+    display: block;
+}
+#cityName.city{
+    display: block;
+}
+#stateIcon.dropIcon{
+    transform: rotate(-180deg);
+}
+#cityIcon.drop-cityIcon{
+    transform: rotate(-180deg);
+}
+
+.drop-down-list-items {
+    font-family: var(--poppins-font-family);
+    font-weight: 500;
+    padding: 0.7rem 0rem 0.5rem 1rem;
+    transition: all 0.3s ease-in-out, all 0.3s ease-in-out;
+}
+
+.drop-down-list-items:hover {
+    margin-left: .5rem;
+    color: var(--dark-red-color);
+}
+
+.cardsearch {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 1rem;
+}
+
+.cardsearch input {
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
 }
 
 .client-img {
@@ -729,44 +823,3 @@ footer {
 .like-icon:hover i {
     color: red;
 }
-
-/* Hiring Page CSS Starts */
-
-.hiring-section {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hiring-banner {
-    width: 100%;
-    height: 600px;
-}
-
-.hiring-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hiring-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0px;
-    background: rgba(94, 93, 93, 0.24);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.5px);
-    -webkit-backdrop-filter: blur(1.5px);
-}
-.hiring-heading{
-    width: max-content;
-    margin: 0 auto;
-    font-weight: 600;
-    padding: 10px;
-    border-bottom: 2px solid var(--dark-red-color);
-}
-
-/* Hiring Page CSS Ends */

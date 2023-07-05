@@ -57,10 +57,11 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item"
-                                    href="<?= BASE ?>userprofile/<?= Auth::user('users_id') ?>">Profile</a></li>
-                            <li><a class="dropdown-item" href="<?= BASE ?>hiring">Hire Employees</a></li>
-                            <li><a class="dropdown-item" href="#">New Jobs</a></li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="<?= BASE ?>userprofile/<?= Auth::user('users_id') ?>">Profile
+                                </a>
+                            </li>
                             <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
                             <li><a class="dropdown-item" href="#">Sitting</a></li>
                             <li><a class="dropdown-item" href="#">Billing</a></li>

@@ -119,15 +119,41 @@ $this->view("includes/searchnav");
             </div>
             <?php if ($rows): ?>
                 <div class="col-11 m-auto col-lg-8 card border-0 shadow-sm mx-lg-4">
-                    <form action="" class="my-5">
-                        <div class="input-group">
-                            <input type="text" class="cardsearch form-control d-none d-md-flex"
-                                placeholder="What services you want to search Today?" aria-label="Username"
-                                aria-describedby="basic-addon1" value="<?= $search ?>">
-                            <span class="input-group-text bg-success text-white" id="basic-addon1"><i
-                                    class="fa-solid fa-magnifying-glass"></i></span>
+                    <form action="" class="mb-5 mt-3 search-box">
+                        <div class="drop-down">
+                            <div class="drop-down-items shadow-sm" id="selectState">
+                                <span id="drop-text">State</span>
+                                <i class="fa-solid fa-caret-down mt-1" id="stateIcon"></i>
+                            </div>
+                            <ul class="drop-down-list list-unstyled shadow-sm" id="stateName">
+                                <li class="drop-down-list-items sname">Uttar Pradesh</li>
+                                <li class="drop-down-list-items sname">Madhay Pradesh</li>
+                                <li class="drop-down-list-items sname">Rajasthan</li>
+                                <li class="drop-down-list-items sname">Andhra Pradesh</li>
+                                <li class="drop-down-list-items sname">Arunachal Pradesh</li>
+                                <li class="drop-down-list-items sname">Bihar</li>
+                                <li class="drop-down-list-items sname">Himachal Pradesh</li>
+
+                            </ul>
                         </div>
-                        <a href="#" class="text-decoration-none ms-2 mt-2">Advance Search</a>
+                        <div class="drop-down mx-2">
+                            <div class="drop-down-items shadow-sm" id="selectCity">
+                                <span id="span">City</span>
+                                <i class="fa-solid fa-caret-down mt-1" id="cityIcon"></i>
+                            </div>
+                            <ul class="drop-down-list list-unstyled shadow-sm" id="cityName">
+                                <li class="drop-down-list-items cname">Lucknow</li>
+                                <li class="drop-down-list-items cname">Sitapur</li>
+                                <li class="drop-down-list-items cname">Hardoi</li>
+                                <li class="drop-down-list-items cname">Jaipur</li>
+                            </ul>
+                        </div>
+                        <div class="cardsearch">
+                            <input type="text" class="d-none d-md-flex" placeholder="What services you want to search Today?"
+                                aria-label="search" name="search" aria-describedby="basic-addon1" value="<?= $search ?>">
+                            <span class="text-success" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        </div>
+                        <!-- <a href="#" class="text-decoration-none ms-2 mt-2">Advance Search</a> -->
                     </form>
                     <hr>
 
@@ -204,7 +230,63 @@ $this->view("includes/searchnav");
         }
     };
 
+    // Select State Code
 
+    const selectState = document.getElementById("selectState");
+
+    const stateName = document.getElementById("stateName");
+    const droptext = document.getElementById("drop-text");
+    const stateIcon = document.getElementById("stateIcon");
+
+    selectState.onclick = () => {
+        // selectState.classList.toggle('state');
+        stateName.classList.toggle('state');
+        stateIcon.classList.toggle('dropIcon');
+    }
+
+
+
+    // Select City Code
+
+    const selectCity = document.getElementById("selectCity");
+    const cityName = document.getElementById("cityName");
+    const span = document.getElementById("span");
+    const cityIcon = document.getElementById("cityIcon");
+
+    selectCity.onclick = () => {
+        // selectCity.classList.toggle('city');
+        cityName.classList.toggle('city');
+        cityIcon.classList.toggle('drop-cityIcon');
+    }
+
+    window.onclick = function (e) {
+        if (e.target !== selectState && e.target !== stateName && e.target !== droptext && e.target !== stateIcon
+            && e.target !== selectCity && e.target !== cityName && e.target !== span && e.target !== cityIcon) {
+            selectState.classList.remove('state');
+            stateName.classList.remove('state');
+            selectCity.classList.remove('city');
+            cityName.classList.remove('city');
+            stateIcon.classList.remove('dropIcon');
+            cityIcon.classList.remove('drop-cityIcon');
+        }
+    };
+
+    const stateItems = document.querySelectorAll(".sname");
+    
+    for (let item of stateItems) {
+        item.onclick = (e)=>{
+           droptext.innerText = e.target.innerText;
+        }
+    }
+
+
+    const cityItems =document.querySelectorAll(".cname");
+
+    for (let item  of cityItems) {
+        item.onclick = (e)=>{
+            span.innerText = e.target.innerText;
+        }
+    }
 
 
 </script>
