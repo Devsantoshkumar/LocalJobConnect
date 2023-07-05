@@ -702,10 +702,6 @@ footer {
     border-radius: 50%;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> update
 .search-title {
     font-family: var(--ubuntu-font-family);
     font-weight: bold;
@@ -754,16 +750,20 @@ footer {
     border-radius: 10px;
     overflow-y: scroll;
 }
-#stateName.state{
+
+#stateName.state {
     display: block;
 }
-#cityName.city{
+
+#cityName.city {
     display: block;
 }
-#stateIcon.dropIcon{
+
+#stateIcon.dropIcon {
     transform: rotate(-180deg);
 }
-#cityIcon.drop-cityIcon{
+
+#cityIcon.drop-cityIcon {
     transform: rotate(-180deg);
 }
 

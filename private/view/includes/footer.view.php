@@ -7,36 +7,32 @@
 <script src="<?= ASSETS ?>js/script.js"></script>
 
 
-<?php  if(isset($_SESSION['msg']) && $_SESSION['msg'] != ""){  ?>
+<?php if (isset($_SESSION['msg']) && $_SESSION['msg'] != "") { ?>
 
-<script>
+    <script>
 
-    const Toast = Swal.mixin({
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-    }
-    })
-    Toast.fire({
-        icon: '<?=$_SESSION['status']; ?>',
-        title: '<?=$_SESSION['msg']; ?>'
-    })
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        Toast.fire({
+            icon: '<?= $_SESSION['status']; ?>',
+            title: '<?= $_SESSION['msg']; ?>'
+        })
 
-</script>
+    </script>
 
-<?php unset($_SESSION['msg']); unset($_SESSION['status']); } ?>
+    <?php unset($_SESSION['msg']);
+    unset($_SESSION['status']);
+} ?>
 
 </body>
-<<<<<<< HEAD
-</html>
-
-
-=======
 
 </html>
->>>>>>> update
