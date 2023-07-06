@@ -19,7 +19,7 @@ $this->view("includes/navbar");
             <p class="text-white fw-bold mx-md-5 mx-3 fs-6">You bring the skill. We'll make earning easy.</p>
         </div>
         <div class="container-fluid mx-md-5">
-            <form class="d-flex mb-4 input-group" action="<?= BASE?>search">
+            <form class="d-flex mb-4 input-group" action="<?= BASE ?>search">
                 <span class="input-group-text link-btn fw-bold" id="basic-addon1"><i
                         class="fa-solid fa-magnifying-glass text-white"></i>
                 </span>
@@ -59,16 +59,17 @@ $this->view("includes/navbar");
         </div>
         <div class="row mb-3">
             <ul class="list-unstyled work-list d-flex justify-content-around">
-                <li class="me-3">
+                <li class="me-sm-3 col-12 col-sm-4 order-1">
                     <div class="work-process-img m-auto">
                         <img src="assets\image\gig.png" alt="image">
                     </div>
-                    <h5 class="text-center">1. Create a Gig</h5>
+                    <h5 class="text-center">1. Create Your Acccount</h5>
                     <p class="text-center">Sign up for free, set up your Gig, and offer your work to our
                         global audience.
                     </p>
+
                 </li>
-                <li class="mx-3">
+                <li class="mx-sm-3 pb-5 col-12 col-sm-4 order-2">
                     <div class="work-process-img m-auto">
                         <img src="assets\image\email.png" alt="image">
                     </div>
@@ -76,7 +77,7 @@ $this->view("includes/navbar");
                     <p class="text-center">Get notified when you get an order and use our system to discuss
                         details with customers.</p>
                 </li>
-                <li class="ms-3">
+                <li class="ms-sm-3 col-12 col-sm-4 order-3">
                     <div class="work-process-img m-auto">
                         <img src="assets\image\paid.png" alt="image">
                     </div>

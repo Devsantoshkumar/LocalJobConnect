@@ -43,3 +43,18 @@ $(document).ready(function () {
   }
 
 });
+
+// SideBar Code
+
+const togglebtn = document.querySelector('#toggle-btn');
+const sidebar = document.querySelector('#sidebar');
+const hideSidebar = document.querySelector("#hide-sidebar");
+
+
+togglebtn.onclick = function () {
+  sidebar.classList.toggle('active');
+};
+
+hideSidebar.onclick = function () {
+  sidebar.classList.remove('active');
+}

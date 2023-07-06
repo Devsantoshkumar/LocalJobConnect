@@ -128,3 +128,6 @@ nav {
 .accordion-button:focus {
     box-shadow: none;
 }
+.sticky-top{
+    z-index: 5;
+}
