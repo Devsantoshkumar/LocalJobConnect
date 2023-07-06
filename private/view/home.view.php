@@ -16,13 +16,15 @@ $this->view("includes/navbar");
             <h1 class="text-white fw-bold mx-md-5 mx-3 mb-3 fs-1">Talent ?<br> Meet Opportunity.</h1>
             <p class="text-white fw-bold mx-md-5 mx-3 fs-6">Search Between More Then 50,000+ Open Jobs.</p>
         </div>
-        <div class="container-fluid mx-md-5">
-            <form class="d-flex input-group" action="<?= BASE ?>search">
-                <span class="input-group-text link-btn fw-bold" id="basic-addon1"><i
-                        class="fa-solid fa-magnifying-glass text-white"></i></span>
-                <input class="form-control me-2" type="search" name="search" class="" placeholder="Search"
-                    aria-label="Search">
-                <button class="btn link-btn fw-bold" type="submit">Search</button>
+        <div class="container-fluid mx-md-4">
+            <form action="<?= BASE ?>search">
+                <div class="searchbar">
+                    <span class="p-2 text-success" id="basic-addon1"><i
+                            class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="p-2" name="search"
+                        placeholder="Search your Work" aria-label="search"
+                        aria-describedby="basic-addon1">
+                </div>
             </form>
         </div>
     </div>
