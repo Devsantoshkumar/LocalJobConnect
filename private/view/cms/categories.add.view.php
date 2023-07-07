@@ -16,20 +16,28 @@
                     <div class="card-body">
                         <h5 class="d-flex border-bottom py-3 align-items-center justify-content-between">
                             <span>Add New Category</span>
-                            <a href="<?=BASE ?>users" class="btn btn-sm btn-primary shadow-sm">Category</a>
+                            <a href="<?=BASE ?>categories" class="btn btn-sm btn-danger shadow-sm">Cancel</a>
                         </h5>
 
-                        <form method="POST">
+                        <form method="POST" autocomplete="off">
                             <div class="row justify-content-md-center p-4">
                                 <div class="col-12 col-md-6 my-3">
                                     <div class="input-group d-flex flex-column position-relative">
                                         <label for="fname" class="form-label">Job Category</label>
-                                        <input type="text" name="firstname" class="p-2 px-3 form-control w-100 shadow-none rounded" placeholder="Category name">
-                                        <small class="text-danger position-absolute errorMsg"><?=isset($errors['firstname']) ? $errors['firstname'] : ""; ?></small>
+                                        <input type="text" name="category_name" class="p-2 px-3 form-control w-100 py-3 shadow-none rounded" placeholder="Category name">
+                                        <small class="text-danger position-absolute errorMsg"><?=isset($errors['category_name']) ? $errors['category_name'] : ""; ?></small>
                                     </div>
                                 </div>
-                                
-                                <div class="col-12 d-flex justify-content-center my-4">
+
+                                <div class="col-12 col-md-6 my-3">
+                                    <div class="input-group d-flex flex-column position-relative">
+                                        <label for="fname" class="form-label">Job Category</label>
+                                        <input type="text" name="category_description" class="p-2 px-3 form-control w-100 py-3 shadow-none rounded" placeholder="Category Description">
+                                        <small class="text-danger position-absolute errorMsg"><?=isset($errors['category_name']) ? $errors['category_name'] : ""; ?></small>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 my-4">
                                     <button class="btn btn-sm btn-primary shadow-sm">Add Category</button>
                                 </div>
                             </div>

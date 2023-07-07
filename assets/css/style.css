@@ -79,7 +79,7 @@
 
 .job-category-box {
     width: 250px;
-    height: 250px;
+    min-height: max-content;
     object-fit: cover;
     transition: transform .3s ease-in-out;
 }

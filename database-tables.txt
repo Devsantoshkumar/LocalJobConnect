@@ -90,3 +90,15 @@ locations{
     pin_code varchar(50),
     location_status tinyInt default(1)
 }
+
+
+table 7:
+-------
+categorys{
+    categorys_id: int primary_key auto_increament,
+    category_name varchar(100),
+    category_slug varchar(100),
+    category_description: varchar(500),
+    category_status tinyInt default(1),
+    created_by int,
+}

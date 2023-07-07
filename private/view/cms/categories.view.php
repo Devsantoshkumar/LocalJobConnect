@@ -67,36 +67,42 @@
                     <div class="card-body overflow-auto">
                         <h5 class="d-flex align-items-center justify-content-between">
                             <span>Team Administration</span>
-                            <a href="<?=BASE ?>users/add" class="btn btn-sm btn-primary shadow-sm">Create</a>
+                            <a href="<?=BASE ?>categories/add" class="btn btn-sm btn-primary shadow-sm">Create</a>
                         </h5>
-                        <?php if(false): $id = 0; ?>
+                        <?php if($categories_data): $id = 0; ?>
                         <table class="table table-bordered my-4">
                         <thead class="table-light">
                           <tr class="tableDataHeading">
                             <th class="p-3">S.No.</th>
-                            <th class="p-3">User</th>
-                            <th class="p-3">Role</th>
+                            <th class="p-3">Category Name</th>
+                            <th class="p-3">Created By</th>
                             <th class="p-3">Status</th>
                             <th class="p-3">Action</th>
                           </tr>
                         </thead>
                           <tbody>
-                            <?php foreach($team as $row): $id++; ?>
+                            <?php foreach($categories_data as $row): $id++; ?>
                           <tr class="tableData">
                             <td><?=$id; ?></td>
                             <td>
-                                <span class="d-block"><?=$row->firstname; ?> <?=$row->lastname; ?></span>
-                                <span class="d-block text-muted"><?=$row->email; ?></span>
+                                <span class="d-block text-capitalize"><?=$row->category_name; ?></span>
                             </td>
-                            <td><?=$row->rank; ?></td>
+                            <?php  
+                               
+                               $users = new User();
+                               $createdBy = $row->created_by;
+                               $userData = $users->where("users_id",  $createdBy);
+                            
+                            ?>
+                            <td class="text-capitalize"><?=$userData[0]->firstname; ?> <?=isset($userData[0]->lastname) ? $userData[0]->lastname : ""; ?></td>
                             <?php
                             
-                             if($row->email_varified == NULL){
-                                 $status = "Non verified";
+                             if($row->category_status == 0){
+                                 $status = "Inactive";
                                  $bgColor = "--transPink";
                                  $textColor = "--lightPink";
                              }else{
-                                $status = "Verified";
+                                $status = "Active";
                                 $bgColor = "--transGreen";
                                 $textColor = "--darkGreen";
                              }
@@ -104,8 +110,8 @@
                             ?>
                             <td><span class="badge" style="color: var(<?=$textColor; ?>); background-color: var(<?=$bgColor; ?>)"><?=$status; ?></span></td>
                             <td>
-                                <a href="<?=BASE ?>users/delete/<?=$row->users_id; ?>" class="mx-1 text-danger"><span class="material-symbols-outlined">delete</span></a>
-                                <a href="<?=BASE ?>users/edit/<?=$row->users_id; ?>" class="mx-1 text-success"><span class="material-symbols-outlined">border_color</span></a>
+                                <a href="<?=BASE ?>categories/delete/<?=$row->categorys_id; ?>" class="mx-1 text-danger"><span class="material-symbols-outlined">delete</span></a>
+                                <a href="<?=BASE ?>categories/edit/<?=$row->categorys_id; ?>" class="mx-1 text-success"><span class="material-symbols-outlined">border_color</span></a>
                             </td>
                           </tr>
                           <?php endforeach; ?>

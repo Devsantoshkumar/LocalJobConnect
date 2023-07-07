@@ -85,80 +85,21 @@ $this->view("includes/navbar");
                 </p>
             </div>
         </div>
+        <?php if($category_data): ?>
         <div class="job-category mt-2">
-            <div class="job-category-box rounded card border-0 shadow m-sm-4 m-auto">
+            <?php foreach($category_data as $rows): ?>
+            <a href="<?=BASE ?>employees/<?=$rows->categorys_id; ?>" class="job-category-box text-decoration-none text-dark rounded card border-0 shadow-sm p-3 m-sm-4 m-auto">
                 <i class="fa-solid fa-lightbulb"></i>
                 <div class="p-3">
                     <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
+                        <h1 class="fw-bold fs-6 heading-text  card-title"><?=$rows->category_name; ?></h1>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
+                    <p class="text-center"><?=$rows->category_description; ?></p>
                 </div>
-            </div>
-            <div class="job-category-box rounded card border-0 shadow m-sm-4 m-auto">
-                <i class="fa-solid fa-wrench"></i>
-                <div class="p-3">
-                    <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-5 heading-text  card-title">Plumber</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
-                </div>
-            </div>
-            <div class="job-category-box rounded card border-0 shadow m-sm-4 m-auto">
-                <i class="fa-solid fa-lightbulb"></i>
-                <div class="p-3">
-                    <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
-                </div>
-            </div>
-            <div class="job-category-box rounded card border-0 shadow m-sm-4 m-auto">
-                <i class="fa-solid fa-lightbulb"></i>
-                <div class="p-3">
-                    <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
-                </div>
-            </div>
-            <div class="job-category-box rounded card border-0 shadow m-sm-4 m-auto">
-                <i class="fa-solid fa-lightbulb"></i>
-                <div class="p-3">
-                    <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
-                </div>
-            </div>
-            <div class="job-category-box rounded card border-0 shadow m-sm-4 m-auto">
-                <i class="fa-solid fa-lightbulb"></i>
-                <div class="p-3">
-                    <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
-                </div>
-            </div>
-            <div class="job-category-box rounded card border-0 shadow m-sm-4 m-auto">
-                <i class="fa-solid fa-lightbulb"></i>
-                <div class="p-3">
-                    <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
-                </div>
-            </div>
-            <div class="job-category-box rounded card border-0 shadow m-sm-4 m-auto">
-                <i class="fa-solid fa-lightbulb"></i>
-                <div class="p-3">
-                    <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-5 heading-text  card-title">Electrician</h1>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, accusantium.</p>
-                </div>
-            </div>
+            </a>
+            <?php endforeach; ?>
         </div>
+        <?php endif; ?>
         <div class="d-flex justify-content-center mt-2 p-2">
             <a href="#" class="text-decoration-none fw-bold link-btn text-center">Explore More</a>
         </div>
