@@ -7,8 +7,11 @@ class Home extends Controller
 
         $errors = [];
 
+        $category = new Category();
 
-        $this->view("home", ['errors' => $errors]);
+        $catData = $category->query("SELECT * FROM categorys WHERE category_status = 1 LIMIT 10");
+
+        $this->view("home", ['errors' => $errors, 'category_data'=>$catData]);
     }
 }
 

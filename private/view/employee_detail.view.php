@@ -152,11 +152,12 @@
             <li class="list-group-item rounded-0 tablinks" data-tab="tab2">Portfolio</li>
             <li class="list-group-item rounded-0 tablinks" data-tab="tab3">Gallery</li>
             <li class="list-group-item rounded-0 tablinks" data-tab="tab4">Settings</li>
+            <li class="list-group-item rounded-0 tablinks" data-tab="tab5">Create Profile</li>
             <a href="<?=BASE ?>empdetail/employee_hire" class="hire_me text-decoration-none ms-auto">Hire Me</a>
         </ul>
 
         <div class="mt-2">
-        <div id="tab1" class="tabcontent">
+        <div id="tab5" class="tabcontent">
             <h5>About me</h5>
             <p class="border p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam id dolores sed molestias deserunt, totam doloribus quis nobis consectetur reiciendis voluptatem enim recusandae aliquam, provident velit! Reprehenderit veniam ipsum cupiditate assumenda recusandae sint, commodi ad officia quos ratione magnam blanditiis ab optio qui omnis quibusdam quas distinctio temporibus tenetur reiciendis modi saepe aspernatur placeat. Similique deserunt cum commodi, modi quidem tempora totam inventore illo alias nisi ullam natus, possimus dolorum saepe doloribus atque repellendus autem, reprehenderit blanditiis sunt impedit perspiciatis. Inventore ut veniam explicabo obcaecati, rem reiciendis iste labore? Ab totam assumenda libero suscipit vitae illum, ipsa neque quisquam dolorem.</p>
             <h5>Education</h5>
@@ -185,6 +186,52 @@
         <div id="tab4" class="tabcontent">
             <h3>Tab 4 Content</h3>
             <p>This is the content for Tab 4.</p>
+        </div>
+        <div id="tab1" class="tabcontent">
+            <form action="">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-uppercase">Create Job Profile</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                         <div class="row">
+                            <div class="col">
+                                <label for="fname">First name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control shadow-none border" placeholder="First name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="fname">Last name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control shadow-none border" placeholder="Last name">
+                                </div>
+                            </div>
+                         </div>
+
+                         <div class="row my-3">
+                            <div class="col">
+                                <label for="fname">First name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control shadow-none border" placeholder="First name">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label for="fname">Last name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control shadow-none border" placeholder="Last name">
+                                </div>
+                            </div>
+                         </div>
+
+                    </div>
+                    <div class="col-3">
+                        
+                    </div>
+                </div>
+            </form>
         </div>
         </div>
 
