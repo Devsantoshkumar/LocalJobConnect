@@ -2,13 +2,17 @@
 
 <div id="sidebar" class="sidebar-responsive shadow-sm">
     <div class="sidebar-content">
-        <a href="<?= BASE ?>"
-            class="text-decoration-none fs-4 fw-bold p-4 sidebar-logo heading-text heading-color d-flex align-items-center gap-2 ">
-            <span>
-                <img src="assets\image\logo.svg" alt="">
-            </span>
-            LJC
-        </a>
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="<?= BASE ?>"
+                class="text-decoration-none fs-4 pt-2 fw-bold sidebar-logo heading-text heading-color d-flex align-items-center gap-2 ">
+                <span>
+                    <img src="assets\image\logo.svg" alt="">
+                </span>
+                LJC
+            </a>
+            <span class="close-btn me-3" id="hide-sidebar"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
         <ul class="navbar-nav p-3">
             <li class="nav-item mx-3">
                 <a class="nav-link" aria-current="page" href="<?= BASE ?>">Home</a>

@@ -1,9 +1,31 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 /* Background Content Section Start */
+
+.home-searchbar {
+    display: flex;
+    border: none;
+    border: 2px solid var(--grey-color);
+    width: max-content;
+    border-radius: 20px;
+    background-color: var(--white-color);
+}
+
+.home-searchbar input {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.home-searchbar input:focus {
+    border: none;
+    outline: none;
+}
 
 .bg-text {
     font-family: var(--ubuntu-font-family);
@@ -37,7 +59,10 @@
 /* Work Process Section Start */
 
 .work-process-heading {
-    text-align: center;
+    border-bottom: 2px solid var(--dark-red-color);
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 10px;
     font-weight: bold;
     font-family: var(--opensans-font-family);
     font-size: 30px;
@@ -622,9 +647,9 @@ footer {
     left: -300px;
     width: 300px;
     height: 100%;
-    background-color: var(--white-color2);
+    background-color: var(--light-red-Color);
     transition: all 0.5s ease-in-out;
-    z-index: 1;
+    z-index: 10;
 }
 
 #sidebar.active {
@@ -640,6 +665,14 @@ footer {
 .sidebar-logo span img {
     width: 100%;
     height: 100%;
+}
+
+.close-btn {
+    color: var(--black-color);
+    font-size: 25px;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
 }
 
 .toggler {
@@ -848,17 +881,20 @@ footer {
     -webkit-backdrop-filter: blur(1px);
     border: 1px solid rgba(255, 255, 255, 0.25);
 }
-.heading-underline{
+
+.heading-underline {
     border-bottom: 2px solid red;
     padding-bottom: 10px;
     margin: auto;
     width: fit-content;
 }
-.about-img{
+
+.about-img {
     width: 400px;
     height: 300px;
 }
-.about-img img{
+
+.about-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
