@@ -1,143 +1,45 @@
-<!-- Footer Section Start -->
+<!-- Footer Content Page Starts -->
 
-<footer class="page-footer shadow-sm font-small pt-4 text-white">
-
-    <div class="container-fluid text-md-left my-5">
-        <div class="container px-0">
-            <div class="footer-bg">
-                <img src="<?= ASSETS ?>image/footer image.jpg" alt="image">
+<footer class="footer-bg bg-white">
+    <div class="footer-overlay">
+        <div class="footer-content text-white">
+            <div class="card border-0 bg-transparent m-2 m-md-5">
+                <h1 class="fs-4 heading-text">Local Job Connect</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam expedita, ratione deserunt
+                    inventore delectus repellendus officiis similique cumque quibusdam modi.</p>
             </div>
-            <!-- </div> -->
-            <!-- <div class="container footer-card"> -->
-            <div class="row footer-card pt-5">
-                <div class="col-md-3 mt-md-0 mt-3">
-                    <!-- Content -->
-                    <a class="navbar-brand px-5" href="http://localhost/LOCALJOBCONNECT/">
-                        <img src="<?= ASSETS ?>image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30">
-                    </a>
-                    <p class="pt-2 text-center">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolor voluptatibus sed ullam
-                        nobis
-                        beatae quos pariatur quaerat, mollitia dignissimos!
-                    </p>
-
-                </div>
-                <hr class="clearfix w-100 d-md-none pb-3">
-                <div class="col-md-3 mb-md-0 mb-3">
-                    <h5 class="mb-3 fw-bold heading-text">Job Categories</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none text-center pt-2"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Work from Job</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none text-center pt-2"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Internship Job</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none text-center pt-2"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Freelancer Job</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none text-center pt-2"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Part Time Job</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none text-center pt-2"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Full Time Job</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="col-md-3 mb-md-0 mb-3">
-                    <h5 class="mb-3 heading-text fw-bold">Job Type</h5>
-
-                    <ul class="list-unstyled">
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Create Account</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Job
-                                List</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>FAQ</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Join
-                                Us</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Report Problem</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-md-0 mb-3">
-                    <h5 class="mb-3 heading-text fw-bold">Resources</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>My
-                                Account</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Support</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>How
-                                it Work</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Underwriting</a>
-                        </li>
-                        <li class="mb-3 footer-link">
-                            <a href="#!" class="text-decoration-none"><i
-                                    class="fa-solid fa-angles-right fs-6 mx-2"></i>Employees</a>
-                        </li>
-                    </ul>
-
-                </div>
-
-
-                <div class="col-md-6 col-12 my-4">
-                    <ul class="list-unstyled d-flex px-sm-5 px-2">
-                        <li class="footer-icon">
-                            <a href="#!" class="text-decoration-none rounded-circle"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li class="footer-icon">
-                            <a href="#!" class="text-decoration-none rounded-circle"><i
-                                    class="fa-brands fa-twitter"></i></a>
-                        </li>
-                        <li class="footer-icon">
-                            <a href="#!" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li class="footer-icon">
-                            <a href="#!" class="text-decoration-none"><i class="fa-brands fa-google"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-copyright text-center py-3 text-white">
-                    <hr class="clearfix text-dark w-100">
-                    Copyright © 2023 All Rights Reserved.
-                </div>  
+            <div class="card border-0 bg-transparent m-2 m-md-5">
+                <h1 class="fs-4 heading-text">Our Services</h1>
+                <ul class="list-unstyled">
+                    <li>Account</li>
+                    <li>Seller</li>
+                    <li>Query</li>
+                    <li>Contact Us</li>
+                    <li>Community</li>
+                    <li>Connect</li>
+                    <li>Work</li>
+                    <li>About Us</li>
+                </ul>
+            </div>
+            <div class="card border-0 bg-transparent m-2 m-md-5">
+                <h1 class="fs-4 heading-text">Contact Us</h1>
+                <ul class="list-unstyled">
+                    <li>Address - Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>PhoneNo- 789654123</li>
+                    <li>Email - localjobconnect@gmail.com</li>
+                    <li>
+                        <ul class="list-unstyled d-flex">
+                            <li class="p-3 fs-4"><i class="fa-brands fa-instagram"></i></li>
+                            <li class="p-3 fs-4"><i class="fa-brands fa-facebook"></i></li>
+                            <li class="p-3 fs-4"><i class="fa-brands fa-twitter"></i></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-
-
+        <hr class="text-white">
+        <p class="text-white text-center">copright rervesed</p>
     </div>
-
-    <!-- Copyright -->
-
-
 </footer>
 
-<!-- Footer Section End -->
+<!-- Footer Content Page Ends -->

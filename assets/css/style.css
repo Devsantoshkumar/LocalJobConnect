@@ -500,92 +500,36 @@
 
 /* Explore Section End */
 
-/* FOOTER SECTION Start */
 
-footer {
-    position: relative;
-    width: 100%;
-    height: 520px;
-}
+/* Footer Section Starts */
 
 .footer-bg {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    min-height: 300px;
+    background-image: url('../image/footer image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.footer-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.footer-overlay {
+    background: rgba(0, 0, 0, 0.367);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.footer-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 12px;
-    backdrop-filter: blur(10px) saturate(171%);
-    -webkit-backdrop-filter: blur(10px) saturate(171%);
-    background-color: rgba(0, 0, 0, 0.33);
-    /* border: 1px solid rgba(209, 213, 219, 0.3); */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    min-height: max-content;
+    gap: 40px;
 }
-
-.footer-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: var(--white-color);
-    margin: 0px 10px;
-    transition: scale .5s ease-in-out;
-}
-
-.footer-icon:hover {
-    background-color: var(--yellow-color);
-    scale: 1.2;
-}
-
-.footer-icon a {
-    border-radius: 50%;
-    padding: 10px 15px 12px 15px;
-    color: var(--green-color);
-}
-
-.footer-icon a:hover {
-    color: var(--black-blue-color);
-}
-
-.footer-icon a i {
-    margin-top: 15px;
-}
-
-.footer-link {
-    transition: scale .5s ease-in-out;
-}
-
-.footer-link:hover {
-    scale: 1.1;
-}
-
-.footer-link a {
-    color: var(--white-color);
-    font-family: var(--ubuntu-font-family);
-}
-
-.footer-link a:hover {
-    color: var(--black-blue-color);
-}
-
-/* .footer-copyright {
-    background-color: var(--green-color);
-} */
 
 /* Footer Section End */
+
 
 /* User Profile Section Start */
 
@@ -890,11 +834,13 @@ footer {
 .like-icon:hover i {
     color: red;
 }
-.about-img{
+
+.about-img {
     width: 300px;
     height: 300px;
 }
-.about-img img{
+
+.about-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
