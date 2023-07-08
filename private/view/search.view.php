@@ -208,28 +208,6 @@ $this->view("includes/searchnav");
 
 <script>
 
-
-    const togglebtn = document.querySelector('#toggle-btn');
-    const sidebar = document.querySelector('#sidebar');
-
-    togglebtn.onclick = function () {
-        if (!togglebtn.classList.contains('active')) {
-            togglebtn.classList.toggle('active');
-            sidebar.classList.toggle('active');
-        } else {
-            togglebtn.classList.remove('active');
-            sidebar.classList.remove('active');
-        }
-    };
-
-    window.onclick = function (e) {
-        if (e.target === togglebtn && e.target === sidebar) {
-            // togglebtn.classList.remove('active');
-            // sidebar.classList.remove('active');
-            console.log("hello");
-        }
-    };
-
     // Select State Code
 
     const selectState = document.getElementById("selectState");

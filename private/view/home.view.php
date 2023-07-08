@@ -47,13 +47,13 @@ $this->view("includes/navbar");
         <?php if($category_data): ?>
         <div class="job-category mt-2">
             <?php foreach($category_data as $rows): ?>
-            <a href="<?=BASE ?>employees/<?=$rows->categorys_id; ?>" class="job-category-box text-decoration-none text-dark rounded card border-0 shadow-sm p-3 m-sm-4 m-auto">
+            <a href="<?=BASE ?>employees/<?=$rows->categorys_id; ?>" class="job-category-box text-decoration-none text-dark rounded card border-0 shadow-sm pt-3 m-sm-4 m-auto">
                 <i class="fa-solid fa-lightbulb"></i>
-                <div class="p-3">
-                    <div class="d-flex align-item-center justify-content-center">
-                        <h1 class="fw-bold fs-6 heading-text  card-title"><?=$rows->category_name; ?></h1>
-                    </div>
-                    <p class="text-center"><?=$rows->category_description; ?></p>
+                <div class="job-category-content">
+                    <!-- <div class="d-flex align-item-center justify-content-center"> -->
+                        <h1 class="fw-bold fs-6 heading-text text-center card-title"><?=$rows->category_name; ?></h1>
+                    <!-- </div> -->
+                    <p><?=$rows->category_description; ?></p>
                 </div>
             </a>
             <?php endforeach; ?>

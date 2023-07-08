@@ -93,15 +93,14 @@ locations{
 
 
 table 7:
-<<<<<<< HEAD
---------
+
 verifys{
    verifys_id: int primary_key auto_increament,
    otp: varchar(6),
    expired: varchar(100),
    email: varchar(100)
-=======
--------
+}
+
 categorys{
     categorys_id: int primary_key auto_increament,
     category_name varchar(100),
@@ -109,5 +108,4 @@ categorys{
     category_description: varchar(500),
     category_status tinyInt default(1),
     created_by int,
->>>>>>> santosh_workspace
 }

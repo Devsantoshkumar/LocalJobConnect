@@ -1,16 +1,27 @@
 @media only screen and (max-width: 460px) {
+
     /* home Search Bar */
-    .home-searchbar input{
+    .home-searchbar input {
         width: 250px;
     }
+
+    /* Explore Page responsive start */
+
+    .explore-text {
+        left: 20px;
+    }
+
+    /* Explore Page responsive End */
 }
 
 @media only screen and (max-width: 640px) {
+
     /* home list */
-    .work-list{
+    .work-list {
         flex-direction: column;
     }
-    .work-list li{
-        margin: auto!important;
+
+    .work-list li {
+        margin: auto !important;
     }
 }

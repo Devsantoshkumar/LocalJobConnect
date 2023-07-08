@@ -8,9 +8,21 @@ $this->view("includes/navbar");
 
 ?>
 
-<section class="banner-section">
+<section class="banner-section position-relative">
     <div class="banner-image-box">
-        <img src="assets\image\explore-bg (1).jpg" alt="image" class="bg-image">
+        <img src="<?= ASSETS ?>image/explore-bg (2).jpg" alt="image" class="bg-image">
+    </div>
+    <div class="banner-bg-overlay">
+        <div class="explore-text">
+            <h1 class="mb-4">Explore More Job</h1>
+            <form action="<?= BASE ?>search">
+                <div class="home-searchbar">
+                    <span class="text-success p-2" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="p-2" name="search" placeholder="Search your Work" aria-label="search"
+                        aria-describedby="basic-addon1" autocomplete="off">
+                </div>
+            </form>
+        </div>
     </div>
 </section>
 
@@ -23,7 +35,7 @@ $this->view("includes/navbar");
             reiciendis.</p>
     </div>
     <div class="explore">
-        <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
+        <div class="m-sm-4 m-auto card border-0 shadow-sm" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
@@ -41,7 +53,7 @@ $this->view("includes/navbar");
                         class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)</a></span>
             <span class="p-3"><a href="#" class="text-decoration-none text-dark fw-bold">$100</a></span>
         </div>
-        <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
+        <div class="m-auto m-sm-4 card border-0 shadow-sm" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
@@ -59,7 +71,7 @@ $this->view("includes/navbar");
                         class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)</a></span>
             <span class="p-3"><a href="#" class="text-decoration-none text-dark fw-bold">$100</a></span>
         </div>
-        <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
+        <div class="m-auto m-sm-4 card border-0 shadow-sm" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
@@ -77,7 +89,7 @@ $this->view("includes/navbar");
                         class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)</a></span>
             <span class="p-3"><a href="#" class="text-decoration-none text-dark fw-bold">$100</a></span>
         </div>
-        <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
+        <div class="m-auto m-sm-4 card border-0 shadow-sm" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
@@ -95,7 +107,7 @@ $this->view("includes/navbar");
                         class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)</a></span>
             <span class="p-3"><a href="#" class="text-decoration-none text-dark fw-bold">$100</a></span>
         </div>
-        <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
+        <div class="m-auto m-sm-4 card border-0 shadow-sm" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
@@ -113,7 +125,7 @@ $this->view("includes/navbar");
                         class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)</a></span>
             <span class="p-3"><a href="#" class="text-decoration-none text-dark fw-bold">$100</a></span>
         </div>
-        <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
+        <div class="m-auto m-sm-4 card border-0 shadow-sm" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
@@ -131,7 +143,7 @@ $this->view("includes/navbar");
                         class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)</a></span>
             <span class="p-3"><a href="#" class="text-decoration-none text-dark fw-bold">$100</a></span>
         </div>
-        <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
+        <div class="m-auto m-sm-4 card border-0 shadow-sm" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
@@ -149,7 +161,7 @@ $this->view("includes/navbar");
                         class="fa-solid fa-star fa-bounce heading-color me-3"></i>4.7 (1.3K)</a></span>
             <span class="p-3"><a href="#" class="text-decoration-none text-dark fw-bold">$100</a></span>
         </div>
-        <div class="m-4 card border-0 shadow" style="width:260px; height:450px;">
+        <div class="m-auto m-sm-4 card border-0 shadow-sm" style="width:260px; height:450px;">
             <div class="explore-img">
                 <div>
                     <img src="assets\image\electrical-card.jpg" alt="image" class="image-fluid">
@@ -168,7 +180,7 @@ $this->view("includes/navbar");
             <span class="p-3"><a href="#" class="text-decoration-none text-dark fw-bold">$100</a></span>
         </div>
     </div>
-    <div class="d-flex justify-content-center my-3">
+    <div class="d-flex justify-content-center my-5">
         <a href="#" class="text-decoration-none link-btn p-3">Explore More</a>
     </div>
 </section>

@@ -11,22 +11,22 @@ $this->view("includes/navbar");
 
 <section class="banner-section">
     <div class="banner-image-box">
-        <img src="assets\image\bg-2.jpg" alt="image" class="bg-image">
+        <img src="<?= ASSETS ?>image/seller.jpg" alt="image" class="bg-image">
     </div>
     <div class="image-text-section">
         <div class="bg-text mb-3">
             <h1 class="text-white fw-bold mx-md-5 mx-3 mb-3 fs-1">Work Your Way</h1>
             <p class="text-white fw-bold mx-md-5 mx-3 fs-6">You bring the skill. We'll make earning easy.</p>
         </div>
-        <div class="container-fluid mx-md-5">
-            <form class="d-flex mb-4 input-group" action="<?= BASE ?>search">
-                <span class="input-group-text link-btn fw-bold" id="basic-addon1"><i
-                        class="fa-solid fa-magnifying-glass text-white"></i>
-                </span>
-                <input class="form-control me-2" type="search" name="search" placeholder="Search">
-                <button class="btn link-btn fw-bold" type="submit">Search</button>
+        <div class="container-fluid mx-md-4">
+            <form action="<?= BASE ?>search" class="mb-4">
+                <div class="home-searchbar">
+                    <span class="text-success p-2" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="p-2" name="search" placeholder="Search your Work" aria-label="search"
+                        aria-describedby="basic-addon1" autocomplete="off">
+                </div>
             </form>
-            <button class="btn text-center link-btn p-3 fs-5">Become a Seller</button>
+            <a href="<?= BASE ?>signup" class="link-btn ms-3 text-decoration-none text-center">Become A Seller</a>
         </div>
     </div>
     <div class="banner-cover">
@@ -48,12 +48,100 @@ $this->view("includes/navbar");
 </section>
 
 
-<!-- Working Process for Seller Section Start -->
+<!-- Community Section Start -->
 
-<section class="container-fluid my-5">
+<section class="containerfluid mt-5 mb-3">
     <div class="container">
         <div class="row mb-5">
-            <h4 class="work-process-heading">How It
+            <div class="col">
+                <h1 class="text-center fs-2 fw-bold heading-text">Join Our <span
+                        class="fw-bold fs-2 heading-text heading-color"> Community</span></h1>
+                <p class="text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nemo!
+                </p>
+            </div>
+        </div>
+        <div class="community-section mt-2 mb-5 position-relative">
+            <div class="community-box card border-0 shadow my-sm-4 m-auto">
+                <div class="community-image">
+                    <img src="assets\image\employee (1).jpg" alt="worker image" class="image-fluid">
+                </div>
+                <div class="community-text">
+                    <p>I am a<br><span class="heading-color">Electrician</span></p>
+                </div>
+            </div>
+            <div class="community-box card border-0 shadow m-sm-4 m-auto">
+                <div class="community-image">
+                    <img src="assets\image\employee (2).jpg" alt="worker image">
+                </div>
+                <div class="community-text">
+                    <p>I am a<br><span class="heading-color">Electrician</span></p>
+                </div>
+            </div>
+            <div class="community-box card border-0 shadow m-sm-4 m-auto">
+                <div class="community-image">
+                    <img src="assets\image\employee (3).jpg" alt="worker image">
+                </div>
+                <div class="community-text">
+                    <p>I am a<br><span class="heading-color">Electrician</span></p>
+                </div>
+            </div>
+            <div class="community-box card border-0 shadow m-sm-4 m-auto">
+                <div class="community-image">
+                    <img src="assets\image\employee (4).jpg" alt="worker image">
+                </div>
+                <div class="community-text">
+                    <p>I am a<br><span class="heading-color">Electrician</span></p>
+                </div>
+            </div>
+            <div class="community-box card border-0 shadow m-sm-4 m-auto">
+                <div class="community-image">
+                    <img src="assets\image\employee (1).jpg" alt="worker image">
+                </div>
+                <div class="community-text">
+                    <p>I am a<br><span class="heading-color">Electrician</span></p>
+                </div>
+            </div>
+            <div class="community-box card border-0 shadow m-sm-4 m-auto">
+                <div class="community-image">
+                    <img src="assets\image\employee (2).jpg" alt="worker image">
+                </div>
+                <div class="community-text">
+                    <p>I am a<br><span class="heading-color">Electrician</span></p>
+                </div>
+            </div>
+            <div class="community-box card border-0 shadow m-sm-4 m-auto">
+                <div class="community-image">
+                    <img src="assets\image\employee (3).jpg" alt="worker image">
+                </div>
+                <div class="community-text">
+                    <p>I am a<br><span class="heading-color">Electrician</span></p>
+                </div>
+            </div>
+
+            <div class="community-box card border-0 shadow m-sm-4 m-auto">
+                <div class="community-image">
+                    <img src="assets\image\employee (4).jpg" alt="worker image">
+                </div>
+                <div class="community-text">
+                    <p>I am a<br><span class="heading-color">Electrician</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <a href="#" class="text-decoration-none fw-bold link-btn text-center p-3">Explore More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Community Section End -->
+
+
+<!-- Working Process for Seller Section Start -->
+
+<section class="container-fluid my-5 bg-white">
+    <div class="container">
+        <div class="row mb-5">
+            <h4 class="work-process-heading pt-5">How It
                 <span style="color:var(--green-color);">Works</span>
             </h4>
         </div>
@@ -102,93 +190,7 @@ $this->view("includes/navbar");
 
 <!-- Working Process for Seller Section End -->
 
-<!-- Community Section Start -->
 
-<section class="containerfluid mt-5 mb-3">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col">
-                <h1 class="text-center fs-2 fw-bold heading-text">Join Our <span
-                        class="fw-bold fs-2 heading-text heading-color"> Community</span></h1>
-                <p class="text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nemo!
-                </p>
-            </div>
-        </div>
-        <div class="community-section mt-2 mb-5 position-relative">
-            <div class="community-box rounded card border-0 shadow mb-5">
-                <div class="community-image">
-                    <img src="assets\image\employee (1).jpg" alt="worker image" class="image-fluid">
-
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box rounded card border-0 shadow m-sm-0 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (2).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box rounded card border-0 shadow m-sm-0 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (3).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box rounded card border-0 shadow m-sm-0 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (4).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box rounded card border-0 shadow m-sm-0 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (1).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box rounded card border-0 shadow m-sm-0 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (2).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box rounded card border-0 shadow m-sm-0 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (3).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-
-            <div class="community-box rounded card border-0 shadow m-sm-0 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (4).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center mt-5">
-            <a href="#" class="text-decoration-none fw-bold link-btn text-center p-3">Explore More</a>
-        </div>
-    </div>
-</section>
-
-<!-- Community Section End -->
 
 <!-- Query Section Start -->
 
@@ -316,7 +318,7 @@ $this->view("includes/navbar");
         <div class="row">
             <div class="col">
                 <p class="text-center fw-bold heading-text text-dark fs-4">
-                    Sign up and Creat your first <span class="fw-bold heading-text heading-color fs-4">Gig Today</span>
+                    Sign up and Get Your First<span class="fw-bold heading-text heading-color fs-4"> Work Today</span>
                 </p>
                 <div class="d-flex align-item-center justify-content-center">
                     <a href="<?= BASE ?>signup" class="link-btn text-decoration-none text-center">Get Started</a>
