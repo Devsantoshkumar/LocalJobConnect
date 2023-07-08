@@ -6,6 +6,8 @@
 
 <div class="container-fluid topShift bg-white">
 
+<?php if($userData): ?>
+    
 <div class="row">
     <!-- sidebar side start-->
     <div class="col-12 col-md-3 order-2 order-md-1 p-0 py-3 bg-white shadow-sm">
@@ -135,16 +137,26 @@
     <div class="card border-0  rounded-0">
         <div class="profile_details_image_container">
             <div class="profile_details_cover">
-                <img src="<?=ASSETS ?>image/banner3.jpg" alt="">
+                <img id="bannerImageShow" alt="">
             </div>
             <div class="profile_details_overlay">
                 <div class="text-uppercase d-flex flex-column text-white profile_details_info">
-                <span class="profile_details_name">Sonam Kapoor</span>
-                <span class="profile_details_profession">Home Designer</span>
+                <span class="profile_details_name"><?=$userData[0]->firstname; ?> <?=isset($userData[0]->lastname)? $userData[0]->lastname : ""; ?></span>
+                <span class="profile_details_profession"><?=isset($userData[0]->category_name) ? $userData[0]->category_name : "Update Profession"; ?></span>
+                </div>
+                <div id="bannerImageForm" class="bannerFormImage">
+                    <label for="bannerImage" class='text-center'><i class="fa-solid fa-camera text-light"></i></label>
+                    <input type="hidden" id="uid" value="<?=$userId; ?>" class="d-none">
+                    <input type="file" name="cover" id="bannerImage" class="d-none">
                 </div>
             </div>
             <div class="profile_details_profile rounded-circle p-1 bg-white">
-            <img src="<?=ASSETS ?>image/emp1.jpg" class="rounded-circle" alt="">
+               <img id="profileImageShow" class="rounded-circle" alt="">
+               <div id="profileImageForm" class="profileFormImage">
+                    <label for="profileImage" class='text-center'><i class="fa-solid fa-camera"></i></label>
+                    <input type="hidden" id="userId" value="<?=$userId; ?>" class="d-none">
+                    <input type="file" name="image" id="profileImage" class="d-none">
+               </div>
             </div>
         </div>
         <ul class="list-group rounded-0 d-flex align-items-center list-group-horizontal-sm bg-white shadow-sm border-0 tab">
@@ -239,6 +251,9 @@
     </div>
     <!-- image side end -->
 </div>
+
+<?php endif; ?>
+
 </div>
     
 

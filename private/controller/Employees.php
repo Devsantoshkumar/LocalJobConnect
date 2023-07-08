@@ -1,11 +1,15 @@
 <?php
 
 class Employees extends Controller{
-    function index(){
+
+    function index($id=NULL){
 
         $errors = [];
 
-        
-        $this->view("employees",['errors'=>$errors]);
+        $user = new User();
+
+        $userdata = $user->where("job_category_id", $id);
+
+        $this->view("employees",['errors'=>$errors, 'userData'=>$userdata]);
     }
 }

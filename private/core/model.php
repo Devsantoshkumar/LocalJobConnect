@@ -94,6 +94,20 @@ class Model extends Database
     }
 
 
+    // update record in the table
+    public function updateWithColumn($column,$id,$data){
+        $str = "";
+        foreach($data as $key => $value){
+        $str .= $key."=:".$key.",";
+        }
+
+        $str = trim($str,",");
+        $data['id'] = $id;
+        $query = "UPDATE $this->table SET $str WHERE ".$column. " =:id";
+        return $this->query($query, $data);
+    }
+
+
     // delete record from the table
     public function delete($id){
         $data['id'] = $id;
@@ -136,8 +150,12 @@ class Model extends Database
               mkdir($folder,0777,true);
             }
 
-            if(file_exists($folder.$PREV_FILE)){
-              unlink($folder.$PREV_FILE);
+            if($PREV_FILE != 'profile-default.png' && $PREV_FILE != 'banner-default.jpg'){
+
+                if(file_exists($folder.$PREV_FILE)){
+                    unlink($folder.$PREV_FILE);
+                 }
+
             }
 
             $newImageName = uniqid("", true) . "." . pathinfo($imageName, PATHINFO_EXTENSION);
@@ -149,6 +167,7 @@ class Model extends Database
             return $PREV_FILE;
         }
     }
+
 
     // delete image
     public function deleteImage($PREV_FILE){
