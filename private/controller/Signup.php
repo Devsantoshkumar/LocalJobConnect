@@ -185,7 +185,6 @@ class Signup extends Controller
         $country = new Country();
         $data = $country->findAll();
         echo json_encode($data);
-        // show($data);
     }
 
 
