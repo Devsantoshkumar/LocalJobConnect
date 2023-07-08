@@ -102,3 +102,31 @@ categorys{
     category_status tinyInt default(1),
     created_by int,
 }
+
+table 8:
+-------
+countrys{
+    countrys_id: int primary_key auto_increament,
+    country_name varchar(100),
+    country_status: tinyInt default 1,
+}
+
+
+table 8:
+-------
+states{
+    states_id: int primary_key auto_increament,
+    state_name varchar(100),
+    state_status: tinyInt default 1,
+    country_id: int,
+}
+
+
+table 8:
+-------
+citys{
+    citys_id: int primary_key auto_increament,
+    city_name varchar(100),
+    city_status: tinyInt default 1,
+    state_id: int,
+}

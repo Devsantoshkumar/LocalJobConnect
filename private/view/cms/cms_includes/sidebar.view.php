@@ -39,11 +39,12 @@
                 <li class="my-1" data-bs-toggle="collapse" data-bs-target="#collapseCate" aria-expanded="true" aria-controls="collapseCate"><a href="#" class="d-flex py-2 px-3 rounded align-items-center gap-2 text-decoration-none"><span class="material-symbols-outlined">category</span><span>Category</span><i class="fa-solid fa-angle-right text-muted ms-auto"></i></a></li>
                 <div id="collapseCate" class="accordion-collapse ps-3 collapse" aria-labelledby="headingCate" data-bs-parent="#accordionExample">
                     <ul class="sub-items bg-light rounded p-2 px-3">
-                        <li class=""><a href="#" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> List</a></li>
-                        <li class=""><a href="#" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> Create</a></li>
-                        <li class=""><a href="#" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> Transh</a></li>
-                        <li class=""><a href="#" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> Roles</a></li>
-                        <li class=""><a href="#" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> Create Role</a></li>
+                        <li class=""><a href="<?=BASE ?>countrys" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> Country List</a></li>
+                        <li class=""><a href="<?=BASE ?>countrys/add" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> Create Country</a></li>
+                        <li class=""><a href="<?=BASE ?>states" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> State List</a></li>
+                        <li class=""><a href="<?=BASE ?>states/add" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> Create List</a></li>
+                        <li class=""><a href="<?=BASE ?>citys" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i>City List</a></li>
+                        <li class=""><a href="<?=BASE ?>citys/add" class="text-decoration-none d-block p-2"><i class="fa-regular fa-circle-dot me-2"></i> Create City</a></li>
                     </ul>
                 </div>
 

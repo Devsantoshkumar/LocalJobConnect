@@ -148,7 +148,7 @@
                            
                            <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
                                 <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
-                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                                <a href="<?=BASE ?>empdetail/1" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
                            </div>
 
                         </div>
@@ -171,7 +171,7 @@
                            
                            <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
                                 <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
-                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                                <a href="<?=BASE ?>empdetail/2" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
                            </div>
 
                         </div>
@@ -194,7 +194,7 @@
                            
                            <div class="actionButtons d-flex flex-column align-items-center justify-content-between pb-3 px-3">
                                 <p class="emp_price btn shadow-none px-0 pb-0 fs-6">Service charges: &#x20B9;4545</p>
-                                <a href="<?=BASE ?>empdetail" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
+                                <a href="<?=BASE ?>empdetail/3" class="btn btn-sm text-white fw-bold w-100 py-2 rounded border-0 shadow-sm">View Detail</a>
                            </div>
 
                         </div>
