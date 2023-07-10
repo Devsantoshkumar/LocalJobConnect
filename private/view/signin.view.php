@@ -34,19 +34,6 @@ $this->view("includes/navBar");
                                     <span type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></span>
                                 </div>
                             <?php endif; ?>
-                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
-                                <li class="footer-icon">
-                                    <a href="#!" class="text-decoration-none rounded-circle"><i
-                                            class="fa-brands fa-facebook-f"></i></a>
-                                </li>
-                                <li class="footer-icon">
-                                    <a href="#!" class="text-decoration-none rounded-circle"><i
-                                            class="fa-brands fa-twitter"></i></a>
-                                </li>
-                                <li class="footer-icon">
-                                    <a href="#!" class="text-decoration-none"><i class="fa-brands fa-google"></i></a>
-                                </li>
-                            </ul>
                             <form action="#" autocomplete="off" method="post">
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
