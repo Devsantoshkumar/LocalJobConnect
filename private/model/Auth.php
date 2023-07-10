@@ -11,8 +11,11 @@ class Auth
     // Logout() -> It will unset all the value that is store by the session variable
     public static function logout()
     {
-        if (isset($_SESSION['USERS'])) {
+        if (isset($_SESSION['USERS'])) 
+        {
             unset($_SESSION['USERS']);
+            unset($_SESSION['EMAIL']);
+            unset($_SESSION['OTP']);
         }
     }
 

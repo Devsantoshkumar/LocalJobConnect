@@ -2,6 +2,13 @@
 
 class Signup extends Controller
 {
+
+    function __construct(){
+        if(Auth::loggedIn()){
+            $this->redirect("/");
+        }
+    }
+
     function index()
     {
 
@@ -9,6 +16,7 @@ class Signup extends Controller
 
         $user = new User();
         $verify = new Verify();
+        $categorys = new Category();
 
         if(count($_POST)>0){
             
@@ -18,6 +26,8 @@ class Signup extends Controller
                 $emailId = $_POST['email']; 
                 $firstname = $_POST['firstname']; 
                 $_POST['date'] = date("y-m-d H:i:s");
+                $_POST['image'] = 'profile-default.png';
+                $_POST['cover'] = 'banner-default.jpg';
 
                 $message = "<b>Hello  Sir/Madam</b><br/><br/>";
                 $message .= "Welcome to Local Job Connect <br/><br/>";
@@ -53,7 +63,10 @@ class Signup extends Controller
             }
         }
 
-        $this->view("signup", ['errors' => $errors]);
+
+        $categoryData = $categorys->findAll();
+
+        $this->view("signup", ['errors' => $errors, 'cateData'=>$categoryData]);
     }
 
 
@@ -79,7 +92,7 @@ class Signup extends Controller
                     $user->query("update users set email_varified = email where email = '$email'");
                     $_SESSION['msg'] = "Email verified successfully";
                     $_SESSION['status'] = "success";
-                    $this->redirect('signin');
+                    $this->redirect('signup/location');
                 }else{
                     $_SESSION['msg'] = "OTP has expired. Send again";
                     $_SESSION['status'] = "error";
@@ -131,6 +144,69 @@ class Signup extends Controller
             $_SESSION['msg'] = "Something wrong. Try again!";
             $_SESSION['status'] = 'error';
         }
+    }
+
+
+    public function location(){
+
+        $errors = [];
+        
+        $category = new Category();
+        $user = new User();
+        $email = $_SESSION['EMAIL'];
+
+        if(count($_POST)>0){
+            
+            if($user->validate($_POST)){
+
+                $user->updateWithColumn("email_varified", $email, $_POST);
+                $_SESSION['msg'] = "Registration successfully done";
+                $_SESSION['status'] = "success";
+                $userData = $user->where("email_varified", $email);
+                $row = $userData[0];
+                Auth::authenticate($row);
+                $this->redirect("/");
+
+            }else{
+                $errors = $user->errors;
+            }
+        }
+
+        $categoryData = $category->findAll();
+
+
+        $this->view("user.location", ['errors'=>$errors, 'categories'=>$categoryData]);
+    }
+
+
+
+    public function fetch_countries(){
+
+        $country = new Country();
+        $data = $country->findAll();
+        echo json_encode($data);
+    }
+
+
+
+    public function fetch_states($id=NULL){
+
+        $state = new State();
+
+        $data = $state->where("country_id", $id);
+
+        echo json_encode($data);
+
+    }
+
+
+    public function fetch_cities($id=NULL){
+        
+        $city = new City();
+
+        $data = $city->where("state_id", $id);
+
+        echo json_encode($data);
     }
 
 

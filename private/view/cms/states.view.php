@@ -66,38 +66,40 @@
             <div class="card border-0 shadow-sm p-2 my-3">
                     <div class="card-body overflow-auto">
                         <h5 class="d-flex align-items-center justify-content-between">
-                            <span>Team Administration</span>
-                            <a href="<?=BASE ?>categories/add" class="btn btn-sm btn-primary shadow-sm">Create</a>
+                            <span>States</span>
+                            <a href="<?=BASE ?>states/add" class="btn btn-sm btn-primary shadow-sm">Create</a>
                         </h5>
-                        <?php if($categories_data): $id = 0; ?>
+                        <?php if($stateData): $id = 0; ?>
                         <table class="table table-bordered my-4">
                         <thead class="table-light">
                           <tr class="tableDataHeading">
                             <th class="p-3">S.No.</th>
-                            <th class="p-3">Category Name</th>
-                            <th class="p-3">Created By</th>
+                            <th class="p-3">State Name</th>
+                            <th class="p-3">Country Name</th>
                             <th class="p-3">Status</th>
                             <th class="p-3">Action</th>
                           </tr>
                         </thead>
                           <tbody>
-                            <?php foreach($categories_data as $row): $id++; ?>
+                            <?php foreach($stateData as $row): $id++; ?>
                           <tr class="tableData">
                             <td><?=$id; ?></td>
                             <td>
-                                <span class="d-block text-capitalize"><?=$row->category_name; ?></span>
+                                <span class="d-block text-capitalize"><?=$row->state_name; ?></span>
                             </td>
-                            <?php  
-                               
-                               $users = new User();
-                               $createdBy = $row->created_by;
-                               $userData = $users->where("users_id",  $createdBy);
+
+                            <td>
+                                <?php 
+                                   $country = new Country();
+                                   $sId = $row->country_id;
+                                   $countryName = $country->query("SELECT * FROM countrys JOIN states ON countrys.countrys_id = states.country_id WHERE countrys_id = $sId");
+                                ?>
+                                <span class="d-block text-capitalize"><?=$countryName[0]->country_name; ?></span>
+                            </td>
                             
-                            ?>
-                            <td class="text-capitalize"><?=isset($userData[0]->firstname) ? $userData[0]->firstname : "Not Found"; ?> <?=isset($userData[0]->lastname) ? $userData[0]->lastname : ""; ?></td>
                             <?php
                             
-                             if($row->category_status == 0){
+                             if($row->state_status == 0){
                                  $status = "Inactive";
                                  $bgColor = "--transPink";
                                  $textColor = "--lightPink";
@@ -110,8 +112,8 @@
                             ?>
                             <td><span class="badge" style="color: var(<?=$textColor; ?>); background-color: var(<?=$bgColor; ?>)"><?=$status; ?></span></td>
                             <td>
-                                <a href="<?=BASE ?>categories/delete/<?=$row->categorys_id; ?>" class="mx-1 text-danger"><span class="material-symbols-outlined">delete</span></a>
-                                <a href="<?=BASE ?>categories/edit/<?=$row->categorys_id; ?>" class="mx-1 text-success"><span class="material-symbols-outlined">border_color</span></a>
+                                <a href="<?=BASE ?>states/delete/<?=$row->states_id; ?>" class="mx-1 text-danger"><span class="material-symbols-outlined">delete</span></a>
+                                <a href="<?=BASE ?>states/edit/<?=$row->states_id; ?>" class="mx-1 text-success"><span class="material-symbols-outlined">border_color</span></a>
                             </td>
                           </tr>
                           <?php endforeach; ?>

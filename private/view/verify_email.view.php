@@ -14,40 +14,28 @@ $this->view("includes/navBar");
         <div class="col-10"></div>
     </div>
     <div class="row d-flex justify-content-center">
-        <div class="col-10 pb-5 pt-3">
-            <div class="card border-0 shadow-sm">
+        <div class="col-7 pb-5 pt-2">
+            <div class="card border-0 py-5 shadow">
                 <div class="row gap-0">
-                    <div class="col-md-6">
-                        <img src="<?=ASSETS ?>image/signin-image.jpg" class="img-fluid rounded-start h-100" alt="image">
-                    </div>
-                    <div class="col-md-6 pt-3">
-                        <h4 class="card-header heading-text heading-color fw-bold border-0 bg-white text-center">Varify OTP
-                        </h4>
-                        <?php if (count($errors) > 0): ?>
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>Error!</strong>
-                                <?php foreach ($errors as $errors): ?><br>
-                                    <?= $errors ?>
-                                <?php endforeach; ?>
-                                <span type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></span>
-                            </div>
-                        <?php endif; ?>
-                        <div class="card-body">
-                            <form autocomplete="off" method="post">
-
-                                <div class="mb-3">
-                                    <label class="form-label">Enter 6 Digit OTP</label>
-                                    <input type="text" value="<?= get_val('otp') ?>" name="otp" class="form-control" placeholder="Enter OTP">
+                    <div class="col pt-3">
+                        <h4 class="card-header custom-card-heading border-0 bg-white text-center">Email Varification</h4>
+                        <div class="card-body px-5">
+                            <form action="#" autocomplete="off" method="post">
+                                <div class="row">
+                                    <div class="col myinputgroup">
+                                        <label class="form-label">Enter OTP</label>
+                                        <input type="text" value="<?= get_val('otp') ?>" name="otp" class="form-control py-3 shadow-none rounded-0 bg-light" placeholder="Enter OTP">
+                                        <small class="text-danger errormsg"><?=isset($errors['otp']) ? $errors['otp'] : ""; ?></small>
+                                    </div>
                                 </div>
-
-                                <p class="card-text">OTP has been expired?<a href="<?= BASE ?>signup/send_again"
+                                <p class="card-text mt-4">OTP Expired?<a href="<?= BASE ?>signup/send_again"
                                         class="text-decoration-none">Send Again</a>
                                 </p>
                                 <p class="card-text">By creating an account or logging in, you agree to LOCAL JOB
                                     CONNECT <a href="#" class="text-decoration-none">Conditions
                                         of Use</a>and <a href="#" class="text-decoration-none">Privacy Policy.</a>
                                 </p>
-                                <input type="submit" value="Varify OTP" name="signup" class="btn link-btn">
+                                <input type="submit" value="Varify" name="signup" class="btn custom-button rounded-0 text-white shadow-sm fw-bold">
                             </form>
                         </div>
                     </div>
