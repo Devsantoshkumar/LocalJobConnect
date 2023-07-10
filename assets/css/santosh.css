@@ -1,6 +1,6 @@
-.topShift{
-    margin-top: 70px;
-}
+/* .topShift{
+    margin-top: 10px;
+} */
 
 /* employee page start */
 
@@ -127,8 +127,7 @@ profile_details_profession{
 }
 
 .profile_details_recommonded_cards{
-    min-height: 100vh;
-    max-height: 200vh;
+    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -182,6 +181,13 @@ profile_details_profession{
     color: var(--white-color);
 }
 
+.tab-vertical-nav{
+    height: 100vh;
+}
+
+.custom-inputs textarea{
+    outline: none;
+}
 
 /* hire page style start */
 

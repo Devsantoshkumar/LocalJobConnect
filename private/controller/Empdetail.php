@@ -5,14 +5,19 @@ class Empdetail extends Controller{
 
     function index($id=NULL){
 
-
-
         $users = new User();
+        $category = new Category();
+
+        $userdata = $users->query("SELECT * FROM users LEFT JOIN countrys ON users.country_id LEFT JOIN states ON users.state_id LEFT JOIN citys ON users.city_id WHERE users_id = $id");
+        
+        $jobCategories = $category->findAll();
+
+        $this->view("employee_detail" , ['userId'=>$id, 'userData'=>$userdata, 'jobCategories'=>$jobCategories]);
+    }
 
 
-        $userdata = $users->where("users_id", $id);
-
-        $this->view("employee_detail" , ['userId'=>$id, 'userData'=>$userdata]);
+    function edit_emp_info($id=NULL){
+        
     }
 
 

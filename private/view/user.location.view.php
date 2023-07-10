@@ -9,7 +9,7 @@ $this->view("includes/navBar");
 
 <!-- Sign Up Section Start -->
 
-<section class="container my-5" style="min-height:100vh;">
+<section class="container" style="min-height:100vh;">
     <div class="row d-flex justify-content-center pt-5">
         <div class="col-10"></div>
     </div>
@@ -26,7 +26,7 @@ $this->view("includes/navBar");
                                         <label class="form-label">Job Category</label>
                                         <?php if($categories): ?>
                                         <select name="job_category_id" id="jobCategory" class="form-control rounded-0 bg-light shadow-none">
-                                            <option value="">Select Category</option>
+                                           <option value="">Select Category</option>
                                            <?php foreach($categories as $crows): ?>
                                             <option value="<?=$crows->categorys_id; ?>"><?=$crows->category_name; ?></option>
                                             <?php endforeach; ?>

@@ -28,7 +28,15 @@
             </ul>
         </div>
         <button class="link-btn d-none d-lg-flex">
-            <a href="<?= BASE ?>signin" class="text-decoration-none text-white">Sign In</a>
+            <?php if(Auth::loggedIn()): ?>
+
+                <a href="<?= BASE ?>signout" class="text-decoration-none text-white">Logout</a>
+                
+            <?php else: ?>
+
+                <a href="<?= BASE ?>signin" class="text-decoration-none text-white">Sign In</a>
+
+            <?php endif; ?>
         </button>
     </div>
 </nav>
