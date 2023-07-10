@@ -1,88 +1,85 @@
 <!-- Start Selling Nav Page -->
 
 
-<nav class="navbar fixed-top navbar-expand-lg bg-white shadow-sm">
+<nav class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold heading-text" href="<?= BASE ?>startselling/<?= Auth::user("users_id") ?>">
-            <img src="<?= ASSETS ?>image\logo.svg" alt="LOCALJOBCONNECT" width="50" height="30">LJC
+        <a class="navbar-brand" href="<?= BASE ?>">
+            <img src="<?= ASSETS ?>image\LJC Logo.png" width="100" height="30" alt="image">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <form action="" class="mx-0 mx-lg-3">
+            <div class="searchbar">
+                <span class="text-success p-2" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="p-2" name="search" placeholder="Search your Work" aria-label="search"
+                    aria-describedby="basic-addon1" autocomplete="off">
+            </div>
+        </form>
+        <button class="navbar-toggler" id="toggle-btn">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <form class="d-flex mx-lg-5 mt-lg-0 mt-3 w-md-50 w-100" action="<?= BASE ?>search" method="GET">
-                <input class="form-control me-2" type="search" name="search"
-                    placeholder="What service are you looking for today ?" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <ul class="navbar-nav">
-                <li class="profile-icon">
-                    <a href="<?= BASE ?>profile" class="text-decoration-none">
-                        <i class="fa-regular fa-bell rounded-circle"></i>
+        <div class="collapse navbar-collapse ms-2" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 w-100 d-flex align-items-center justify-content-between mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link fs-5" aria-current="page" href="<?= BASE ?>">
+                        <i class="fa-solid fa-paper-plane"></i>
                     </a>
                 </li>
-                <li class="profile-icon">
-                    <a href="<?= BASE ?>profile" class="text-decoration-none">
-                        <i class="fa-regular fa-envelope"></i>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="<?= BASE ?>explore">
+                        <i class="fa-solid fa-envelope"></i>
                     </a>
                 </li>
-
-                <li class="profile-icon"><a href="<?= BASE ?>profile" class="text-decoration-none">
-                        <i class="fa-regular fa-circle-question"></i>
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="<?= BASE ?>explore">
+                        <i class="fa-solid fa-bell"></i>
                     </a>
                 </li>
-
-                <li class="profile-icon">
-                    <a href="<?= BASE ?>profile/<?= Auth::user("users_id"); ?>" class="text-decoration-none">
+                <li class="nav-item">
+                    <a class="nav-link fs-5" href="<?= BASE ?>explore">
                         <i class="fa-solid fa-toggle-on"></i>
                     </a>
                 </li>
-
-                <li class="nav-item dropdown">
-                    <div class="btn-group">
-                        <a class="nav-link dropdown-toggle" href="<?= BASE ?>profile" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <?php
-                            if (Auth::loggedIn()) {
-                                echo Auth::user('firstname');
-                            } else {
-                                echo "No Name";
-                            }
-                            ?>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-start">
-                            <li class="m-auto"><a class="dropdown-item buy-btn"
-                                    href="<?= BASE ?>profile/<?= Auth::user('users_id') ?>">Switch to Selling</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <a class="dropdown-item"
-                                    href="<?= BASE ?>userprofile/<?= Auth::user('users_id') ?>">Profile
-                                </a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
-                            <li><a class="dropdown-item" href="#">Sitting</a></li>
-                            <li><a class="dropdown-item" href="#">Billing</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">English <i class="fa-solid fa-globe ms-2"></i></a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-indian-rupee-sign me-2"></i>
-                                    INR</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="<?= BASE ?>signout">Logout <i
-                                        class="fa-solid fa-power-off ms-2"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                <li class="nav-item dropdown drop-img">
+                    <a class="nav-link drop-link" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="<?= ASSETS ?>image/user.png" alt="image">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-start">
+                        <li class="m-auto"><a class="dropdown-item buy-btn"
+                                href="<?= BASE ?>startselling/<?= Auth::user("users_id"); ?>">Switch to Selling</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="<?= BASE ?>userprofile/<?= Auth::user('users_id') ?>">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
+                        <li><a class="dropdown-item" href="#">Sitting</a></li>
+                        <li><a class="dropdown-item" href="#">Billing</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">English <i class="fa-solid fa-globe ms-2"></i></a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-indian-rupee-sign me-2"></i>
+                                INR</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="<?= BASE ?>signout">Logout <i
+                                    class="fa-solid fa-power-off ms-2"></i></a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
-
         </div>
     </div>
 </nav>
+
+
+<?php
+
+$this->view("includes/sidebar");
+
+?>
+
+<!--  -->

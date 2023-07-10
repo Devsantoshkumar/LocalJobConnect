@@ -12,10 +12,15 @@ class StartSelling extends Controller
         }
     }
 
-    function index()
+    function index($id = null)
     {
 
         $errors = [];
+
+        $user = new User();
+
+        $data = $user->where('users_id', $id);
+
         // $rows = [];
         // $search = '';
 
@@ -28,7 +33,7 @@ class StartSelling extends Controller
         // }
 
 
-        $this->view("startselling", ['errors' => $errors]);
+        $this->view("startselling", ['errors' => $errors, 'rows' => $data]);
     }
 }
 
