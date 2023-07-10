@@ -41,7 +41,7 @@
                 <li class="nav-item dropdown drop-img">
                     <a class="nav-link drop-link" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="<?= ASSETS ?>image/user.png" alt="image">
+                        <img src="<?= BASE ?>uploads/<?= $rows[0]->image; ?>" alt="image">
                     </a>
                     <ul class="dropdown-menu dropdown-menu-start">
                         <li class="m-auto"><a class="dropdown-item buy-btn"

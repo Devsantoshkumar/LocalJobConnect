@@ -31,7 +31,7 @@ class StartSelling extends Controller
         //     $rows = $user->query("SELECT * FROM users LEFT JOIN skills ON users.users_id = skills.skill_user_id WHERE skill_name LIKE '%$search%'");
         //     // show($rows);
         // }
-
+        // show($data);
 
         $this->view("startselling", ['errors' => $errors, 'rows' => $data]);
     }
