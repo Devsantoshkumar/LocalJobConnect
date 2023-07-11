@@ -21,8 +21,8 @@ $this->view("includes/navBar");
                         <img src="assets\image\signin-imagee1.jpg" class="img-fluid rounded-start h-100" alt="image">
                     </div>
                     <div class="col-md-6 pt-3">
-                        <h4 class="card-header heading-text heading-color fw-bold border-0 bg-white text-center mb-3">
-                            Sign In
+                        <h4 class="signin-title heading-text fs-4 heading-color fw-bold bg-white m-auto">
+                            SIGN IN
                         </h4>
                         <div class="card-body">
                             <?php if (count($errors) > 0): ?>
@@ -34,19 +34,6 @@ $this->view("includes/navBar");
                                     <span type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></span>
                                 </div>
                             <?php endif; ?>
-                            <ul class="list-unstyled d-flex align-item-center justify-content-center">
-                                <li class="footer-icon">
-                                    <a href="#!" class="text-decoration-none rounded-circle"><i
-                                            class="fa-brands fa-facebook-f"></i></a>
-                                </li>
-                                <li class="footer-icon">
-                                    <a href="#!" class="text-decoration-none rounded-circle"><i
-                                            class="fa-brands fa-twitter"></i></a>
-                                </li>
-                                <li class="footer-icon">
-                                    <a href="#!" class="text-decoration-none"><i class="fa-brands fa-google"></i></a>
-                                </li>
-                            </ul>
                             <form action="#" autocomplete="off" method="post">
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>

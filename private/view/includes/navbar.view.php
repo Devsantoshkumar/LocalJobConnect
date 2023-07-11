@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?= BASE ?>">
-            <img src="assets\image\LJC Logo.png" width="100" height="30" alt="image">
+            <img src="<?= ASSETS ?>image\LJC Logo.png" width="100" height="30" alt="image">
         </a>
         <button class="navbar-toggler" id="toggle-btn">
             <span class="navbar-toggler-icon"></span>
@@ -28,10 +28,10 @@
             </ul>
         </div>
         <button class="link-btn d-none d-lg-flex">
-            <?php if(Auth::loggedIn()): ?>
+            <?php if (Auth::loggedIn()): ?>
 
                 <a href="<?= BASE ?>signout" class="text-decoration-none text-white">Logout</a>
-                
+
             <?php else: ?>
 
                 <a href="<?= BASE ?>signin" class="text-decoration-none text-white">Sign In</a>

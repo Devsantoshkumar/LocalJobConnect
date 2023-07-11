@@ -6,7 +6,7 @@
             <a href="<?= BASE ?>"
                 class="text-decoration-none fs-4 pt-2 fw-bold sidebar-logo heading-text heading-color d-flex align-items-center gap-2 ">
                 <span>
-                    <img src="assets\image\logo.svg" alt="">
+                    <img src="<?= ASSETS ?>image\logo.svg" alt="">
                 </span>
                 LJC
             </a>
