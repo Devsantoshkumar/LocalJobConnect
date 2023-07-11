@@ -2,8 +2,6 @@
 <?php $bgColor = "bg-white text-dark" ?>
 <?php $this->view("includes/navbar", ['bgColor'=>$bgColor]); ?>
 
-
-
 <div class="container-fluid topShift bg-white">
 
 <?php if($userData):?>
@@ -220,27 +218,29 @@
                     </div>
                     <div class="tab-content w-100" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-                            <form method="POST" action="<?=BASE ?>empdetail/edit_emp_info/<?=$userData[0]->users_id; ?>">
+                            <form id="updateFormData">
                                 <div class="container">
+                                    
                                     <div class="row">
                                         <div class="col my-2">
-                                            <label for="fname">First name</label>
-                                          <input type="text" value="<?=$userData[0]->firstname; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="First name">
+                                          <label for="fname">First name</label>
+                                          <input type="hidden" id="userId" value="<?=$userData[0]->users_id; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="First name">
+                                          <input type="text" name="firstname" id="fname" value="<?=$userData[0]->firstname; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="First name">
                                         </div>
                                         <div class="col my-2">
                                             <label for="fname">Last name</label>
-                                            <input type="text" value="<?=$userData[0]->lastname; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="Last name">
+                                            <input type="text" name="lastname" id="lname" value="<?=$userData[0]->lastname; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="Last name">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col my-2 custom-inputs">
                                             <label for="bio">Your Bio</label>
-                                            <textarea name="bio"  value="<?=$userData[0]->bio; ?>" id="bio" rows="5" class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100" placeholder="About bio"></textarea>
+                                            <textarea name="bio" id="bio" rows="5" class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100" placeholder="About bio"><?=$userData[0]->bio; ?></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col my-2">
-                                            <select name="job_category_id" class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3" id="">
+                                            <select name="job_category_id" id="job_category_id" class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3" id="">
                                                 <option value="">Select Category</option>
                                                    <?php if($jobCategories): ?>
                                                     <?php foreach($jobCategories as $row): ?>
@@ -281,6 +281,11 @@
                                                 <option value="">Select City</option>
                                             </select>
                                             <small class="text-danger errormsg"></small>
+                                        </div>
+                                    </div>
+                                    <div class="row py-5">
+                                        <div class="col">
+                                            <button id="updateProfileData" class="btn btn-sm btn-primary shadow">Update</button>
                                         </div>
                                     </div>
                                 </div>
@@ -357,5 +362,59 @@ $this->view("includes/footer");
         $(this).addClass("active");
     });
 });
+
+
+// update profile data request
+
+$("#updateFormData").submit(function(e){
+        e.preventDefault()
+
+        let userId = $("#userId").val();
+        
+        let formData = {
+            firstname: $("#fname").val(),
+            lastname: $("#lname").val(),
+            bio: $("#bio").val(),
+            job_category_id: $("#job_category_id").val(),
+            country_id: $("#country").val(),
+            state_id: $("#state").val(),
+            city_id: $("#city").val(),
+        }
+
+        $.ajax({
+            url: `<?=BASE ?>empdetail/edit_emp_info/${userId}`,
+            type: "POST",
+            data: formData,
+            success: function(response){
+                const data = JSON.parse(response);
+                
+                if(typeof data.updatedProfile !== 'undefined'){
+                    showErrorAlert(data.updatedProfile, 'success'); 
+                }
+            }
+        })
+
+})
+
+
+
+    // error massage alert
+    function showErrorAlert(errorMessage, status) {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+            })
+            Toast.fire({
+            icon: `${status}`,
+            title: `${errorMessage}`
+            })
+    }
 
 </script>

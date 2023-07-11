@@ -6,7 +6,6 @@ require 'PHPMailer-master/src/Exception.php';
 require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
 
-
 function send_mail($recipient, $subject, $message)
 {
     $mail = new PHPMailer();
@@ -22,7 +21,7 @@ function send_mail($recipient, $subject, $message)
 
     $mail->IsHTML(true);                                  //Set email format to HTML
     $mail->AddAddress($recipient, 'Santosh Kumar');     //Add a recipient             //Name is optional
-    $mail->SetFrom('quietudestudio@gmail.com', 'The Web Sources');
+    $mail->SetFrom('quietudestudio@gmail.com', 'Local Job Connect');
     $mail->Subject = $subject;
     $content = $message;
 
