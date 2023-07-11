@@ -120,8 +120,22 @@ class Empdetail extends Controller
         $_POST['date'] = date("Y-m-d");
         $_POST['user_id'] = Auth::user("users_id");
         $skills->insert($_POST);
-        echo "Data inserted successfully";
 
+        $errors['skill_add'] = "Data inserted successfully";
+
+        echo json_encode($errors);
+        die();
+    }
+
+    function fetch_skill()
+    {
+        $error = [];
+        $skills = new Skill();
+        $id = Auth::user('users_id');
+        $data = $skills->where('user_id', $id);
+        // show($data);
+        echo json_encode($data);
+        die();
     }
 
 }

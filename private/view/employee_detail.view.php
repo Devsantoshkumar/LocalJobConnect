@@ -388,6 +388,7 @@
                                                                 <input type="text" name="skill_name" id="skill"
                                                                     class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
                                                                     placeholder="skill name">
+                                                                <small class="text-danger" id="error_msg"></small>
                                                             </div>
                                                             <div
                                                                 class="col my-2 d-flex align-items-center justify-content-end">
@@ -408,6 +409,9 @@
                                                         </div>
                                                     </div>
                                                 </form>
+                                                <div class="">
+                                                    <p class="text-dark" id="fetch_Skill"></p>
+                                                </div>
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
                                                 aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
@@ -461,35 +465,57 @@ $this->view("includes/footer");
 
         //  Fetching Skill Code Starts
 
+        function fetchSkill() {
+            $.ajax({
+                url: "<?= BASE ?>empdetail/fetch_skill",
+                type: "GET",
+                data: "json",
+                success: function (response) {
+                    let data = JSON.parse(response);
+                    let skills = $("#fetch_Skill");
+                    $.each(data, function (index, skill) {
+                        skills.append(`<p class="mx-2"><i class="fa-solid fa-plus mx-2"></i>${skill.skill_name}</p>`);
+                    });
+                }
+            })
+        }
+
+        fetchSkill();
 
         // Add Skill Code Starts
 
         $("#skillForm").submit(function (e) {
             e.preventDefault()
 
+            let form = this;
+
             const formData = {
                 skill_name: $("#skill").val(),
                 skill_description: $("#skillDesc").val()
             }
-            if (skill_name === "") {
-                
+            if (formData.skill_name === "") {
+                $("#error_msg").text("Skill Name Required!");
+            } else {
+                $("#error_msg").text("");
             }
 
-            let form = this;
+            if (formData.skill_name !== "") {
 
-            $.ajax({
-                type: "POST",
-                url: "<?= BASE ?>empdetail/skill_add",
-                data: formData,
-                success: function (response) {
-                    // Reset the form
-                    form.reset();
-                    // fetchData();
-                },
-                error: function (xhr, status, error) {
-                    console.log(error)
-                }
-            })
+                $.ajax({
+                    type: "POST",
+                    url: "<?= BASE ?>empdetail/skill_add",
+                    data: formData,
+                    success: function (response) {
+                        // Reset the form
+                        form.reset();
+                        let data = JSON.parse(response);
+                        // console.log(data);
+                        $("#fetch_Skill").empty();
+                        fetchSkill();
+                    }
+                })
+            }
+
         });
     });
 
