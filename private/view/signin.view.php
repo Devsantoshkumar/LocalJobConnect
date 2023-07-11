@@ -21,8 +21,8 @@ $this->view("includes/navBar");
                         <img src="assets\image\signin-imagee1.jpg" class="img-fluid rounded-start h-100" alt="image">
                     </div>
                     <div class="col-md-6 pt-3">
-                        <h4 class="card-header heading-text heading-color fw-bold border-0 bg-white text-center mb-3">
-                            Sign In
+                        <h4 class="signin-title heading-text fs-4 heading-color fw-bold bg-white m-auto">
+                            SIGN IN
                         </h4>
                         <div class="card-body">
                             <?php if (count($errors) > 0): ?>

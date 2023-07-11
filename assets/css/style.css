@@ -856,3 +856,9 @@
     height: 100%;
     object-fit: cover;
 }
+
+.signin-title {
+    border-bottom: 2px solid var(--dark-red-color);
+    padding-bottom: 10px;
+    width: fit-content;
+}
