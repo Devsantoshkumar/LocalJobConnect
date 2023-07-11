@@ -1,8 +1,9 @@
 <!-- Skill Model class -->
 
-<?php 
+<?php
 
-class Skill extends Model{
+class Skill extends Model
+{
     protected $table = "skills";
     protected $errors = [];
 
@@ -10,9 +11,30 @@ class Skill extends Model{
         'skill_name',
         'skill_description',
         'skill_status',
-        'skill_user_id',
+        'user_id',
         'date'
     ];
+
+    public function skillValidation($data)
+    {
+        $this->errors = [];
+
+        if (isset($data['skill_name'])) {
+            if (empty($data['skill_name'])) {
+                $this->errors['Skill name'] = "Skill Name is Required";
+            }
+        }
+        if (strlen($data['skill_description'] > 100)) {
+            $this->errors['skill_description'] = "Skill Description can be less than 100 words";
+        }
+
+
+        if (count($this->errors) == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 

@@ -26,13 +26,13 @@ class Userprofile extends Controller
         if (!empty($_POST['skillData'])) {
 
             $_POST['date'] = date("Y-m-d");
-            $_POST['skill_user_id'] = Auth::user("users_id");
+            $_POST['user_id'] = Auth::user("users_id");
             $skills->insert($_POST);
             echo "Data inserted successfully";
             die();
         }
 
-        $sData = $skills->where("skill_user_id", Auth::user("users_id"));
+        $sData = $skills->where("user_id", Auth::user("users_id"));
         if (!empty($_GET['skills'])) {
 
             $output = "";

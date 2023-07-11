@@ -290,31 +290,7 @@ $this->view("includes/footer");
 
 
 
-        $("#skillForm").submit(function (e) {
-            e.preventDefault()
-
-            const formData = {
-                skill_name: $("#skill").val(),
-                skill_description: $("#skillDesc").val(),
-                skillData: "skill_data"
-            }
-
-            let form = this;
-
-            $.ajax({
-                type: "POST",
-                url: "",
-                data: formData,
-                success: function (response) {
-                    // Reset the form
-                    form.reset();
-                    fetchData();
-                },
-                error: function (xhr, status, error) {
-                    console.log(error)
-                }
-            })
-        });
+                                                             
 
         // Skill form code end
 
