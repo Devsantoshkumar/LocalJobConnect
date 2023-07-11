@@ -11,15 +11,16 @@ class Empdetail extends Controller
         $category = new Category();
 
         $userdata = $users->query("SELECT * FROM users LEFT JOIN countrys ON users.country_id LEFT JOIN states ON users.state_id LEFT JOIN citys ON users.city_id WHERE users_id = $id");
-        
+
         $jobCategories = $category->findAll();
 
         $this->view("employee_detail", ['userId' => $id, 'userData' => $userdata, 'jobCategories' => $jobCategories]);
     }
 
 
-    function edit_emp_info($id=NULL){
-        
+    function edit_emp_info($id = NULL)
+    {
+
     }
 
 
@@ -116,13 +117,10 @@ class Empdetail extends Controller
     {
         $errors = [];
         $skills = new Skill();
-        if ($skills->skillValidation($_POST)) {
-            $_POST['date'] = date("Y-m-d");
-            $_POST['user_id'] = Auth::user("users_id");
-            $skills->insert($_POST);
-            echo "Data inserted successfully";
-            die();
-        }
+        $_POST['date'] = date("Y-m-d");
+        $_POST['user_id'] = Auth::user("users_id");
+        $skills->insert($_POST);
+        echo "Data inserted successfully";
 
     }
 

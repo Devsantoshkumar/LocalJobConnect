@@ -260,107 +260,152 @@
                             <p>This is the content for Tab 4.</p>
                         </div>
 
-        <!-- data edit page section start -->
-        <div id="tab1" class="tabcontent p-0">
-            <div class="card rounded-0 border-0">
-                <div class="card-header rounded-0">Edit Profile</div>
-                <div class="card-body p-0">
-                    <div class="d-flex">
-                    <div class="nav shadow-sm w-25 bg-light flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link rounded-0 text-start" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Edit Profile</button>
-                        <button class="nav-link rounded-0 text-start" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Add Skills</button>
-                        <button class="nav-link rounded-0 text-start" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false">Change Password</button>
-                        <button class="nav-link rounded-0 text-start" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Change Email</button>
-                        <button class="nav-link rounded-0 text-start" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
-                    </div>
-                    <div class="tab-content w-100" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-                            <form method="POST" action="<?=BASE ?>empdetail/edit_emp_info/<?=$userData[0]->users_id; ?>">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col my-2">
-                                            <label for="fname">First name</label>
-                                          <input type="text" value="<?=$userData[0]->firstname; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="First name">
+                        <!-- data edit page section start -->
+                        <div id="tab1" class="tabcontent p-0">
+                            <div class="card rounded-0 border-0">
+                                <div class="card-header rounded-0">Edit Profile</div>
+                                <div class="card-body p-0">
+                                    <div class="d-flex">
+                                        <div class="nav shadow-sm w-25 bg-light flex-column nav-pills me-3" id="v-pills-tab"
+                                            role="tablist" aria-orientation="vertical">
+                                            <button class="nav-link rounded-0 text-start" id="v-pills-home-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button"
+                                                role="tab" aria-controls="v-pills-home" aria-selected="true">Edit
+                                                Profile</button>
+                                            <button class="nav-link rounded-0 text-start" id="v-pills-profile-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button"
+                                                role="tab" aria-controls="v-pills-profile" aria-selected="false">Add
+                                                Skills</button>
+                                            <button class="nav-link rounded-0 text-start" id="v-pills-disabled-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button"
+                                                role="tab" aria-controls="v-pills-disabled" aria-selected="false">Change
+                                                Password</button>
+                                            <button class="nav-link rounded-0 text-start" id="v-pills-messages-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button"
+                                                role="tab" aria-controls="v-pills-messages" aria-selected="false">Change
+                                                Email</button>
+                                            <button class="nav-link rounded-0 text-start" id="v-pills-settings-tab"
+                                                data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button"
+                                                role="tab" aria-controls="v-pills-settings"
+                                                aria-selected="false">Settings</button>
                                         </div>
-                                        <div class="col my-2">
-                                            <label for="fname">Last name</label>
-                                            <input type="text" value="<?=$userData[0]->lastname; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="Last name">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col my-2 custom-inputs">
-                                            <label for="bio">Your Bio</label>
-                                            <textarea name="bio"  value="<?=$userData[0]->bio; ?>" id="bio" rows="5" class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100" placeholder="About bio"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col my-2">
-                                            <select name="job_category_id" class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3" id="">
-                                                <option value="">Select Category</option>
-                                                   <?php if($jobCategories): ?>
-                                                    <?php foreach($jobCategories as $row): ?>
-                                                        <?php 
-                                                        
-                                                          if($row->categorys_id == $userData[0]->job_category_id){
-                                                             $selected = "selected";
-                                                          }else{
-                                                             $selected = "";
-                                                          }
-                                                            
-                                                        ?>
-                                                        <option value="<?=$row->categorys_id; ?>" <?=$selected; ?>><?=$row->category_name; ?></option>
-                                                    <?php endforeach; ?>
-                                                <?php endif; ?>
-                                            </select>
-                                        </div>
-                                        <div class="col d-flex align-items-center my-2">
-                                            <input type="text" value="<?=$userData[0]->country_name; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="Last name" disabled>
-                                            <select name="country_id" id="country" class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
-                                                <option value="">Select Country</option>
-                                            </select>
-                                            <small class="text-danger errormsg"></small>
-                                        </div>
-                                    </div>
+                                        <div class="tab-content w-100" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                                aria-labelledby="v-pills-home-tab" tabindex="0">
+                                                <form method="POST"
+                                                    action="<?= BASE ?>empdetail/edit_emp_info/<?= $userData[0]->users_id; ?>">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col my-2">
+                                                                <label for="fname">First name</label>
+                                                                <input type="text" value="<?= $userData[0]->firstname; ?>"
+                                                                    class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="First name">
+                                                            </div>
+                                                            <div class="col my-2">
+                                                                <label for="fname">Last name</label>
+                                                                <input type="text" value="<?= $userData[0]->lastname; ?>"
+                                                                    class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="Last name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col my-2 custom-inputs">
+                                                                <label for="bio">Your Bio</label>
+                                                                <textarea name="bio" value="<?= $userData[0]->bio; ?>"
+                                                                    id="bio" rows="5"
+                                                                    class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100"
+                                                                    placeholder="About bio"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col my-2">
+                                                                <select name="job_category_id"
+                                                                    class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3"
+                                                                    id="">
+                                                                    <option value="">Select Category</option>
+                                                                    <?php if ($jobCategories): ?>
+                                                                        <?php foreach ($jobCategories as $row): ?>
+                                                                            <?php
 
-                                    <div class="row">
-                                        <div class="col d-flex align-items-center my-2">
-                                            <input type="text" value="<?=$userData[0]->state_name; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="Last name" disabled>
-                                            <select name="state_id" id="state" class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
-                                                <option value="">Select State</option>
-                                            </select>
-                                            <small class="text-danger errormsg"></small>
-                                        </div>
-                                        <div class="col d-flex align-items-center my-2">
-                                            <input type="text" value="<?=$userData[0]->city_name; ?>" class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="Last name" disabled>
-                                            <select name="city_id" id="city" class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
-                                                <option value="">Select City</option>
-                                            </select>
-                                            <small class="text-danger errormsg"></small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
-                        <form action="">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col my-2">
-                                            <label for="fname">First name</label>
-                                          <input type="text" class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="First name">
-                                        </div>
-                                        <div class="col my-2">
-                                            <label for="fname">Last name</label>
-                                          <input type="text" class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0" placeholder="Last name">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col my-2 custom-inputs">
-                                            <label for="bio">Your Bio</label>
-                                            <textarea name="bio" id="bio" rows="5" class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100" placeholder="About bio"></textarea>
-                                        </div>
-                                    </div>
+                                                                            if ($row->categorys_id == $userData[0]->job_category_id) {
+                                                                                $selected = "selected";
+                                                                            } else {
+                                                                                $selected = "";
+                                                                            }
 
+                                                                            ?>
+                                                                            <option value="<?= $row->categorys_id; ?>" <?= $selected; ?>><?= $row->category_name; ?></option>
+                                                                        <?php endforeach; ?>
+                                                                    <?php endif; ?>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col d-flex align-items-center my-2">
+                                                                <input type="text"
+                                                                    value="<?= $userData[0]->country_name; ?>"
+                                                                    class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="Last name" disabled>
+                                                                <select name="country_id" id="country"
+                                                                    class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
+                                                                    <option value="">Select Country</option>
+                                                                </select>
+                                                                <small class="text-danger errormsg"></small>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col d-flex align-items-center my-2">
+                                                                <input type="text" value="<?= $userData[0]->state_name; ?>"
+                                                                    class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="Last name" disabled>
+                                                                <select name="state_id" id="state"
+                                                                    class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
+                                                                    <option value="">Select State</option>
+                                                                </select>
+                                                                <small class="text-danger errormsg"></small>
+                                                            </div>
+                                                            <div class="col d-flex align-items-center my-2">
+                                                                <input type="text" value="<?= $userData[0]->city_name; ?>"
+                                                                    class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="Last name" disabled>
+                                                                <select name="city_id" id="city"
+                                                                    class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
+                                                                    <option value="">Select City</option>
+                                                                </select>
+                                                                <small class="text-danger errormsg"></small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                                aria-labelledby="v-pills-profile-tab" tabindex="0">
+                                                <form action="" id="skillForm">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col my-2">
+                                                                <label for="skill_name">Skill name</label>
+                                                                <input type="text" name="skill_name" id="skill"
+                                                                    class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="skill name">
+                                                            </div>
+                                                            <div
+                                                                class="col my-2 d-flex align-items-center justify-content-end">
+                                                                <button class="btn p-2 btn-primary shadow-sm"
+                                                                    type="submit">Add
+                                                                    Skill</button>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col my-2 custom-inputs">
+                                                                    <label for="skill_description">skill Description</label>
+                                                                    <textarea name="skill_description" id="skillDesc"
+                                                                        rows="5"
+                                                                        class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100"
+                                                                        placeholder="Skill Description"></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
                                                     </div>
                                                 </form>
                                             </div>
@@ -376,8 +421,6 @@
                             </div>
                         </div>
                         <!-- data edit page section start -->
-
-
                     </div>
                 </div>
             </div>
@@ -428,6 +471,9 @@ $this->view("includes/footer");
                 skill_name: $("#skill").val(),
                 skill_description: $("#skillDesc").val()
             }
+            if (skill_name === "") {
+                
+            }
 
             let form = this;
 
@@ -448,13 +494,13 @@ $this->view("includes/footer");
     });
 
 
-// update profile data request
+    // update profile data request
 
-$("#updateFormData").submit(function(e){
+    $("#updateFormData").submit(function (e) {
         e.preventDefault()
 
         let userId = $("#userId").val();
-        
+
         let formData = {
             firstname: $("#fname").val(),
             lastname: $("#lname").val(),
@@ -466,19 +512,19 @@ $("#updateFormData").submit(function(e){
         }
 
         $.ajax({
-            url: `<?=BASE ?>empdetail/edit_emp_info/${userId}`,
+            url: `<?= BASE ?>empdetail/edit_emp_info/${userId}`,
             type: "POST",
             data: formData,
-            success: function(response){
+            success: function (response) {
                 const data = JSON.parse(response);
-                
-                if(typeof data.updatedProfile !== 'undefined'){
-                    showErrorAlert(data.updatedProfile, 'success'); 
+
+                if (typeof data.updatedProfile !== 'undefined') {
+                    showErrorAlert(data.updatedProfile, 'success');
                 }
             }
         })
 
-})
+    })
 
 
 
@@ -494,11 +540,11 @@ $("#updateFormData").submit(function(e){
                 toast.addEventListener('mouseenter', Swal.stopTimer)
                 toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
-            })
-            Toast.fire({
+        })
+        Toast.fire({
             icon: `${status}`,
             title: `${errorMessage}`
-            })
+        })
     }
 
 </script>
