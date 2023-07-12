@@ -414,11 +414,109 @@
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
-                                                aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
+                                                aria-labelledby="v-pills-disabled-tab" tabindex="0">
+                                                <form action="" id="skillForm">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col my-2">
+                                                                <label for="skill_name">E-mail</label>
+                                                                <input type="email" name="email" id=""
+                                                                    class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="Enter Your Email">
+                                                                <small class="text-danger" id="error_msg"></small>
+                                                            </div>
+                                                            <div
+                                                                class="col my-2 d-flex align-items-center justify-content-end">
+                                                                <button class="btn p-2 btn-primary shadow-sm"
+                                                                    type="submit">Change Password
+                                                                </button>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col my-2">
+                                                                    <label for="skill_name">Previous Password</label>
+                                                                    <input type="password" name="email" id=""
+                                                                        class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                        placeholder="Enter Your Previous Password">
+                                                                    <small class="text-danger" id="error_msg"></small>
+                                                                </div>
+                                                                <div class="col my-2">
+                                                                    <label for="skill_name">New Password</label>
+                                                                    <input type="password" name="email" id=""
+                                                                        class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                        placeholder="Enter New Password">
+                                                                    <small class="text-danger" id="error_msg"></small>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
                                             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                                aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
+                                                aria-labelledby="v-pills-messages-tab" tabindex="0">
+                                                <form action="" id="skillForm">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col my-2">
+                                                                <label for="skill_name">Skill name</label>
+                                                                <input type="text" name="skill_name" id="skill"
+                                                                    class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="skill name">
+                                                                <small class="text-danger" id="error_msg"></small>
+                                                            </div>
+                                                            <div
+                                                                class="col my-2 d-flex align-items-center justify-content-end">
+                                                                <button class="btn p-2 btn-primary shadow-sm"
+                                                                    type="submit">Add
+                                                                    Skill</button>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col my-2 custom-inputs">
+                                                                    <label for="skill_description">skill Description</label>
+                                                                    <textarea name="skill_description" id="skillDesc"
+                                                                        rows="5"
+                                                                        class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100"
+                                                                        placeholder="Skill Description"></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                                aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+                                                aria-labelledby="v-pills-settings-tab" tabindex="0">
+                                                <form action="" id="skillForm">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col my-2">
+                                                                <label for="skill_name">Skill name</label>
+                                                                <input type="text" name="skill_name" id="skill"
+                                                                    class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="skill name">
+                                                                <small class="text-danger" id="error_msg"></small>
+                                                            </div>
+                                                            <div
+                                                                class="col my-2 d-flex align-items-center justify-content-end">
+                                                                <button class="btn p-2 btn-primary shadow-sm"
+                                                                    type="submit">Add
+                                                                    Skill</button>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col my-2 custom-inputs">
+                                                                    <label for="skill_description">skill Description</label>
+                                                                    <textarea name="skill_description" id="skillDesc"
+                                                                        rows="5"
+                                                                        class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100"
+                                                                        placeholder="Skill Description"></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
