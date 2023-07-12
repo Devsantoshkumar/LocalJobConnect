@@ -210,7 +210,7 @@
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab3">Gallery</li>
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab4">Settings</li>
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab5">Create Profile</li>
-                        <a href="<?= BASE ?>empdetail/employee_hire" class="hire_me text-decoration-none ms-auto">Hire
+                        <a href="<?= BASE ?>empdetail/employee_hire/<?=$userData[0]->users_id; ?>" class="hire_me text-decoration-none ms-auto">Hire
                             Me</a>
                     </ul>
 
@@ -292,19 +292,18 @@
                                         <div class="tab-content w-100" id="v-pills-tabContent">
                                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                                 aria-labelledby="v-pills-home-tab" tabindex="0">
-                                                <form method="POST"
-                                                    action="<?= BASE ?>empdetail/edit_emp_info/<?= $userData[0]->users_id; ?>">
+                                                <form id="updateFormData">
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col my-2">
                                                                 <label for="fname">First name</label>
-                                                                <input type="text" value="<?= $userData[0]->firstname; ?>"
+                                                                <input type="text" id="fname" value="<?= $userData[0]->firstname; ?>"
                                                                     class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
                                                                     placeholder="First name">
                                                             </div>
                                                             <div class="col my-2">
                                                                 <label for="fname">Last name</label>
-                                                                <input type="text" value="<?= $userData[0]->lastname; ?>"
+                                                                <input type="text" id="lname" value="<?= $userData[0]->lastname; ?>"
                                                                     class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
                                                                     placeholder="Last name">
                                                             </div>
@@ -312,15 +311,15 @@
                                                         <div class="row">
                                                             <div class="col my-2 custom-inputs">
                                                                 <label for="bio">Your Bio</label>
-                                                                <textarea name="bio" value="<?= $userData[0]->bio; ?>"
+                                                                <textarea name="bio"
                                                                     id="bio" rows="5"
                                                                     class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100"
-                                                                    placeholder="About bio"></textarea>
+                                                                    placeholder="About bio"><?= $userData[0]->bio; ?></textarea>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col my-2">
-                                                                <select name="job_category_id"
+                                                                <select name="job_category_id" id="job_category_id"
                                                                     class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3"
                                                                     id="">
                                                                     <option value="">Select Category</option>
@@ -345,7 +344,7 @@
                                                                     value="<?= $userData[0]->country_name; ?>"
                                                                     class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
                                                                     placeholder="Last name" disabled>
-                                                                <select name="country_id" id="country"
+                                                                <select id="country"
                                                                     class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
                                                                     <option value="">Select Country</option>
                                                                 </select>
@@ -358,7 +357,7 @@
                                                                 <input type="text" value="<?= $userData[0]->state_name; ?>"
                                                                     class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
                                                                     placeholder="Last name" disabled>
-                                                                <select name="state_id" id="state"
+                                                                <select id="state"
                                                                     class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
                                                                     <option value="">Select State</option>
                                                                 </select>
@@ -368,11 +367,17 @@
                                                                 <input type="text" value="<?= $userData[0]->city_name; ?>"
                                                                     class="py-3 form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
                                                                     placeholder="Last name" disabled>
-                                                                <select name="city_id" id="city"
+                                                                <select id="city"
                                                                     class="p-3 bg-light rounded-0 border-0 border-bottom border-2 border-info shadow-none form-control my-3">
                                                                     <option value="">Select City</option>
                                                                 </select>
                                                                 <small class="text-danger errormsg"></small>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row pb-5">
+                                                            <div class="col">
+                                                                <button type="submit" class="btn btn-sm bg-success shadow-sm text-white">Update</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -641,7 +646,6 @@ $this->view("includes/footer");
             data: formData,
             success: function (response) {
                 const data = JSON.parse(response);
-
                 if (typeof data.updatedProfile !== 'undefined') {
                     showErrorAlert(data.updatedProfile, 'success');
                 }

@@ -9,51 +9,46 @@ $this->view("includes/navBar");
 
 <!-- Sign Up Section Start -->
 
-<section class="container my-5" style="min-height:100vh;">
-    <div class="row d-flex justify-content-center pt-5">
+<section class="container" style="min-height:100vh;">
+    <div class="row d-flex justify-content-center pt-4">
         <div class="col-10"></div>
     </div>
     <div class="row d-flex justify-content-center">
-        <div class="col-10 pb-5 pt-3">
-            <div class="card border-0 shadow-sm">
+        <div class="col-6 pb-5">
+            <div class="card border-0 py-4 shadow">
                 <div class="row gap-0">
-                    <div class="col-md-6">
-                        <img src="assets\image\signin-imagee1.jpg" class="img-fluid rounded-start h-100" alt="image">
-                    </div>
-                    <div class="col-md-6 pt-3">
-                        <h4 class="signin-title heading-text fs-4 heading-color fw-bold bg-white m-auto">
-                            SIGN IN
-                        </h4>
-                        <div class="card-body">
-                            <?php if (count($errors) > 0): ?>
-                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                    <strong>Error!</strong>
-                                    <?php foreach ($errors as $errors): ?><br>
-                                        <?= $errors ?>
-                                    <?php endforeach; ?>
-                                    <span type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></span>
+                    <div class="col pt-3">
+                        <h4 class="card-header custom-card-heading border-0 bg-white text-center">Signin Account</h4>
+                        <div class="card-body px-5">
+                            <form autocomplete="off" method="post">
+                                <div class="row">
+                                    <div class="col myinputgroup">
+                                        <label class="form-label">Username or email</label>
+                                        <input type="email" value="<?= get_val('email') ?>" name="email" class="form-control shadow-none rounded-0 bg-light" placeholder="username or email">
+                                        <small class="text-danger errormsg"><?=isset($errors['email']) ? $errors['email'] : ""; ?></small>
+                                    </div>
                                 </div>
-                            <?php endif; ?>
-                            <form action="#" autocomplete="off" method="post">
-                                <div class="mb-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="email" value="<?= get_val('email') ?>" name="email"
-                                        class="form-control" placeholder="abcd123@gmail.com">
+                                
+                                <div class="row my-3">
+                                    <div class="col myinputgroup">
+                                        <label class="form-label">Password</label>
+                                        <input type="password" id="pass" name="password" class="form-control shadow-none rounded-0 bg-light" placeholder="password">
+                                        <small class="text-danger errormsg"><?=isset($errors['password']) ? $errors['password'] : ""; ?></small>
+                                        <input type="checkbox" class="mt-2" name="check" id="check">
+                                        <span class="heading-text">Show password</span>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" id="pass" value="<?= get_val('password') ?>" name="password"
-                                        class="form-control" placeholder="At least 6 characters">
-                                    <input type="checkbox" class="mt-2" name="check" id="check">
-                                    <span class="heading-text fs-6">Show password</span>
-                                </div>
-                                <p class="card-text">New User?<a href="<?= BASE ?>signup"
-                                        class="text-decoration-none">Start here</a></p>
+
+                                <p class="card-text">Create new account? <a href="<?= BASE ?>signup/employee"
+                                        class="text-decoration-none">Employee</a>
+                                        <a href="<?= BASE ?>signup/employer"
+                                        class="text-decoration-none ms-3">Employer</a>
+                                </p>
                                 <p class="card-text">By creating an account or logging in, you agree to LOCAL JOB
                                     CONNECT <a href="#" class="text-decoration-none">Conditions
                                         of Use</a>and <a href="#" class="text-decoration-none">Privacy Policy.</a>
                                 </p>
-                                <input type="submit" value="Sign In" name="signin" class="btn link-btn">
+                                <input type="submit" value="Submit" name="signup" class="btn custom-button rounded-0 text-white shadow-sm fw-bold">
                             </form>
                         </div>
                     </div>
