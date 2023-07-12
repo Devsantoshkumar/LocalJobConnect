@@ -415,15 +415,15 @@
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
                                                 aria-labelledby="v-pills-disabled-tab" tabindex="0">
-                                                <form action="" id="skillForm">
+                                                <form action="" id="passwordForm">
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col my-2">
-                                                                <label for="skill_name">E-mail</label>
-                                                                <input type="email" name="email" id=""
+                                                                <label for="email_id">E-mail</label>
+                                                                <input type="email" name="email" id="email_id"
+                                                                    value="<?= $userData[0]->email ?>"
                                                                     class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
-                                                                    placeholder="Enter Your Email">
-                                                                <small class="text-danger" id="error_msg"></small>
+                                                                    placeholder="Enter Your Email" disabled>
                                                             </div>
                                                             <div
                                                                 class="col my-2 d-flex align-items-center justify-content-end">
@@ -433,15 +433,16 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col my-2">
-                                                                    <label for="skill_name">Previous Password</label>
-                                                                    <input type="password" name="email" id=""
+                                                                    <label for="new_password">New Password</label>
+                                                                    <input type="password" name="password" id="new_password"
                                                                         class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
-                                                                        placeholder="Enter Your Previous Password">
+                                                                        placeholder="Enter New Password">
                                                                     <small class="text-danger" id="error_msg"></small>
                                                                 </div>
                                                                 <div class="col my-2">
-                                                                    <label for="skill_name">New Password</label>
-                                                                    <input type="password" name="email" id=""
+                                                                    <label for="con_password">Confirm Password</label>
+                                                                    <input type="password" name="conpassword"
+                                                                        id="con_password"
                                                                         class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
                                                                         placeholder="Enter New Password">
                                                                     <small class="text-danger" id="error_msg"></small>
@@ -455,67 +456,38 @@
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                                                 aria-labelledby="v-pills-messages-tab" tabindex="0">
-                                                <form action="" id="skillForm">
+                                                <!-- <form action="" id="skillForm" method="post">
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col my-2">
-                                                                <label for="skill_name">Skill name</label>
-                                                                <input type="text" name="skill_name" id="skill"
+                                                                <label for="old_email_id">Old E-mail</label>
+                                                                <input type="email" name="email" id="old_email_id"
+                                                                    value="<?= $userData[0]->email ?>"
                                                                     class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
-                                                                    placeholder="skill name">
+                                                                    placeholder="Enter Your Email">
+                                                                <small class="text-danger" id="error_msg"></small>
+                                                            </div>
+                                                            <div class="col my-2">
+                                                                <label for="new_email_id">New E-mail</label>
+                                                                <input type="email" name="email" id="new_email_id"
+                                                                    class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
+                                                                    placeholder="Enter Your Email">
                                                                 <small class="text-danger" id="error_msg"></small>
                                                             </div>
                                                             <div
                                                                 class="col my-2 d-flex align-items-center justify-content-end">
                                                                 <button class="btn p-2 btn-primary shadow-sm"
-                                                                    type="submit">Add
-                                                                    Skill</button>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col my-2 custom-inputs">
-                                                                    <label for="skill_description">skill Description</label>
-                                                                    <textarea name="skill_description" id="skillDesc"
-                                                                        rows="5"
-                                                                        class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100"
-                                                                        placeholder="Skill Description"></textarea>
-                                                                </div>
+                                                                    type="submit">Change Email
+                                                                </button>
                                                             </div>
 
                                                         </div>
                                                     </div>
-                                                </form>
+                                                </form> -->
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                                                 aria-labelledby="v-pills-settings-tab" tabindex="0">
-                                                <form action="" id="skillForm">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col my-2">
-                                                                <label for="skill_name">Skill name</label>
-                                                                <input type="text" name="skill_name" id="skill"
-                                                                    class="form-control bg-light border-0 border-bottom border-info border-2 shadow-none rounded-0"
-                                                                    placeholder="skill name">
-                                                                <small class="text-danger" id="error_msg"></small>
-                                                            </div>
-                                                            <div
-                                                                class="col my-2 d-flex align-items-center justify-content-end">
-                                                                <button class="btn p-2 btn-primary shadow-sm"
-                                                                    type="submit">Add
-                                                                    Skill</button>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col my-2 custom-inputs">
-                                                                    <label for="skill_description">skill Description</label>
-                                                                    <textarea name="skill_description" id="skillDesc"
-                                                                        rows="5"
-                                                                        class="p-2 bg-light rounded-0 border-0 border-bottom border-info border-2 shadow-none w-100"
-                                                                        placeholder="Skill Description"></textarea>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                                <h5>Setting Section</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -610,6 +582,41 @@ $this->view("includes/footer");
                         // console.log(data);
                         $("#fetch_Skill").empty();
                         fetchSkill();
+                    }
+                })
+            }
+
+        });
+
+        // Change Password Code
+
+        $("#passwordForm").submit(function (e) {
+            e.preventDefault()
+
+            let form = this;
+
+            let passwordData = $("#new_password").val()
+
+            if (passwordData === "") {
+                $("#error_msg").text("Password is Required!");
+            } else {
+                $("#error_msg").text("");
+            }
+
+
+            if (passwordData !== "") {
+
+                $.ajax({
+                    type: "POST",
+                    url: "<?= BASE ?>empdetail/changepassword",
+                    data: { password: passwordData },
+                    success: function (response) {
+                        // Reset the form
+                        form.reset();
+                        let data = JSON.parse(response);
+                        if (typeof data.ChangePassword !== 'undefined') {
+                            showErrorAlert(data.ChangePassword, 'success');
+                        }
                     }
                 })
             }
