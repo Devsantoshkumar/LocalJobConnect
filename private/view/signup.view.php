@@ -9,8 +9,8 @@ $this->view("includes/navBar");
 
 <!-- Sign Up Section Start -->
 
-<section class="container my-5" style="min-height:100vh;">
-    <div class="row d-flex justify-content-center pt-5">
+<section class="container" style="min-height:100vh;">
+    <div class="row d-flex justify-content-center pt-4">
         <div class="col-10"></div>
     </div>
     <div class="row d-flex justify-content-center">
@@ -18,7 +18,7 @@ $this->view("includes/navBar");
             <div class="card border-0 py-4 shadow">
                 <div class="row gap-0">
                     <div class="col pt-3">
-                        <h4 class="card-header custom-card-heading border-0 bg-white text-center">Personal Information</h4>
+                        <h4 class="card-header custom-card-heading border-0 bg-white text-center"><?=$formHeading; ?></h4>
                         <div class="card-body px-5">
                             <form autocomplete="off" method="post">
                                 <div class="row">

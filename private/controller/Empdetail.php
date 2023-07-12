@@ -10,7 +10,7 @@ class Empdetail extends Controller
         $users = new User();
         $category = new Category();
 
-        $userdata = $users->query("SELECT * FROM users LEFT JOIN countrys ON users.country_id LEFT JOIN states ON users.state_id LEFT JOIN citys ON users.city_id WHERE users_id = $id");
+        $userdata = $users->query("SELECT * FROM users LEFT JOIN countrys ON users.country_id = countrys.countrys_id LEFT JOIN states ON users.state_id = states.states_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id = $id");
 
         $jobCategories = $category->findAll();
 
@@ -20,6 +20,17 @@ class Empdetail extends Controller
 
     function edit_emp_info($id = NULL)
     {
+        $errors = [];
+
+        $user = new User();
+
+        if(count($_POST)>0){
+
+            $user->update($id, $_POST);
+            $errors['updatedProfile'] = "Profile updated successfully";
+            echo json_encode($errors);
+            die();
+        }
 
     }
 

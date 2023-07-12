@@ -24,6 +24,12 @@ $this->view("includes/navbar");
                         aria-describedby="basic-addon1" autocomplete="off">
                 </div>
             </form>
+            <div class="row py-4">
+                <div class="col d-flex align-items-center justify-content-center gap-3">
+                    <a href="<?=BASE ?>signup/employee" class="btn shadow-sm rounded-0 hireBtnEmployerPage shadow">Get Job</a>
+                    <a href="<?=BASE ?>signup/employer" class="btn shadow-sm rounded-0 hireBtnEmployerPage shadow">Hire Now</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

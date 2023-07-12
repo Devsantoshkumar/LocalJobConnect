@@ -11,12 +11,17 @@ class Signup extends Controller
 
     function index()
     {
+        $this->redirect("/");
+    }
+
+    function employee()
+    {
 
         $errors = [];
+        $formHeading = 'Register as a employee';
 
         $user = new User();
         $verify = new Verify();
-        $categorys = new Category();
 
         if(count($_POST)>0){
             
@@ -64,10 +69,71 @@ class Signup extends Controller
         }
 
 
-        $categoryData = $categorys->findAll();
-
-        $this->view("signup", ['errors' => $errors, 'cateData'=>$categoryData]);
+        $this->view("signup", ['errors' => $errors, 'formHeading'=>$formHeading]);
     }
+
+
+
+    function employer()
+    {
+
+        $errors = [];
+        $formHeading = 'Register as a employer';
+
+        $user = new User();
+        $verify = new Verify();
+
+        if(count($_POST)>0){
+            
+            if($user->validate($_POST)){
+                
+                $emailOtp = rand(111111,999999);
+                $emailId = $_POST['email']; 
+                $firstname = $_POST['firstname']; 
+                $_POST['date'] = date("y-m-d H:i:s");
+                $_POST['image'] = 'profile-default.png';
+                $_POST['cover'] = 'banner-default.jpg';
+
+                $message = "<b>Hello  Sir/Madam</b><br/><br/>";
+                $message .= "Welcome to Local Job Connect <br/><br/>";
+                $message .= "Your One Time Password (OTP) : <br/>";
+                $message .= "<h1><b>". $emailOtp ."</b></h1><br/>";
+                $message .= "Your OTP will expire in 5 min";
+
+                $subject = "Email Varification OTP";
+                $recipient = $emailId;
+  
+                $sendmail = send_mail($recipient, $subject, $message);
+
+                if($sendmail){
+
+                    $user->insert($_POST);
+                    $_SESSION['EMAIL'] = $emailId;
+                    $_SESSION['OTP'] = $emailOtp;
+      
+                    $_VAR['email'] = $emailId;
+                    $_VAR['otp'] = $emailOtp;
+                    $_VAR['expired'] = (time() + (60 * 5));
+                    $verify->insert($_VAR);
+                    $_SESSION['msg'] = "OTP send successfully. check mail";
+                    $_SESSION['status'] = "success";
+                    $this->redirect('signup/verify_email');
+                  }else{
+                    $_SESSION['msg'] = "Something problem. try again";
+                    $_SESSION['status'] = "error";
+                  }
+                
+            }else{
+                $errors = $user->errors;
+            }
+        }
+
+
+        $this->view("signup", ['errors' => $errors, 'formHeading'=>$formHeading]);
+    }
+
+
+
 
 
 
@@ -90,9 +156,22 @@ class Signup extends Controller
                 if($data[0]->expired > $time){
                     $email = $data[0]->email;
                     $user->query("update users set email_varified = email where email = '$email'");
-                    $_SESSION['msg'] = "Email verified successfully";
-                    $_SESSION['status'] = "success";
-                    $this->redirect('signup/location');
+                    $userDataSignup = $user->where("email_varified", $email);
+                    $userDataSignup = $userDataSignup[0];
+
+                    if($userDataSignup[0]->type == 'employee'){
+
+                        $_SESSION['msg'] = "Email verified successfully";
+                        $_SESSION['status'] = "success";
+                        $this->redirect('signup/location');
+
+                    }else{
+                        Auth::authenticate($userDataSignup);
+                        $_SESSION['msg'] = "Registration successfully";
+                        $_SESSION['status'] = "success";
+                        $this->redirect('/');
+
+                    }
                 }else{
                     $_SESSION['msg'] = "OTP has expired. Send again";
                     $_SESSION['status'] = "error";

@@ -27,7 +27,7 @@
                 </li>
             </ul>
         </div>
-        <button class="link-btn d-none d-lg-flex">
+        <button class="link-btn d-none hireBtnEmployerPage rounded-0 py-1 d-lg-flex">
             <?php if (Auth::loggedIn()): ?>
 
                 <a href="<?= BASE ?>signout" class="text-decoration-none text-white">Logout</a>
