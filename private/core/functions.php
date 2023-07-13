@@ -18,4 +18,10 @@ function get_val($key, $default="")
 
 
 
+function myfunc(){
+  
+}
+
+
+
 ?>
