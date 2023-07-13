@@ -215,36 +215,9 @@
 
                     <div>
                         <div id="tab1" class="tabcontent">
-                            <h5>About me</h5>
-                            <p class="border p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam id dolores
-                                sed molestias deserunt, totam doloribus quis nobis consectetur reiciendis voluptatem enim
-                                recusandae aliquam, provident velit! Reprehenderit veniam ipsum cupiditate assumenda
-                                recusandae sint, commodi ad officia quos ratione magnam blanditiis ab optio qui omnis
-                                quibusdam quas distinctio temporibus tenetur reiciendis modi saepe aspernatur placeat.
-                                Similique deserunt cum commodi, modi quidem tempora totam inventore illo alias nisi ullam
-                                natus, possimus dolorum saepe doloribus atque repellendus autem, reprehenderit blanditiis
-                                sunt impedit perspiciatis. Inventore ut veniam explicabo obcaecati, rem reiciendis iste
-                                labore? Ab totam assumenda libero suscipit vitae illum, ipsa neque quisquam dolorem.</p>
-                            <h5>Education</h5>
-                            <ul class="list-unstyled">
-                                <li class="border p-2 my-2"><strong class="px-3">BCA :</strong> <span>Lorem, ipsum dolor sit
-                                        amet consectetur adipisicing elit. Reprehenderit, adipisci.</span></li>
-                                <li class="border p-2 my-2"><strong class="px-3">BCA :</strong> <span>Lorem, ipsum dolor sit
-                                        amet consectetur adipisicing elit. Reprehenderit, adipisci.</span></li>
-                                <li class="border p-2 my-2"><strong class="px-3">BCA :</strong> <span>Lorem, ipsum dolor sit
-                                        amet consectetur adipisicing elit. Reprehenderit, adipisci.</span></li>
-                            </ul>
 
-                            <h5>Skills</h5>
-                            <ul class="list-unstyled">
-                                <li class="border p-2 my-2"><strong class="px-3">BCA :</strong> <span>Lorem, ipsum dolor sit
-                                        amet consectetur adipisicing elit. Reprehenderit, adipisci.</span></li>
-                                <li class="border p-2 my-2"><strong class="px-3">BCA :</strong> <span>Lorem, ipsum dolor sit
-                                        amet consectetur adipisicing elit. Reprehenderit, adipisci.</span></li>
-                                <li class="border p-2 my-2"><strong class="px-3">BCA :</strong> <span>Lorem, ipsum dolor sit
-                                        amet consectetur adipisicing elit. Reprehenderit, adipisci.</span></li>
-                            </ul>
-
+                        <h4>Requested jobs</h4>
+                            
                         </div>
                         <div id="tab2" class="tabcontent">
                             <h3>Tab 21 Content</h3>
