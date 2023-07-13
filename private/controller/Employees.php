@@ -1,8 +1,10 @@
 <?php
 
-class Employees extends Controller{
+class Employees extends Controller
+{
 
-    function index($id=NULL){
+    function index($id = NULL)
+    {
 
         $errors = [];
 
@@ -10,6 +12,17 @@ class Employees extends Controller{
 
         $userdata = $user->where("job_category_id", $id);
 
-        $this->view("employees",['errors'=>$errors, 'userData'=>$userdata]);
+        $this->view("employees", ['errors' => $errors, 'userData' => $userdata]);
+    }
+
+    function searching()
+    {
+        $errors = [];
+        $rows = [];
+        $search = '';
+
+        $user = new User();
+
+        
     }
 }
