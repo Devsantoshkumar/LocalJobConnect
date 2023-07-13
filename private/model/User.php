@@ -15,6 +15,7 @@ class User extends Model
         'password',
         'image',
         'cover',
+        'type',
         'token',
         'status',
         'date',

@@ -9,12 +9,18 @@ class Empdetail extends Controller
 
         $users = new User();
         $category = new Category();
+        $hire = new Hire();
 
         $userdata = $users->query("SELECT * FROM users LEFT JOIN countrys ON users.country_id = countrys.countrys_id LEFT JOIN states ON users.state_id = states.states_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id = $id");
 
         $jobCategories = $category->findAll();
 
-        $this->view("employee_detail", ['userId' => $id, 'userData' => $userdata, 'jobCategories' => $jobCategories]);
+        $inccoming = $hire->query("SELECT * FROM hires LEFT JOIN users ON hires.employee_id = users.users_id WHERE employee_id = $id");
+
+        $similiarProfiles = $users->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id <> $id AND job_category_id IS NOT NULL");
+
+
+        $this->view("employee_detail", ['userId' => $id, 'userData' => $userdata, 'incooming'=>$inccoming, 'jobCategories' => $jobCategories, 'similiarProfiles'=>$similiarProfiles]);
     }
 
 
@@ -65,6 +71,8 @@ class Empdetail extends Controller
         $userData = $user->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id = $id");
 
         $employerData = $user->query("SELECT * FROM users WHERE users_id = $id AND type = 'employer'");
+
+        
 
         $this->view("employee_hire", ['data'=>$userData, 'empDetial'=>$employerData, 'errors'=>$errors]);
 
