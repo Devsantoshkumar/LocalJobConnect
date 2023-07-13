@@ -208,14 +208,13 @@
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab1">About</li>
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab2">Portfolio</li>
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab3">Gallery</li>
-                        <li class="list-group-item rounded-0 tablinks" data-tab="tab4">Settings</li>
-                        <li class="list-group-item rounded-0 tablinks" data-tab="tab5">Create Profile</li>
+                        <li class="list-group-item rounded-0 tablinks" data-tab="tab4">Create Profile</li>
                         <a href="<?= BASE ?>empdetail/employee_hire/<?=$userData[0]->users_id; ?>" class="hire_me text-decoration-none ms-auto">Hire
                             Me</a>
                     </ul>
 
                     <div>
-                        <div id="tab5" class="tabcontent">
+                        <div id="tab1" class="tabcontent">
                             <h5>About me</h5>
                             <p class="border p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam id dolores
                                 sed molestias deserunt, totam doloribus quis nobis consectetur reiciendis voluptatem enim
@@ -255,13 +254,9 @@
                             <h3>Tab 3 Content</h3>
                             <p>This is the content for Tab 3.</p>
                         </div>
-                        <div id="tab4" class="tabcontent">
-                            <h3>Tab 4 Content</h3>
-                            <p>This is the content for Tab 4.</p>
-                        </div>
 
                         <!-- data edit page section start -->
-                        <div id="tab1" class="tabcontent p-0">
+                        <div id="tab4" class="tabcontent p-0">
                             <div class="card rounded-0 border-0">
                                 <div class="card-header rounded-0">Edit Profile</div>
                                 <div class="card-body p-0">
@@ -290,7 +285,7 @@
                                                 aria-selected="false">Settings</button>
                                         </div>
                                         <div class="tab-content w-100" id="v-pills-tabContent">
-                                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                            <div class="tab-pane fade active show" id="v-pills-home" role="tabpanel"
                                                 aria-labelledby="v-pills-home-tab" tabindex="0">
                                                 <form id="updateFormData">
                                                     <div class="container">

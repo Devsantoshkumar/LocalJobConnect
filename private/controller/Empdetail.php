@@ -35,11 +35,39 @@ class Empdetail extends Controller
     }
 
 
-    function employee_hire()
+    function employee_hire($id=NULL)
     {
 
+        $errors = [];
 
-        $this->view("employee_hire");
+        $user = new User();
+        $hire = new Hire();
+
+        
+        if(count($_POST)>0){
+            
+            if($hire->validate($_POST))
+            {
+                $_POST['hiring_date'] = date("y-m-d H:i:s");
+                $_POST['employee_id'] = $id;
+                 $_SESSION['msg'] = "Request send to employee";
+                 $_SESSION['status'] = 'success';
+                 $hire->insert($_POST);
+                 $this->redirect("empdetail/employee_hire/".$id);
+            }else{
+
+                $errors = $hire->errors;
+
+            }
+
+        }
+
+        $userData = $user->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id = $id");
+
+        $employerData = $user->query("SELECT * FROM users WHERE users_id = $id AND type = 'employer'");
+
+        $this->view("employee_hire", ['data'=>$userData, 'empDetial'=>$employerData, 'errors'=>$errors]);
+
     }
 
 

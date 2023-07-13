@@ -5,6 +5,7 @@
 
 
 <div class="container-fluid topShift">
+    <?php if($data): ?>
     <div class="row">
         <div class="col-12 col-md-3 order-2 order-md-1 p-1">
             <div class="card border-0 rounded-0 shadow-sm">
@@ -128,13 +129,13 @@
                 <div class="row">
                     <div class="col-3">
                         <div class="hire_page_profile_box">
-                            <img src="<?=ASSETS ?>image/emp1.jpg" alt="">
+                            <img src="<?=BASE ?>uploads/<?=$data[0]->image; ?>" alt="">
                         </div>
                     </div>
                     <div class="col-9">
                        <div class="employee_hire_page_info">
-                           <h1>Shivani Verma</h1>
-                           <h3 class="text-muted"><span>Homemade</span> <span class="ms-3"><i class="fa-solid fa-location-dot"></i> Lucknow</span></h3>
+                           <h1><?=$data[0]->firstname; ?> <?=isset($data[0]->lastname) ? $data[0]->lastname : ""; ?></h1>
+                           <h3 class="text-muted"><span><?=$data[0]->category_name;?></span> <span class="ms-3"><i class="fa-solid fa-location-dot"></i> <?=$data[0]->city_name; ?></span></h3>
                            <h5 class="d-flex mt-3 align-items-center gap-2 text-uppercase"><span>Cost per hour: </span> <span><i class="fa-solid fa-indian-rupee-sign"></i> 343</span></h5>
                        </div>
                     </div>
@@ -144,21 +145,27 @@
             <div class="card bg-white mt-2 border-0 shadow-sm">
                 <div class="card-header bg-white border-bottom d-flex align-items-center gap-3 p-3">
                      <div class="hire_page_employer_profile_box">
-                         <img src="<?=ASSETS ?>image/emp3.jpg" alt="">
+                         <img src="<?=BASE ?>uploads/<?=Auth::user("image"); ?>" alt="">
                      </div>
                      <div class="hire_page_employer_info">
-                        <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
-                        <span class="d-block text-muted">santosh@gmail.com</span>
+                        <h6 class="d-block p-0 m-0"><?=Auth::user("firstname"); ?> <?=Auth::user("lastname") ? Auth::user("lastname") : ""; ?></h6>
+                        <span class="d-block text-muted"><?=Auth::user("email");?></span>
                      </div>
                 </div>
                 <div class="card-body px-5">
                      <form method="POST">
                         <div class="input-group">
-                            <input type="text" name="work_cost" class="form-control py-3 bg-light border-0 border-bottom shadow-none" placeholder="Offered cost" id="">
+                            <input type="hidden" name="employer_id" value="<?=Auth::user("users_id"); ?>">
                         </div>
 
-                        <div class="input-group mt-3">
-                            <textarea name="work_description" id="" class="form-control bg-light shadow-none border-0 border-bottom " placeholder="Explain about work" rows="5"></textarea>
+                        <div class="input-group d-flex flex-column">
+                            <input type="text" name="offered_cost" class="form-control w-100 py-3 bg-light border-0 border-bottom shadow-none" placeholder="Offered cost">
+                            <small class="text-danger"><?=isset($errors['offered_cost']) ? $errors['offered_cost'] : ""; ?></small>
+                        </div>
+
+                        <div class="input-group d-flex flex-column mt-3">
+                            <textarea name="hiring_description" id="" class="form-control w-100 bg-light shadow-none border-0 border-bottom " placeholder="Explain about work" rows="5"></textarea>
+                            <small class="text-danger"><?=isset($errors['offered_cost']) ? $errors['offered_cost'] : ""; ?></small>
                         </div>
 
                         <div class="input-group mt-4">
@@ -194,6 +201,7 @@
 
         </div>
     </div>
+    <?php endif; ?>
 </div>
     
 
