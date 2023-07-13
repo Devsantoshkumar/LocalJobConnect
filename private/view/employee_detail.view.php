@@ -456,7 +456,7 @@
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
                                                 aria-labelledby="v-pills-messages-tab" tabindex="0">
-                                                <!-- <form action="" id="skillForm" method="post">
+                                                <form action="" id="skillForm" method="post">
                                                     <div class="container">
                                                         <div class="row">
                                                             <div class="col my-2">
@@ -483,7 +483,7 @@
 
                                                         </div>
                                                     </div>
-                                                </form> -->
+                                                </form>
                                             </div>
                                             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
                                                 aria-labelledby="v-pills-settings-tab" tabindex="0">
