@@ -17,6 +17,7 @@ class Empdetail extends Controller
 
         $inccoming = $hire->query("SELECT * FROM hires LEFT JOIN users ON hires.employee_id = users.users_id WHERE employee_id = $id");
 
+
         $similiarProfiles = $users->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id <> $id AND job_category_id IS NOT NULL");
 
 
