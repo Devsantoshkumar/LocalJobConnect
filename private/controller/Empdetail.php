@@ -4,6 +4,13 @@
 class Empdetail extends Controller
 {
 
+
+    function __construct()
+    {
+        if (!Auth::loggedIn()) {
+            $this->redirect("Signin");
+        }
+    }
     function index($id = NULL)
     {
 
@@ -146,6 +153,21 @@ class Empdetail extends Controller
         $data = $skills->where('user_id', $id);
         // show($data);
         echo json_encode($data);
+        die();
+    }
+
+
+    // Change password code
+
+    function changepassword()
+    {
+        $errors = [];
+        $users = new User();
+        $id = Auth::user('users_id');
+        $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $users->update($id, $_POST);
+        $errors['ChangePassword'] = "Password Changed Successfullly";
+        echo json_encode($errors);
         die();
     }
 
