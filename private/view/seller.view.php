@@ -29,21 +29,31 @@ $this->view("includes/navbar");
             <a href="<?= BASE ?>signup" class="link-btn ms-3 text-decoration-none text-center">Become A Seller</a>
         </div>
     </div>
-    <div class="banner-cover">
-        <ul class="list-unstyled banner-cover-list">
-            <li class="m-2">
-                <p class="fs-4 text-center fw-bold">A Gig is Bought Every</p>
-                <h1 class="text-center fw-bold">4 SEC</h1>
-            </li>
-            <li>
-                <P class="fs-4 text-center fw-bold">Transactions</P>
-                <h1 class="text-center fw-bold">50K+</h1>
-            </li>
-            <li>
-                <P class="fs-4 text-center fw-bold">Price Range</P>
-                <h1 class="text-center fw-bold">$5 - $10,000</h1>
-            </li>
-        </ul>
+    <div class="banner-cover bg-transparent">
+         <!-- Swiper -->
+         <div class="container">
+            <div class="swiper mySwiper">
+                <?php if($hireData): ?>
+                <div class="swiper-wrapper">
+                    <?php foreach($hireData as $row): ?>
+                    <a href="<?=BASE ?>empdetail/<?=$row->employee_id?>" class="swiper-slide card p-3">
+                     <div class="hiredCard  d-flex gap-2 flex-wrap align-items-center">
+                        <div class="hireImgBox">
+                            <img src="<?=BASE ?>uploads/<?=$row->image; ?>" alt="">
+                        </div>
+                        <div>
+                           <h5 class="hireName"><?=$row->firstname; ?> <?=isset($row->lastname) ? $row->lastname : ""; ?></h5>
+                        </div>
+                     </div>
+                    </a>
+                    <?php endforeach; ?>
+                </div>
+                <?php endif; ?>
+                <!-- Add Previous and Next buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+         </div>
     </div>
 </section>
 
@@ -334,3 +344,16 @@ $this->view("includes/footer.content");
 $this->view("includes/footer");
 
 ?>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      freeMode: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>

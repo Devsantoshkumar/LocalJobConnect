@@ -300,3 +300,29 @@ profile_details_profession{
 .custom-button:hover{
     background-color: var(--darkYellow);
 }
+
+
+.mySwiper{
+    z-index: 1000;
+}
+
+.mySwiper .swiper-slide{
+    height: 120px;
+}
+
+.hireImgBox{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.hireImgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.hireName{
+    font-size: 13px;
+}

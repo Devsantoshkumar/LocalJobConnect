@@ -9,6 +9,7 @@
         <div class="row">
             <!-- sidebar side start-->
             <div class="col-12 col-md-3 order-2 order-md-1 p-0 py-3 bg-white shadow-sm">
+                <?php if(Auth::user('type') == 'employer'): ?>
                 <h5 class="border-bottom px-4 text-uppercase pb-3 m-0">Similar Profiles</h5>
                 <?php if($similiarProfiles): ?>
                 <div class="col employee_cards profile_details_recommonded_cards p-4 py-2">
@@ -44,12 +45,128 @@
                         </div>
                     </div>
                     <?php endforeach; ?>
-
                 </div>
                 <?php else:  ?>
 
                     <h5 class="text-center p-3">No similar Profiles found</h5>
                 
+                <?php endif; ?>
+                <?php else: ?>
+                    <h5 class="border-bottom p-3 px-4">Reviews:</h5>
+                    <div class="card border-0 rounded-0 employee_cards profile_details_recommonded_cards shadow-sm">
+                    <ul class="list-group px-2">
+                    <li class="list-group-item border-0 border-bottom rounded-0">
+                        <div class="row">
+                            <div class="col d-flex align-items-center gap-3">
+                                <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
+                                    <img src="<?=ASSETS ?>image/emp3.jpg" alt="">
+                                </div>
+                                <div class="hire_page_employer_info">
+                                    <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <div class="reveiw_star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-0 border-bottom rounded-0">
+                        <div class="row">
+                            <div class="col d-flex align-items-center gap-3">
+                                <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
+                                    <img src="<?=ASSETS ?>image/emp3.jpg" alt="">
+                                </div>
+                                <div class="hire_page_employer_info">
+                                    <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <div class="reveiw_star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-0 border-bottom rounded-0">
+                        <div class="row">
+                            <div class="col d-flex align-items-center gap-3">
+                                <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
+                                    <img src="<?=ASSETS ?>image/emp3.jpg" alt="">
+                                </div>
+                                <div class="hire_page_employer_info">
+                                    <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <div class="reveiw_star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-0 border-bottom rounded-0">
+                        <div class="row">
+                            <div class="col d-flex align-items-center gap-3">
+                                <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
+                                    <img src="<?=ASSETS ?>image/emp3.jpg" alt="">
+                                </div>
+                                <div class="hire_page_employer_info">
+                                    <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <div class="reveiw_star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-0 border-bottom rounded-0">
+                        <div class="row">
+                            <div class="col d-flex align-items-center gap-3">
+                                <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
+                                    <img src="<?=ASSETS ?>image/emp3.jpg" alt="">
+                                </div>
+                                <div class="hire_page_employer_info">
+                                    <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3">
+                            <div class="reveiw_star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
                 <?php endif; ?>
             </div>
             <!-- sidebaer side end -->
@@ -77,16 +194,21 @@
                                 </span>
                             </div>
                             <div id="bannerImageForm" class="bannerFormImage">
+                                <?php if(Auth::user('type') == 'employee'): ?>
                                 <label for="bannerImage" class='text-center'><i
                                         class="fa-solid fa-camera text-light"></i></label>
+                                <?php endif; ?>
                                 <input type="hidden" id="uid" value="<?= $userId; ?>" class="d-none">
                                 <input type="file" name="cover" id="bannerImage" class="d-none">
+                    
                             </div>
                         </div>
                         <div class="profile_details_profile rounded-circle p-1 bg-white">
                             <img id="profileImageShow" class="rounded-circle" alt="">
                             <div id="profileImageForm" class="profileFormImage">
+                                <?php if(Auth::user('type') == 'employee'): ?>
                                 <label for="profileImage" class='text-center'><i class="fa-solid fa-camera"></i></label>
+                                <?php endif; ?>
                                 <input type="hidden" id="userId" value="<?= $userId; ?>" class="d-none">
                                 <input type="file" name="image" id="profileImage" class="d-none">
                             </div>
@@ -96,33 +218,47 @@
                         class="list-group rounded-0 d-flex align-items-center list-group-horizontal-sm bg-white shadow-sm border-0 tab">
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab1">About</li>
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab2">Portfolio</li>
+                        <?php if(Auth::user('type') == 'employee'): ?>
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab3">Gallery</li>
                         <li class="list-group-item rounded-0 tablinks" data-tab="tab4">Create Profile</li>
+                        <?php endif; ?>
+                        <?php if(Auth::user('type') == 'employer'): ?>
                         <a href="<?= BASE ?>empdetail/employee_hire/<?=$userData[0]->users_id; ?>" class="hire_me text-decoration-none ms-auto">Hire
                             Me</a>
+                        <?php endif; ?>
                     </ul>
 
                     <div>
                         <div id="tab1" class="tabcontent">
 
-                        <h4 class="my-3">Incomming requests</h4>
-
-                        <?php if($incooming): ?>
-                        <div class="row row-cols-4">
-                            <?php foreach($incooming as $irow): ?>
-                            <div class="col my-3">
-                                <div class="card p-3 py-4 bg-light rounded-0 text-center shadow-sm border-0">
-                                    <h5 class="text-center"><?=$irow->firstname; ?> <?=isset($irow->lastname) ? $irow->lastname : ""; ?></h5>
-                                    <p class="text-uppercase text-success border p-2 my-3 fw-bold">Offered cost: <span>&#8377;</span><?=$irow->offered_cost; ?></p>
-                                    <p class="text-justify py-0"><?=$irow->hiring_description; ?></p>
-                                    <button type="submit" class="btn rounded-0 shadow-sm hireBtnEmployerPage">Reply Now</button>
+                            <div class="row">
+                            <?php if(Auth::user('type') == 'employee'): ?>
+                            <div class="col">
+                               <h4 class="my-3">Incomming requests</h4>
+                                <?php if($incooming): ?>
+                                    <div class="row">
+                                    <?php foreach($incooming as $irow): ?>
+                                    <div class="col-6 my-3">
+                                        <div class="card p-3 py-4 bg-light rounded-0 text-center shadow-sm border-0">
+                                            <h5 class="text-center"><?=$irow->firstname; ?> <?=isset($irow->lastname) ? $irow->lastname : ""; ?></h5>
+                                            <p class="text-uppercase text-success border p-2 my-3 fw-bold">Offered cost: <span>&#8377;</span><?=$irow->offered_cost; ?></p>
+                                            <p class="text-justify py-0"><?=$irow->hiring_description; ?></p>
+                                            <button type="submit" class="btn rounded-0 shadow-sm hireBtnEmployerPage">Reply Now</button>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
                                 </div>
+                                <?php else: ?>
+                                    <h5 class="p-2">Request not found</h5>
+                                <?php endif; ?>
                             </div>
-                            <?php endforeach; ?>
+                            <?php endif; ?>
+                            <div class="col">
+                                 <p>About the employee</p>
+                            </div>
                         </div>
-                        <?php else: ?>
-                            <h5 class="p-2">Request not found</h5>
-                        <?php endif; ?>
+
+
                             
                         </div>
                         <div id="tab2" class="tabcontent">

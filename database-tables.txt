@@ -93,7 +93,7 @@ locations{
 
 
 table 7:
-
+-------
 verifys{
    verifys_id: int primary_key auto_increament,
    otp: varchar(6),

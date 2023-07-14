@@ -64,6 +64,8 @@ class Empdetail extends Controller
             if ($hire->validate($_POST)) {
                 $_POST['hiring_date'] = date("y-m-d H:i:s");
                 $_POST['employee_id'] = $id;
+                $_STATUS['hiring_status'] = 1;
+                $user->update($id, $_STATUS);
                 $_SESSION['msg'] = "Request send to employee";
                 $_SESSION['status'] = 'success';
                 $hire->insert($_POST);
