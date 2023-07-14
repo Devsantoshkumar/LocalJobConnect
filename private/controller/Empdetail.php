@@ -28,7 +28,7 @@ class Empdetail extends Controller
         $similiarProfiles = $users->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id <> $id AND job_category_id IS NOT NULL");
 
 
-        $this->view("employee_detail", ['userId' => $id, 'userData' => $userdata, 'incooming'=>$inccoming, 'jobCategories' => $jobCategories, 'similiarProfiles'=>$similiarProfiles]);
+        $this->view("employee_detail", ['userId' => $id, 'userData' => $userdata, 'incooming' => $inccoming, 'jobCategories' => $jobCategories, 'similiarProfiles' => $similiarProfiles]);
     }
 
 
@@ -38,7 +38,7 @@ class Empdetail extends Controller
 
         $user = new User();
 
-        if(count($_POST)>0){
+        if (count($_POST) > 0) {
 
             $user->update($id, $_POST);
             $errors['updatedProfile'] = "Profile updated successfully";
@@ -49,7 +49,7 @@ class Empdetail extends Controller
     }
 
 
-    function employee_hire($id=NULL)
+    function employee_hire($id = NULL)
     {
 
         $errors = [];
@@ -57,18 +57,18 @@ class Empdetail extends Controller
         $user = new User();
         $hire = new Hire();
 
-        
-        if(count($_POST)>0){
-            
-            if($hire->validate($_POST))
-            {
+
+
+        if (count($_POST) > 0) {
+
+            if ($hire->validate($_POST)) {
                 $_POST['hiring_date'] = date("y-m-d H:i:s");
                 $_POST['employee_id'] = $id;
-                 $_SESSION['msg'] = "Request send to employee";
-                 $_SESSION['status'] = 'success';
-                 $hire->insert($_POST);
-                 $this->redirect("empdetail/employee_hire/".$id);
-            }else{
+                $_SESSION['msg'] = "Request send to employee";
+                $_SESSION['status'] = 'success';
+                $hire->insert($_POST);
+                $this->redirect("empdetail/employee_hire/" . $id);
+            } else {
 
                 $errors = $hire->errors;
 
@@ -80,9 +80,9 @@ class Empdetail extends Controller
 
         $employerData = $user->query("SELECT * FROM users WHERE users_id = $id AND type = 'employer'");
 
-        
 
-        $this->view("employee_hire", ['data'=>$userData, 'empDetial'=>$employerData, 'errors'=>$errors]);
+
+        $this->view("employee_hire", ['data' => $userData, 'empDetial' => $employerData, 'employee_id' => $id, 'errors' => $errors]);
 
     }
 
@@ -206,6 +206,37 @@ class Empdetail extends Controller
         $errors['ChangePassword'] = "Password Changed Successfullly";
         echo json_encode($errors);
         die();
+    }
+
+    // Review System code
+    function comment()
+    {
+
+        $errors = [];
+
+        $reviews = new Review();
+
+
+
+        if (count($_POST) > 0) {
+
+            $_POST['review_date'] = date("Y-m-d");
+            $id = $_POST['review_employee_id'];
+
+            $reviews->insert($_POST);
+
+            $_SESSION['msg'] = "Comment Posted";
+            $_SESSION['status'] = 'success';
+
+            $this->redirect("empdetail/employee_hire/" . $id);
+
+
+
+        }
+
+
+        $this->view("employee_hire", ['errors' => $errors]);
+
     }
 
 }

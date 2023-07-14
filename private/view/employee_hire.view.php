@@ -203,24 +203,46 @@
                             <img src="<?= ASSETS ?>image/emp3.jpg" alt="">
                         </div>
                         <div class="hire_page_employer_info">
-                            <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
-                            <span class="d-block text-muted">santosh@gmail.com</span>
+                            <h6 class="d-block p-0 m-0">
+                                <?= Auth::user("firstname"); ?>
+                                <?= Auth::user("lastname"); ?>
+                            </h6>
+                            <span class="d-block text-muted">
+                                <?= Auth::user("email"); ?>
+                            </span>
                         </div>
                     </div>
                     <div class="card-body px-5">
-                        <form method="POST" action="">
+                        <form method="POST" action="<?= BASE ?>/empdetail/comment">
                             <div class="input-group">
-                                <input type="hidden" name="employer_id" value="<?= Auth::user("users_id"); ?>">
+                                <input type="hidden" name="review_employer_id" value="<?= Auth::user("users_id"); ?>">
+                                <input type="hidden" name="review_employee_id" value="<?= $employee_id ?>">
                             </div>
                             <div class="input-group">
-                                <label for="">
-                                    <input type="radio" name="employer_id" value="<?= Auth::user("users_id"); ?>">
+                                <label>
+                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="1">
+                                    <i class="fa-solid fa-star"></i>
+                                </label>
+                                <label>
+                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="2">
+                                    <i class="fa-solid fa-star"></i>
+                                </label>
+                                <label>
+                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="3">
+                                    <i class="fa-solid fa-star"></i>
+                                </label>
+                                <label>
+                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="4">
+                                    <i class="fa-solid fa-star"></i>
+                                </label>
+                                <label>
+                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="5">
                                     <i class="fa-solid fa-star"></i>
                                 </label>
 
                             </div>
                             <div class="input-group mt-3">
-                                <textarea name="work_description" id=""
+                                <textarea name="review_description" id=""
                                     class="form-control bg-light shadow-none border-0 border-bottom "
                                     placeholder="Write your review..." rows="5"></textarea>
                             </div>
@@ -237,8 +259,6 @@
         </div>
     <?php endif; ?>
 </div>
-
-
 
 
 <?php

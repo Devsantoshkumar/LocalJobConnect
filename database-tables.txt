@@ -139,7 +139,7 @@ citys{
 }
 
 
-table 8:
+table 9:
 --------
 hires{
     hires_id: int primary_key auto_increament,
@@ -149,4 +149,15 @@ hires{
     offered_cost: int,
     hiring_description: varchar 250,
     hiring_date: datetime
+}
+
+table 10:
+---------
+reviews{
+    reviews_id:int primary_key auto_increament,
+    reveiw_star:int,
+    review_description:varchar 100,
+    review_date:datetime,
+    review_employer_id:int,
+    review_employee_id:int
 }

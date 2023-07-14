@@ -862,3 +862,16 @@
     padding-bottom: 10px;
     width: fit-content;
 }
+
+input[type='radio'] {
+    appearance: none;
+}
+
+label i {
+    color: var(--darkYellow);
+    cursor: pointer;
+}
+
+label i:hover {
+    color: var(--dark-red-color);
+}
