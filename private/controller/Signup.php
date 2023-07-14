@@ -33,6 +33,7 @@ class Signup extends Controller
                 $_POST['date'] = date("y-m-d H:i:s");
                 $_POST['image'] = 'profile-default.png';
                 $_POST['cover'] = 'banner-default.jpg';
+                $_POST['type'] = 'employee';
 
                 $message = "<b>Hello  Sir/Madam</b><br/><br/>";
                 $message .= "Welcome to Local Job Connect <br/><br/>";
@@ -93,6 +94,7 @@ class Signup extends Controller
                 $_POST['date'] = date("y-m-d H:i:s");
                 $_POST['image'] = 'profile-default.png';
                 $_POST['cover'] = 'banner-default.jpg';
+                $_POST['type'] = 'employer';
 
                 $message = "<b>Hello  Sir/Madam</b><br/><br/>";
                 $message .= "Welcome to Local Job Connect <br/><br/>";
@@ -154,12 +156,12 @@ class Signup extends Controller
                 $data = $verify->where('otp',$otp);
 
                 if($data[0]->expired > $time){
-                    $email = $data[0]->email;
                     $user->query("update users set email_varified = email where email = '$email'");
-                    $userDataSignup = $user->where("email_varified", $email);
+                    
+                    $userDataSignup = $user->where("email", $email);
                     $userDataSignup = $userDataSignup[0];
 
-                    if($userDataSignup[0]->type == 'employee'){
+                    if($userDataSignup->type == 'employee'){
 
                         $_SESSION['msg'] = "Email verified successfully";
                         $_SESSION['status'] = "success";
