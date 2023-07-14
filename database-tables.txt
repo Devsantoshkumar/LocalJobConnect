@@ -137,3 +137,16 @@ citys{
     city_status: tinyInt default 1,
     state_id: int,
 }
+
+
+table 8:
+--------
+hires{
+    hires_id: int primary_key auto_increament,
+    hiring_status: tinyInt default 0
+    employee_id: int,
+    employer_id: int,
+    offered_cost: int,
+    hiring_description: varchar 250,
+    hiring_date: datetime
+}
