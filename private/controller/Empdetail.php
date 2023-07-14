@@ -57,8 +57,10 @@ class Empdetail extends Controller
             {
                 $_POST['hiring_date'] = date("y-m-d H:i:s");
                 $_POST['employee_id'] = $id;
-                 $_SESSION['msg'] = "Request send to employee";
-                 $_SESSION['status'] = 'success';
+                $_STATUS['hiring_status'] = 1;
+                $user->update($id, $_STATUS);
+                $_SESSION['msg'] = "Request send to employee";
+                $_SESSION['status'] = 'success';
                  $hire->insert($_POST);
                  $this->redirect("empdetail/employee_hire/".$id);
             }else{

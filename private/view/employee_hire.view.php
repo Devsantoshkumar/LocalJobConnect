@@ -121,7 +121,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
                     </div>
                 </li>
-            </ul>
+                </ul>
             </div>
         </div>
         <div class="col-12 col-md-9 order-1 order-md-2 p-1">

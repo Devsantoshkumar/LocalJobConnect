@@ -17,9 +17,6 @@
                     <a class="nav-link" href="<?= BASE ?>explore">Explore</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= BASE ?>seller"> Become a Seller </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="<?= BASE ?>contact">Contact Us</a>
                 </li>
                 <li class="nav-item">

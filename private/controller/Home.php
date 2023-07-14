@@ -2,6 +2,20 @@
 
 class Home extends Controller
 {
+
+
+    function __construct(){
+
+        if(Auth::loggedIn()){
+            
+            if(Auth::user("type") == 'employee'){
+                $this->redirect("empdetail/".Auth::user("users_id"));
+            }else{
+                $this->redirect("seller/".Auth::user("users_id"));
+            }
+        }
+    }
+
     function index()
     {
 
