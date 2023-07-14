@@ -220,23 +220,23 @@
                             </div>
                             <div class="input-group">
                                 <label>
-                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="1">
+                                    <input type="radio" class="star" name="review_star" value="1">
                                     <i class="fa-solid fa-star"></i>
                                 </label>
                                 <label>
-                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="2">
+                                    <input type="radio" class="star" name="review_star" value="2">
                                     <i class="fa-solid fa-star"></i>
                                 </label>
                                 <label>
-                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="3">
+                                    <input type="radio" class="star" name="review_star" value="3">
                                     <i class="fa-solid fa-star"></i>
                                 </label>
                                 <label>
-                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="4">
+                                    <input type="radio" class="star" name="review_star" value="4">
                                     <i class="fa-solid fa-star"></i>
                                 </label>
                                 <label>
-                                    <input type="radio" class="star" id="reviewStar" name="review_star" value="5">
+                                    <input type="radio" class="star" name="review_star" value="5">
                                     <i class="fa-solid fa-star"></i>
                                 </label>
 
