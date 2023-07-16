@@ -58,92 +58,40 @@ $this->view("includes/navbar");
 </section>
 
 
-<!-- Community Section Start -->
+<!-- Job Categories Section Start -->
 
-<section class="containerfluid mt-5 mb-3">
+<section class="containerfluid my-5 pt-5">
     <div class="container">
-        <div class="row mb-5">
+        <div class="row">
             <div class="col">
-                <h1 class="text-center fs-2 fw-bold heading-text">Join Our <span
-                        class="fw-bold fs-2 heading-text heading-color"> Community</span></h1>
+                <h1 class="text-center fs-2 fw-bold heading-text">Browse Jobs By <span
+                        class="fw-bold fs-2 heading-text heading-color"> Categories</span></h1>
                 <p class="text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nemo!
                 </p>
             </div>
         </div>
-        <div class="community-section mt-2 mb-5 position-relative">
-            <div class="community-box card border-0 shadow my-sm-4 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (1).jpg" alt="worker image" class="image-fluid">
+        <?php if($category_data): ?>
+        <div class="job-category mt-2">
+            <?php foreach($category_data as $rows): ?>
+            <a href="<?=BASE ?>employees/<?=$rows->categorys_id; ?>" class="job-category-box text-decoration-none text-dark rounded card border-0 shadow-sm pt-3 m-sm-4 m-auto">
+                <i class="fa-solid fa-lightbulb"></i>
+                <div class="job-category-content">
+                    <!-- <div class="d-flex align-item-center justify-content-center"> -->
+                        <h1 class="fw-bold fs-6 heading-text text-center card-title"><?=$rows->category_name; ?></h1>
+                    <!-- </div> -->
+                    <p><?=$rows->category_description; ?></p>
                 </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box card border-0 shadow m-sm-4 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (2).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box card border-0 shadow m-sm-4 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (3).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box card border-0 shadow m-sm-4 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (4).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box card border-0 shadow m-sm-4 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (1).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box card border-0 shadow m-sm-4 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (2).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-            <div class="community-box card border-0 shadow m-sm-4 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (3).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
-
-            <div class="community-box card border-0 shadow m-sm-4 m-auto">
-                <div class="community-image">
-                    <img src="assets\image\employee (4).jpg" alt="worker image">
-                </div>
-                <div class="community-text">
-                    <p>I am a<br><span class="heading-color">Electrician</span></p>
-                </div>
-            </div>
+            </a>
+            <?php endforeach; ?>
         </div>
-        <div class="d-flex justify-content-center mt-5">
-            <a href="#" class="text-decoration-none fw-bold link-btn text-center p-3">Explore More</a>
+        <?php endif; ?>
+        <div class="d-flex justify-content-center mt-2 p-2">
+            <a href="#" class="text-decoration-none fw-bold link-btn text-center">Explore More</a>
         </div>
     </div>
 </section>
 
-<!-- Community Section End -->
+<!-- Job Categories Section End -->
 
 
 <!-- Working Process for Seller Section Start -->
