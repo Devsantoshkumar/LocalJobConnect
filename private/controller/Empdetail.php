@@ -15,7 +15,7 @@ class Empdetail extends Controller
 
         $jobCategories = $category->findAll();
 
-        $inccoming = $hire->query("SELECT * FROM hires LEFT JOIN users ON hires.employee_id = users.users_id WHERE employee_id = $id");
+        $inccoming = $hire->query("SELECT * FROM hires LEFT JOIN users ON hires.employer_id = users.users_id WHERE employee_id = $id");
 
 
         $similiarProfiles = $users->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id <> $id AND job_category_id IS NOT NULL");
@@ -32,7 +32,7 @@ class Empdetail extends Controller
         $user = new User();
 
         if(count($_POST)>0){
-
+            
             $user->update($id, $_POST);
             $errors['updatedProfile'] = "Profile updated successfully";
             echo json_encode($errors);
@@ -41,6 +41,35 @@ class Empdetail extends Controller
 
     }
 
+    function accept($id=NULL){
+
+        $error = [];
+        $hire = new Hire();
+
+        if(!empty($id)){
+            $_POST['emp_status'] = 1;
+            $hire->updateWithColumn("employer_id",$id,$_POST);
+            $_SESSION['msg'] = "Request accepted sucessfully";
+            $_SESSION['status'] = "success";
+            $this->redirect("empdetail/".Auth::user("users_id"));
+        }
+
+    }
+
+    function reject($id=NULL){
+
+        $error = [];
+        $hire = new Hire();
+
+        if(!empty($id)){
+            $_POST['emp_status'] = 0;
+            $hire->updateWithColumn("employer_id",$id,$_POST);
+            $_SESSION['msg'] = "Request rejected";
+            $_SESSION['status'] = "success";
+            $this->redirect("empdetail/".Auth::user("users_id"));
+        }
+
+    }
 
     function employee_hire($id=NULL)
     {
