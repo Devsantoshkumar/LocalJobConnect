@@ -10,118 +10,39 @@
             <div class="col-12 col-md-3 order-2 order-md-1 p-1">
                 <div class="card border-0 rounded-0 shadow-sm">
                     <h5 class="border-bottom p-3 px-4">Reviews:</h5>
-                    <ul class="list-group px-2">
-                        <li class="list-group-item border-0 border-bottom rounded-0">
-                            <div class="row">
-                                <div class="col d-flex align-items-center gap-3">
-                                    <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
-                                        <img src="<?= ASSETS ?>image/emp3.jpg" alt="">
+                    <?php if ($result): ?>
+                        <ul class="list-group px-2">
+                            <?php foreach ($result as $results): ?>
+                                <li class="list-group-item border-0 border-bottom rounded-0">
+                                    <div class="row">
+                                        <div class="col d-flex align-items-center gap-3">
+                                            <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
+                                                <img src="<?= BASE ?>uploads/<?= $results->image; ?>" alt="">
+                                            </div>
+                                            <div class="hire_page_employer_info">
+                                                <h6 class="d-block p-0 m-0">
+                                                    <?= $results->firstname; ?>
+                                                    <?= $results->lastname; ?>
+                                                </h6>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="hire_page_employer_info">
-                                        <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
+                                    <div class="pt-3">
+                                        <div class="reveiw_star">
+                                            <?php for ($i=1; $i <= $results->review_star; $i++): ?>
+                                                <i class="fa-solid fa-star"></i>
+                                            <?php endfor; ?>
+                                        </div>
+
+                                        <p>
+                                            <?= $results->review_description; ?>
+                                        </p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="pt-3">
-                                <div class="reveiw_star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0 border-bottom rounded-0">
-                            <div class="row">
-                                <div class="col d-flex align-items-center gap-3">
-                                    <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
-                                        <img src="<?= ASSETS ?>image/emp3.jpg" alt="">
-                                    </div>
-                                    <div class="hire_page_employer_info">
-                                        <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-3">
-                                <div class="reveiw_star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0 border-bottom rounded-0">
-                            <div class="row">
-                                <div class="col d-flex align-items-center gap-3">
-                                    <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
-                                        <img src="<?= ASSETS ?>image/emp3.jpg" alt="">
-                                    </div>
-                                    <div class="hire_page_employer_info">
-                                        <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-3">
-                                <div class="reveiw_star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0 border-bottom rounded-0">
-                            <div class="row">
-                                <div class="col d-flex align-items-center gap-3">
-                                    <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
-                                        <img src="<?= ASSETS ?>image/emp3.jpg" alt="">
-                                    </div>
-                                    <div class="hire_page_employer_info">
-                                        <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-3">
-                                <div class="reveiw_star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0 border-bottom rounded-0">
-                            <div class="row">
-                                <div class="col d-flex align-items-center gap-3">
-                                    <div class="hire_page_employer_profile_box hire_page_employer_review_profile">
-                                        <img src="<?= ASSETS ?>image/emp3.jpg" alt="">
-                                    </div>
-                                    <div class="hire_page_employer_info">
-                                        <h6 class="d-block p-0 m-0">Santosh Kumar</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-3">
-                                <div class="reveiw_star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star-half-stroke"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, excepturi!</p>
-                            </div>
-                        </li>
-                    </ul>
+                                </li>
+                            <?php endforeach; ?>
+
+                        </ul>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-12 col-md-9 order-1 order-md-2 p-1">

@@ -48,22 +48,24 @@ class Empdetail extends Controller
 
     }
 
-    function accept($id=NULL){
+    function accept($id = NULL)
+    {
 
         $error = [];
         $hire = new Hire();
 
-        if(!empty($id)){
+        if (!empty($id)) {
             $_POST['emp_status'] = 1;
-            $hire->updateWithColumn("employer_id",$id,$_POST);
+            $hire->updateWithColumn("employer_id", $id, $_POST);
             $_SESSION['msg'] = "Request accepted sucessfully";
             $_SESSION['status'] = "success";
-            $this->redirect("empdetail/".Auth::user("users_id"));
+            $this->redirect("empdetail/" . Auth::user("users_id"));
         }
 
     }
 
-    function reject($id=NULL){
+    function reject($id = NULL)
+    {
 
         $error = [];
         $hire = new Hire();
@@ -73,7 +75,7 @@ class Empdetail extends Controller
             $hire->updateWithColumn("employer_id",$id,$_POST);
             $_SESSION['msg'] = "Request rejected";
             $_SESSION['status'] = "success";
-            $this->redirect("empdetail/".Auth::user("users_id"));
+            $this->redirect("empdetail/" . Auth::user("users_id"));
         }
 
     }
@@ -85,7 +87,7 @@ class Empdetail extends Controller
 
         $user = new User();
         $hire = new Hire();
-
+        $reviews = new Review();
 
 
         if (count($_POST) > 0) {
@@ -107,13 +109,15 @@ class Empdetail extends Controller
 
         }
 
+        $result = $reviews->query("SELECT * FROM users  JOIN reviews ON users.users_id = reviews.review_employee_id WHERE users_id = $id");
+
         $userData = $user->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id = $id");
 
         $employerData = $user->query("SELECT * FROM users WHERE users_id = $id AND type = 'employer'");
 
 
 
-        $this->view("employee_hire", ['data' => $userData, 'empDetial' => $employerData, 'employee_id' => $id, 'errors' => $errors]);
+        $this->view("employee_hire", ['data' => $userData, 'result' => $result, 'empDetial' => $employerData, 'employee_id' => $id, 'errors' => $errors]);
 
     }
 
@@ -261,9 +265,9 @@ class Empdetail extends Controller
 
             $this->redirect("empdetail/employee_hire/" . $id);
 
-
-
         }
+
+        $reviews->where();
 
 
         $this->view("employee_hire", ['errors' => $errors]);
