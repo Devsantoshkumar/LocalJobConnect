@@ -10,25 +10,18 @@ class Employees extends Controller
 
         $user = new User();
 
+        $rows = '';
+        $search = '';
+
+        if (isset($_GET['search'])) {
+            $search = $_GET['search'];
+            $rows = $user->query("SELECT * FROM users JOIN categorys ON users.job_category_id = categorys.categorys_id WHERE category_name LIKE '%$search%' || firstname LIKE '%$search%'");
+        }
+
         $userdata = $user->where("job_category_id", $id);
 
-        $this->view("employees", ['errors' => $errors, 'userData' => $userdata]);
+        $this->view("employees", ['errors' => $errors, 'userData' => $userdata, 'row' => $rows, 'search' => $search, 'category_id'=>$id]);
     }
 
-    // function searching()
-    // {
-    //     $errors = [];
-    //     $rows = [];
-    //     $search = '';
 
-    //     $user = new User();
-
-    //     if (isset($_GET['search'])) {
-    //         $search = $_GET['search'];
-    //         $rows = $user->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id WHERE category_name LIKE '%$search%'");
-    //         show($rows);
-    //     }
-
-    //     $this->view('employees', ['errors' => $errors, 'rows' => $rows, 'search' => $search]);
-    // }
 }
