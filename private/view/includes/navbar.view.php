@@ -1,6 +1,6 @@
 <!-- NavBar Section Start -->
 
-<nav class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg ljc-navigation sticky-top shadow-sm">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?= BASE ?>">
             <img src="<?= ASSETS ?>image\LJC Logo.png" width="100" height="30" alt="image">
