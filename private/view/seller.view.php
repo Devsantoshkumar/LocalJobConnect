@@ -47,7 +47,11 @@ $this->view("includes/navbar");
                              if($row->emp_status == 0){
                                 $status = "Pending";
                                 $color = "danger";
-                             }else{
+                             }else if($row->emp_status == 2){
+                                $status = "Rejected";
+                                $color = "info";
+                             }
+                             else{
                                 $status = "Accepted";
                                 $color = "success";
                              }

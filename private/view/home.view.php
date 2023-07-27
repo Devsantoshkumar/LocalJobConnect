@@ -9,7 +9,7 @@ $this->view("includes/navbar");
 
 <section class="banner-section">
     <div class="banner-image-box">
-        <img src="<?= ASSETS ?>image\bg-1.jpg" alt="image" class="bg-image">
+        <img src="<?=ASSETS ?>image/bg-1.jpg" alt="image" class="bg-image">
     </div>
     <div class="image-text-section">
         <div class="bg-text mb-3">
@@ -89,7 +89,7 @@ $this->view("includes/navbar");
             <ul class="list-unstyled work-list d-flex justify-content-around">
                 <li class="me-sm-3 col-12 col-sm-4 order-1">
                     <div class="work-process-img m-auto">
-                        <img src="assets\image\gig.png" alt="image">
+                        <img src="<?=ASSETS ?>image/gig.png" alt="image">
                     </div>
                     <h5 class="text-center">1. Create Your Acccount</h5>
                     <p class="text-center">Sign up for free, set up your Gig, and offer your work to our
@@ -99,7 +99,7 @@ $this->view("includes/navbar");
                 </li>
                 <li class="mx-sm-3 pb-5 col-12 col-sm-4 order-2">
                     <div class="work-process-img m-auto">
-                        <img src="assets\image\email.png" alt="image">
+                        <img src="<?=ASSETS ?>image/email.png" alt="image">
                     </div>
                     <h5 class="text-center">2. Deliver Great Work</h5>
                     <p class="text-center">Get notified when you get an order and use our system to discuss
@@ -107,7 +107,7 @@ $this->view("includes/navbar");
                 </li>
                 <li class="ms-sm-3 col-12 col-sm-4 order-3">
                     <div class="work-process-img m-auto">
-                        <img src="assets\image\paid.png" alt="image">
+                        <img src="<?=ASSETS ?>image/paid.png" alt="image">
                     </div>
                     <h5 class="text-center">3. Get Paid</h5>
                     <p class="text-center">Get paid on time, every time. Payment is available for
@@ -148,7 +148,7 @@ $this->view("includes/navbar");
                 <div class="owl-carousel owl-theme">
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -160,7 +160,7 @@ $this->view("includes/navbar");
 
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -171,7 +171,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -182,7 +182,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -193,7 +193,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -204,7 +204,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -215,7 +215,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -226,7 +226,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -262,7 +262,7 @@ $this->view("includes/navbar");
                 <div class="owl-carousel owl-theme">
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -278,7 +278,7 @@ $this->view("includes/navbar");
 
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -293,7 +293,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -308,7 +308,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -323,7 +323,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -338,7 +338,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -353,7 +353,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -368,7 +368,7 @@ $this->view("includes/navbar");
                     </div>
                     <div class="item card client shadow border">
                         <div class="client-img">
-                            <img src="assets\image\logo.svg" alt="image" class="rounded-circle">
+                            <img src="<?=ASSETS ?>image/logo.svg" alt="image" class="rounded-circle">
                         </div>
                         <h5 class="text-center card-title heading-text">Jatin Yadav</h5>
                         <p class="card-body text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.

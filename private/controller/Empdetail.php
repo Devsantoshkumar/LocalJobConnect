@@ -22,7 +22,7 @@ class Empdetail extends Controller
 
         $jobCategories = $category->findAll();
 
-        $inccoming = $hire->query("SELECT * FROM hires LEFT JOIN users ON hires.employer_id = users.users_id WHERE employee_id = $id");
+        $inccoming = $hire->query("SELECT * FROM hires LEFT JOIN users ON hires.employer_id = users.users_id WHERE employee_id = $id AND emp_status = 0");
 
 
         $similiarProfiles = $users->query("SELECT * FROM users LEFT JOIN categorys ON users.job_category_id = categorys.categorys_id LEFT JOIN citys ON users.city_id = citys.citys_id WHERE users_id <> $id AND job_category_id IS NOT NULL");
@@ -69,7 +69,7 @@ class Empdetail extends Controller
         $hire = new Hire();
 
         if(!empty($id)){
-            $_POST['emp_status'] = 0;
+            $_POST['emp_status'] = 2;
             $hire->updateWithColumn("employer_id",$id,$_POST);
             $_SESSION['msg'] = "Request rejected";
             $_SESSION['status'] = "success";

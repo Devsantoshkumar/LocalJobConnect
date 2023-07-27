@@ -22,9 +22,13 @@ class Signin extends Controller
 
                         $this->redirect("empdetail/".$row->users_id);
 
-                    }else
-                    {
+                    }else if(Auth::user("type") == 'employer'){
+
                         $this->redirect("seller/".$row->users_id);
+                    }
+                    else
+                    {
+                        $this->redirect("dashboard");
                     }
 
                 } else {
