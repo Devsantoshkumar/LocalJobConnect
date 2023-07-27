@@ -243,7 +243,10 @@
                                             <h5 class="text-center"><?=$irow->firstname; ?> <?=isset($irow->lastname) ? $irow->lastname : ""; ?></h5>
                                             <p class="text-uppercase text-success border p-2 my-3 fw-bold">Offered cost: <span>&#8377;</span><?=$irow->offered_cost; ?></p>
                                             <p class="text-justify py-0"><?=$irow->hiring_description; ?></p>
-                                            <button type="submit" class="btn rounded-0 shadow-sm hireBtnEmployerPage">Reply Now</button>
+                                            <div>
+                                                <a href="<?=BASE ?>empdetail/accept/<?=$irow->users_id; ?>" type="submit" class="btn btn-sm rounded-0 shadow-sm hireBtnEmployerPage">Accept</a>
+                                                <a href="<?=BASE ?>empdetail/reject/<?=$irow->users_id; ?>" type="submit" class="btn btn-sm rounded-0 shadow-sm btn-danger">Reject</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <?php endforeach; ?>
@@ -518,7 +521,6 @@
 
     <?php endif; ?>
 </div>
-
 
 
 
