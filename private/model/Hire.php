@@ -6,7 +6,7 @@ class Hire extends Model
     public $errors = [];
 
     protected $allowedColumns = [
-        'hiring_status',
+        'emp_status',
         'employee_id',
         'employer_id',
         'offered_cost',
