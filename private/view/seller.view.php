@@ -26,7 +26,7 @@ $this->view("includes/navbar");
                         aria-describedby="basic-addon1" autocomplete="off">
                 </div>
             </form>
-            <a href="<?= BASE ?>signup" class="link-btn ms-3 text-decoration-none text-center">Become A Seller</a>
+            
         </div>
     </div>
     <div class="banner-cover bg-transparent">
