@@ -9,7 +9,7 @@ $this->view("includes/navbar");
 
 <section class="banner-section">
     <div class="banner-image-box">
-        <img src="assets\image\bg-1.jpg" alt="image" class="bg-image">
+        <img src="<?= ASSETS ?>image\bg-1.jpg" alt="image" class="bg-image">
     </div>
     <div class="image-text-section">
         <div class="bg-text mb-3">
@@ -26,8 +26,10 @@ $this->view("includes/navbar");
             </form>
             <div class="row py-4">
                 <div class="col d-flex align-items-center justify-content-center gap-3">
-                    <a href="<?=BASE ?>signup/employee" class="btn shadow-sm rounded-0 hireBtnEmployerPage shadow">Get Job</a>
-                    <a href="<?=BASE ?>signup/employer" class="btn shadow-sm rounded-0 hireBtnEmployerPage shadow">Hire Now</a>
+                    <a href="<?= BASE ?>signup/employee" class="btn shadow-sm rounded-0 hireBtnEmployerPage shadow">Get
+                        Job</a>
+                    <a href="<?= BASE ?>signup/employer" class="btn shadow-sm rounded-0 hireBtnEmployerPage shadow">Hire
+                        Now</a>
                 </div>
             </div>
         </div>
@@ -50,20 +52,21 @@ $this->view("includes/navbar");
                 </p>
             </div>
         </div>
-        <?php if($category_data): ?>
-        <div class="job-category mt-2">
-            <?php foreach($category_data as $rows): ?>
-            <a href="<?=BASE ?>employees/<?=$rows->categorys_id; ?>" class="job-category-box text-decoration-none text-dark rounded card border-0 shadow-sm pt-3 m-sm-4 m-auto">
-                <i class="fa-solid fa-lightbulb"></i>
-                <div class="job-category-content">
-                    <!-- <div class="d-flex align-item-center justify-content-center"> -->
-                        <h1 class="fw-bold fs-6 heading-text text-center card-title"><?=$rows->category_name; ?></h1>
-                    <!-- </div> -->
-                    <p><?=$rows->category_description; ?></p>
-                </div>
-            </a>
-            <?php endforeach; ?>
-        </div>
+        <?php if ($category_data): ?>
+            <div class="job-category mt-2">
+                <?php foreach ($category_data as $rows): ?>
+                    <a href="<?= BASE ?>employees/<?= $rows->categorys_id; ?>"
+                        class="job-category-box text-decoration-none text-dark rounded card border-0 shadow-sm pt-3 m-sm-4 m-auto">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <div class="job-category-content">
+                            <!-- <div class="d-flex align-item-center justify-content-center"> -->
+                            <h1 class="fw-bold fs-6 heading-text text-center card-title"><?= $rows->category_name; ?></h1>
+                            <!-- </div> -->
+                            <p><?= $rows->category_description; ?></p>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            </div>
         <?php endif; ?>
         <div class="d-flex justify-content-center mt-2 p-2">
             <a href="#" class="text-decoration-none fw-bold link-btn text-center">Explore More</a>
