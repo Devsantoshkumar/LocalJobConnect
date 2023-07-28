@@ -24,7 +24,7 @@ $this->view("includes/navBar");
                                 <div class="row">
                                     <div class="col myinputgroup">
                                         <label class="form-label text-light">Varification Code</label>
-                                        <input type="text" value="<?= get_val('otp') ?>" name="otp" class="form-control py-3 shadow-none rounded-0 bg-light" placeholder="Enter OTP">
+                                        <input type="text" value="<?= get_val('otp') ?>" name="otp" class="form-control py-3 shadow-none rounded-0" placeholder="Enter OTP">
                                         <small class="text-danger errormsg"><?=isset($errors['otp']) ? $errors['otp'] : ""; ?></small>
                                     </div>
                                 </div>
