@@ -1,7 +1,7 @@
 <!-- Sign Up Page -->
 
 <?php
-
+              
 $this->view("includes/header");
 $this->view("includes/navBar");
 

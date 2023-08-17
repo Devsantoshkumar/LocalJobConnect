@@ -15,13 +15,12 @@ function send_mail($recipient, $subject, $message)
     $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->Username   = 'yadavjatin137@gmail.com';                     //SMTP username
-    // $mail->Password   = 'nrhyumcpqgwfmujy';                               //SMTP password
-    $mail->Password   = 'agshniilqyvibmen';                               //SMTP password
+    $mail->Username   = 'niteshjha482002@gmail.com';                     //SMTP username
+    $mail->Password   = 'hcfflhkonbxrmssa';                               //SMTP password
 
     $mail->IsHTML(true);                                  //Set email format to HTML
     $mail->AddAddress($recipient, 'Santosh Kumar');     //Add a recipient             //Name is optional
-    $mail->SetFrom('quietudestudio@gmail.com', 'Local Job Connect');
+    $mail->SetFrom('niteshjha482002@gmail.com', 'Local Job Connect');
     $mail->Subject = $subject;
     $content = $message;
 

@@ -12,8 +12,8 @@ class Search extends Controller
 
         $search = $_GET['search'];
 
-        $data = $user->query("SELECT * FROM users JOIN categorys ON users.job_category_id = categorys.categorys_id WHERE category_name LIKE '%$search%' || firstname LIKE '%$search%' ");
-
+        $data = $user->query("SELECT * FROM users JOIN
+ categorys ON users.job_category_id = categorys.categorys_id WHERE category_name LIKE '%$search%' || firstname LIKE '%$search%' ");
 
         $this->view("search", ['errors' => $errors, 'search' => $search, 'data' => $data]);
 
